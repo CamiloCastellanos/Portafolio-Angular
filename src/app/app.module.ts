@@ -7,6 +7,7 @@ import { GitComponent } from './components/git/git.component';
 import { HomeComponent } from './components/home/home.component';
 import { SocialNetworkComponent } from './components/social-network/social-network.component';
 import { LateralMenuComponent } from './components/lateral-menu/lateral-menu.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LateralMenuComponent } from './components/lateral-menu/lateral-menu.com
     GitComponent,
     HomeComponent,
     SocialNetworkComponent,
-    LateralMenuComponent
+    LateralMenuComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

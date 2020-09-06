@@ -8,7 +8,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public projectService:ProjectsService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
