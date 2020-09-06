@@ -1,1 +1,50 @@
-<p>git works!</p>
+<H1 class="title is-1 has-text-centered">
+    Proyectos Personales</H1>
+
+
+
+
+<div class="container">
+    <div class="section">
+        <div class="columns">
+            <div class="column has-text-centered">
+                <h1 class="title" style="color: ghostwhite;">Proyectos</h1><br>
+            </div>
+        </div>
+        <div id="app" class="row columns is-multiline">
+            <div *ngFor="let proyecto of listaProyecto" class="column is-3">
+                <div class="card large">
+                    <div class="card-image">
+                        <figure class="image is-16by9">
+                            <img src="assets/image/project/{{proyecto.lenguaje}}.png" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                    <img :src="assets/image/project/{{proyecto.imagen}}" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4 no-padding "> {{proyecto.titulo}} </p>
+                                <p>
+                                    <span class="is-6">
+                                    <p> {{proyecto.descripcion}}
+                                    </p>
+                                  </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="{{proyecto.url}}" class="card-footer-item">
+                            <i class="fa fa-github-alt fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </footer>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
