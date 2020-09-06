@@ -20,6 +20,7 @@ import { LateralMenuComponent } from './components/lateral-menu/lateral-menu.com
     BrowserModule,
     AppRoutingModule
   ],
-  providers: []
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
