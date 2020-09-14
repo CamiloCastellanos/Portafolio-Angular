@@ -8,6 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { SocialNetworkComponent } from './components/social-network/social-network.component';
 import { LateralMenuComponent } from './components/lateral-menu/lateral-menu.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     SocialNetworkComponent,
     LateralMenuComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
