@@ -1,0 +1,93 @@
+/*
+Credits https://www.youtube.com/watch?v=AlUIlZsQ7vI
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+body {
+    background-attachment: cover;
+    height: 100vh;
+}
+
+.redesSociales {
+    margin-top: 100px;
+}
+
+ul {
+    margin-left: 0;
+    width: 70%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+    position: fixed;
+}
+
+li {
+    position: relative;
+    transform: translate(-90px);
+    background: rgba(0, 0, 0, 0.8);
+    list-style: none;
+    padding: 10px 0;
+    margin: 10px 0;
+    transition: 0.5s;
+    width: 150px;
+    border-radius: 0 200px 200px 0;
+}
+
+
+/* Colores Para el Hover dependiendo de que Hijo de la lista sea*/
+
+li:hover:nth-child(1) {
+    background: orange;
+}
+
+li:hover:nth-child(2) {
+    background: #47b6f5;
+}
+
+li:hover:nth-child(3) {
+    background: #47b6f5;
+}
+
+li:hover:nth-child(4) {
+    background: #47b6f5;
+}
+
+li:hover {
+    transform: translateX(0);
+}
+
+a {
+    font-weight: bold;
+    color: #ffffff;
+    font-family: sans-serif;
+    padding-left: 10px;
+}
+
+i {
+    margin-left: 15px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    color: #000000;
+    background: #ffffff;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.github {
+    position: relative;
+    left: 24px;
+}
+
+.linkedin {
+    position: relative;
+    left: 10px;
+}
