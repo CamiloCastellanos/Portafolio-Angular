@@ -1,5 +1,4 @@
 import { RouterModule, Routes } from '@angular/router'
-import { worker } from 'cluster';
 import { GitComponent } from './components/git/git.component';
 import { HomeComponent } from './components/home/home.component'
 import { WorkComponent } from './components/work/work.component';
