@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+/*Rutas*/
+import {APP_ROUTING} from './app.routes'
+
+/*Componentes*/
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitComponent } from './components/git/git.component';
@@ -10,6 +14,8 @@ import { LateralMenuComponent } from './components/lateral-menu/lateral-menu.com
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { Router } from '@angular/router';
+import { WorkComponent } from './components/work/work.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +26,13 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     LateralMenuComponent,
     NavbarComponent,
     FooterComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    APP_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
