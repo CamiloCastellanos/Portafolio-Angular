@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Work } from 'src/app/models/work.model';
+import { WorksService } from 'src/app/services/works.service';
 
 @Component({
   selector: 'app-work',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkComponent implements OnInit {
 
-  constructor() { }
+  listaTrabajo: Work[] = [];
+
+  constructor() {
+    let servicioTrabajo = new WorksService();
+    this.listaTrabajo = servicioTrabajo.listaTrabajo;
+  }
 
   ngOnInit(): void {
   }

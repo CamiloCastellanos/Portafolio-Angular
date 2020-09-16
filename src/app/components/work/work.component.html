@@ -1,1 +1,14 @@
-<p>work works!</p>
+<div class="container mg-large p-6">
+    <div class="section">
+        <div class="row columns is-multiline">
+            <figure *ngFor="let trabajo of listaTrabajo" class="image snip0015">
+                <img src="assets/image/work/{{trabajo.imagen}}" alt="sample38" />
+                <figcaption>
+                    <h2>{{trabajo.titulo}}</h2>
+                    <p>{{trabajo.descripcion}} </p>
+                    <a href="trabajo.url"></a>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
