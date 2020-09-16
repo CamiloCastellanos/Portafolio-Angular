@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { Router } from '@angular/router';
 import { WorkComponent } from './components/work/work.component';
+import { LearningComponent } from './components/learning/learning.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { WorkComponent } from './components/work/work.component';
     NavbarComponent,
     FooterComponent,
     ContactFormComponent,
-    WorkComponent
+    WorkComponent,
+    LearningComponent
   ],
   imports: [
     BrowserModule,
