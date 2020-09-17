@@ -1,0 +1,65 @@
+.navbar {
+    background-image: linear-gradient(-30deg, rgba(0, 128, 108, 1) 10%, rgba(13, 128, 110, 1) 20%, rgba(26, 128, 112, 1) 30%, rgba(38, 128, 114, 1) 40%, rgba(51, 128, 116, 1) 50%, rgba(64, 128, 118, 1) 60%, rgba(77, 128, 120, 1) 70%, rgba(90, 128, 122, 1) 80%, rgba(102, 128, 124, 1) 90%, rgba(115, 128, 126, 1) 100%);
+}
+
+nav a,
+nav a:after,
+nav a:before {
+    transition: all .5s;
+}
+
+
+/*Color del Hover en el navBar*/
+
+nav.relleno a {
+    position: relative;
+}
+
+nav.relleno a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: white;
+    height: 1px;
+}
+
+nav.relleno a {
+    transition: all 2s;
+}
+
+nav.relleno a:hover {
+    color: white;
+    z-index: 1;
+}
+
+nav.relleno a:hover:after {
+    z-index: -10;
+    animation: relleno 1s forwards;
+    -webkit-animation: relleno 1s forwards;
+    -moz-animation: relleno 1s forwards;
+    opacity: 1;
+}
+
+
+/* Keyframes */
+
+@-webkit-keyframes relleno {
+    0% {
+        width: 0%;
+        height: 1px;
+    }
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        background: #00C2A5;
+    }
+}
