@@ -1,10 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+.imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
 figure.snip0015 {
     font-family: 'Raleway', Arial, sans-serif;
     color: #fff;
     position: relative;
     overflow: hidden;
-    margin: 10px;
+    margin: 50px;
     min-width: 220px;
     max-width: 310px;
     max-height: 220px;
@@ -113,20 +120,4 @@ figure.snip0015:hover figcaption::before {
     opacity: 1;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
-}
-
-
-/* Demo purposes only */
-
-html {
-    height: 100%;
-}
-
-body {
-    background-color: #212121;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 100%;
 }

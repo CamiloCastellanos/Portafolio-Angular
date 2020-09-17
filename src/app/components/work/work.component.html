@@ -2,11 +2,11 @@
     <div class="section">
         <div class="row columns is-multiline">
             <figure *ngFor="let trabajo of listaTrabajo" class="image snip0015">
-                <img src="assets/image/work/{{trabajo.imagen}}" />
+                <img src="assets/image/work/{{trabajo.imagen}}" class="imagen" />
                 <figcaption>
                     <h2>{{trabajo.titulo}}</h2>
                     <p>{{trabajo.descripcion}} </p>
-                    <a href="trabajo.url"></a>
+                    <a href="{{trabajo.url}}"></a>
                 </figcaption>
             </figure>
         </div>
