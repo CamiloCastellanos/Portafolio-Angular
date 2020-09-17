@@ -22,9 +22,9 @@ export class WorksService {
           "url": ""
         },
         {
-          "titulo": "MINERÍA TEXAS COLOMBIA S.A.",
+          "titulo": "Colombian Shared Services",
           "descripcion": "23-06-2018 - 03-05-2019 Cargo: Desarrollador de Aplicaciones",
-          "imagen": "mtc.jpg",
+          "imagen": "css.png",
           "url": ""
         },
         {
