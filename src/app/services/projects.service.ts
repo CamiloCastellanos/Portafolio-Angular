@@ -16,38 +16,38 @@ export class ProjectsService {
     let proyectosJSON = {
       "proyectos": [{
         "titulo": "SPA",
-        "lenguaje": "sin_imagen",
-        "descripcion": "Una aplicación de una sola página. En la cual se busca a unos super Heroes",
-        "imagen": "sin_imagen.png",
+        "lenguaje": "angular.gif",
+        "descripcion": "En este proyecto SPA (single page application/ aplicación de página única) se realizo un buscador de super héroes implementando rutas (routes) y un servicio el cual trae la lista de los héroes.",
+        "imagen": "https://github.com/CamiloCastellanos/Angular/blob/master/2-Proyecto/Imagenes/Portada.png?raw=true",
         "url": "https://github.com/CamiloCastellanos/Angular/tree/master/2-Proyecto"
       },
       {
-        "titulo": "SPA",
-        "lenguaje": "sin_imagen",
-        "descripcion": "Una aplicación de una sola página. En la cual se busca a unos super Heroes",
-        "imagen": "sin_imagen.png",
-        "url": "https://github.com/CamiloCastellanos/Angular/tree/master/2-Proyecto"
+        "titulo": "PIPES",
+        "lenguaje": "mongo.png",
+        "descripcion": "En este proyecto se explora la implementación de los pipes (Transformadores de cadenas a un formato en la vista) y también se ve al creación de un pipe.",
+        "imagen": "https://github.com/CamiloCastellanos/Angular/blob/master/3-Proyecto/Imagenes/Pipe-1.png?raw=true",
+        "url": "https://github.com/CamiloCastellanos/Angular/tree/master/3-Proyecto"
       },
       {
-        "titulo": "SPA",
-        "lenguaje": "sin_imagen",
-        "descripcion": "Una aplicación de una sola página. En la cual se busca a unos super Heroes",
-        "imagen": "sin_imagen.png",
-        "url": "https://github.com/CamiloCastellanos/Angular/tree/master/2-Proyecto"
+        "titulo": "SpotiApp",
+        "lenguaje": "angular.png",
+        "descripcion": "Es un proyecto en el cual se consume la web API de Spotify para mostrar las canciones más escuchadas, además de mostrar la información del cantante y sus mejores canciones.",
+        "imagen": "https://github.com/CamiloCastellanos/Angular/blob/master/4-Proyecto/Imagenes/Portada.png?raw=true",
+        "url": "https://github.com/CamiloCastellanos/Angular/tree/master/4-Proyecto"
       },
       {
-        "titulo": "SPA",
-        "lenguaje": "sin_imagen",
-        "descripcion": "Una aplicación de una sola página. En la cual se busca a unos super Heroes",
-        "imagen": "sin_imagen.png",
-        "url": "https://github.com/CamiloCastellanos/Angular/tree/master/2-Proyecto"
+        "titulo": "Lista de Deseos IONOC",
+        "lenguaje": "angular.png",
+        "descripcion": "Es una aplicación creada con IONIC la cual maneja una lista de tareas pendientes y completa. Para guardar la información se utilizó el Local Storage de los navegadores.",
+        "imagen": "https://github.com/CamiloCastellanos/Angular/blob/master/5-Proyecto/Imagenes/Portada.png?raw=true",
+        "url": "https://github.com/CamiloCastellanos/Angular/tree/master/5-Proyecto"
       },
       {
-        "titulo": "SPA",
-        "lenguaje": "Angular",
-        "descripcion": "Una aplicación de una sola página. En la cual se busca a unos super Heroes",
-        "imagen": "sin_imagen.png",
-        "url": "https://github.com/CamiloCastellanos/Angular/tree/master/2-Proyecto"
+        "titulo": "Api-Restful-con-NodeJS-y-MongoDB",
+        "lenguaje": "mongo.png",
+        "descripcion": "Aplicacion Restfu con Node Js y MongoDB (CRUD basico) Este api se realizó con NodeJS para realizar un CRUD en la base de datos no relacional MongoDB.",
+        "imagen": "https://github.com/CamiloCastellanos/Api-Restful-con-NodeJS-y-MongoDB/blob/master/Image/primer-mensaje.png?raw=true",
+        "url": "https://github.com/CamiloCastellanos/Api-Restful-con-NodeJS-y-MongoDB"
       }
       ]
     }
