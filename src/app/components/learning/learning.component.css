@@ -1,12 +1,5 @@
-div {
-    text-align: center;
-}
-
-img {
-    margin: 60px 0;
-}
-
 .zoom {
+    margin-top: 50px;
     transition: 1.5s ease;
     -moz-transition: 1.5s ease;
     /* Firefox */
@@ -17,6 +10,7 @@ img {
 }
 
 .zoom:hover {
+    z-index: 30;
     transform: scale(2);
     -moz-transform: scale(2);
     /* Firefox */

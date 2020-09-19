@@ -1,4 +1,11 @@
-<div class="zoom">Efecto de zoom con CSS3</div>
-<div>
-    <img class="zoom" src="assets/image/photo/camiloCastellanos.jpg" width="300px" height="300px" />
+<div class="container mg-large p-6">
+    <div class="section">
+        <div class="row columns is-multiline">
+            <div class="column is-4" *ngFor="let item of listaTitulos">
+                <figure class="image zoom is-16by9">
+                    <img src="{{item.imagen}}" alt="{{item.titulo}}" />
+                </figure>
+            </div>
+        </div>
+    </div>
 </div>
