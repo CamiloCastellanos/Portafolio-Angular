@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Learning } from 'src/app/models/learning.model';
+import { LearningService } from 'src/app/services/learning.service';
 
 @Component({
   selector: 'app-learning',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LearningComponent implements OnInit {
 
-  constructor() { }
+  listaTitulos: Learning[] = []
+
+
+  constructor() {
+    let serviceLearning: LearningService = new LearningService();
+    this.listaTitulos = serviceLearning.listaTitulos;
+  }
 
   ngOnInit(): void {
   }
