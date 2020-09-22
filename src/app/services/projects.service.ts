@@ -16,14 +16,14 @@ export class ProjectsService {
     let proyectosJSON = {
       "proyectos": [{
         "titulo": "SPA",
-        "lenguaje": "angular.gif",
+        "lenguaje": "angular.png",
         "descripcion": "En este proyecto SPA (single page application/ aplicación de página única) se realizo un buscador de super héroes implementando rutas (routes) y un servicio el cual trae la lista de los héroes.",
         "imagen": "https://github.com/CamiloCastellanos/Angular/blob/master/2-Proyecto/Imagenes/Portada.png?raw=true",
         "url": "https://github.com/CamiloCastellanos/Angular/tree/master/2-Proyecto"
       },
       {
         "titulo": "PIPES",
-        "lenguaje": "mongo.png",
+        "lenguaje": "angular.png",
         "descripcion": "En este proyecto se explora la implementación de los pipes (Transformadores de cadenas a un formato en la vista) y también se ve al creación de un pipe.",
         "imagen": "https://github.com/CamiloCastellanos/Angular/blob/master/3-Proyecto/Imagenes/Pipe-1.png?raw=true",
         "url": "https://github.com/CamiloCastellanos/Angular/tree/master/3-Proyecto"
@@ -37,7 +37,7 @@ export class ProjectsService {
       },
       {
         "titulo": "Lista de Deseos IONOC",
-        "lenguaje": "angular.png",
+        "lenguaje": "ionic.png",
         "descripcion": "Es una aplicación creada con IONIC la cual maneja una lista de tareas pendientes y completa. Para guardar la información se utilizó el Local Storage de los navegadores.",
         "imagen": "https://github.com/CamiloCastellanos/Angular/blob/master/5-Proyecto/Imagenes/Portada.png?raw=true",
         "url": "https://github.com/CamiloCastellanos/Angular/tree/master/5-Proyecto"
