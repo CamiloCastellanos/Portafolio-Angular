@@ -19,7 +19,7 @@ export class WorksService {
           "titulo": "MINERÍA TEXAS COLOMBIA S.A.",
           "descripcion": "09-01-2018 – 06-06-2018 Cargo: Practicante",
           "imagen": "mtc.jpg",
-          "url": ""
+          "url": "#"
         },
         {
           "titulo": "Colombian Shared Services",
@@ -43,7 +43,7 @@ export class WorksService {
           "titulo": "CORFERIAS",
           "descripcion": "13-04-2020 – Fecha Actual Cargo:INGENIERO DE SOLUCIONES WEB",
           "imagen": "corferias.png",
-          "url": ""
+          "url": "https://corferias.com/"
         }
       ]
     }
