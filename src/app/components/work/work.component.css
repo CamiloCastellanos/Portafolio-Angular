@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+/*Estilo del Hover*/
+
 .imagen {
     width: 100%;
     height: 100%;
@@ -11,11 +12,6 @@ figure.snip0015 {
     color: #fff;
     position: relative;
     overflow: hidden;
-    margin: 50px;
-    min-width: 220px;
-    max-width: 310px;
-    max-height: 220px;
-    width: 100%;
     background: #000000;
     text-align: center;
 }
@@ -120,4 +116,66 @@ figure.snip0015:hover figcaption::before {
     opacity: 1;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+/*Linea de Tiempo*/
+
+.contenedorLineaTiempo {
+    font-family: 'Open Sans', 'sans-serif';
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.momentoLineaTiempo {
+    font-size: 1em;
+    line-height: 1.75em;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    counter-increment: section;
+    position: relative;
+    color: 34435E;
+}
+
+.momentoLineaTiempo::before {
+    content: counter(section);
+    position: absolute;
+    border-radius: 100%;
+    height: 1.25em;
+    width: 1.25em;
+    background-color: #34435E;
+    text-align: center;
+    line-height: 1.25em;
+    color: #ffffff;
+    font-size: 2em;
+}
+
+.momentoLineaTiempo:nth-child(odd) {
+    border-right: 3px solid;
+    padding-left: 0;
+}
+
+.momentoLineaTiempo:nth-child(odd)::before {
+    left: 100%;
+    margin-left: -20px;
+}
+
+.momentoLineaTiempo:nth-child(even) {
+    border-left: 3px solid;
+    padding-right: 0;
+}
+
+.momentoLineaTiempo:first-child {
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.momentoLineaTiempo:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
