@@ -8,7 +8,7 @@
         </div>
     </div>
 </div>
-<div class="container mg-large mt-6 mb-6">
+<div class="container mg-large mt-6 mb-6 is-hidden-touch">
     <div class="section">
         <div class="row columns is-multiline">
             <div class="column is-4" *ngFor="let item of listaTitulos">
@@ -17,5 +17,30 @@
                 </figure>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="container mt-6 mb-6 is-centered is-hidden-desktop">
+    <div class="timeline">
+        <div class="timeline-month has-text-white">
+            Linea de Tiempo
+            <span> Total de Items: {{listaTitulos.length }}</span>
+        </div>
+
+        <div class="timeline-section" *ngFor="let item of listaTitulos">
+            <div class="timeline-date has-text-black">
+                {{item.titulo}}
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="{{item.imagen}}" alt="{{item.titulo}}" />
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
