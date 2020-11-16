@@ -23,35 +23,38 @@
     </div>
 </div>
 
-
-<div id="app" class="row columns is-multiline">
-    <div *ngFor="let trabajo of listaTrabajo" class="column is-3">
-        <div class="card large">
-            <div class="card-image">
-                <figure class="image snip0015">
-                    <img src="assets/image/work/{{trabajo.imagen}}" alt="Imagen del trabajo">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-content">
-                        <p class="title is-4 no-padding "> {{trabajo.titulo}} </p>
-                        <p>
-                            <span class="subtitle is-6">
+<div class="container mt-6 mb-6">
+    <div class="section">
+        <div id="app" class="row columns is-multiline is-hidden-desktop">
+            <div *ngFor="let trabajo of listaTrabajo" class="column is-3">
+                <div class="card large">
+                    <div class="card-image">
+                        <figure class="image snip0015">
+                            <img src="assets/image/work/{{trabajo.imagen}}" alt="Imagen del trabajo">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 no-padding "> {{trabajo.titulo}} </p>
+                                <p>
+                                    <span class="subtitle is-6">
                             <p>
                               {{trabajo.descripcion}}
                             </p>
                           </span>
-                        </p>
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    <footer class="card-footer">
+                        <a href="{{trabajo.url}}" class="card-footer-item">
+                            <i class="fa fa-globe fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </footer>
                 </div>
             </div>
-            <footer class="card-footer">
-                <a href="{{trabajo.url}}" class="card-footer-item">
-                    <i class="fa fa-globe fa-lg" aria-hidden="true"></i>
-                </a>
-            </footer>
+
         </div>
     </div>
-
 </div>
