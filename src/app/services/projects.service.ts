@@ -18,7 +18,7 @@ export class ProjectsService {
         "titulo": "SPA",
         "lenguaje": "https://i.postimg.cc/xjPsq2Nh/angular.png",
         "descripcion": "En este proyecto SPA (single page application/ aplicación de página única) se realizo un buscador de super héroes implementando rutas (routes) y un servicio el cual trae la lista de los héroes.",
-        "imagen": "https://i.postimg.cc/MprZSNYj/Portada.png",
+        "imagen": "https://i.postimg.cc/TwvJtkFZ/Portada.png",
         "url": "https://github.com/CamiloCastellanos/Angular/tree/master/2-Proyecto"
       },
       {
