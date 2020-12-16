@@ -12,4 +12,11 @@ export class ContactFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  envioCorreo() {
+    alert("Lo sentimos de momento no se puede enviar mensajes.");//He recibido tu correo, pronto tendrás respuesta.
+  }
+
 }
+
+
+
