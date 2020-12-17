@@ -24,7 +24,7 @@ export class WorkComponent implements OnInit {
     this.servicioTrabajo.cargarTrabajos().subscribe(data => {
 
       data.forEach(element => {
-        console.log(element.payload.doc.data());
+
         let trabajo = new Work();
         trabajo.titulo = element.payload.doc.data().titulo;
         trabajo.descripcion = element.payload.doc.data().descripcion;
