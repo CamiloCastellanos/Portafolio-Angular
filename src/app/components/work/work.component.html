@@ -14,8 +14,9 @@
             <figure class="image snip0015 mt-6 mb-6 mr-6 ml-6">
                 <img src="{{trabajo.imagen}}" class="imagen" />
                 <figcaption>
-                    <h2 class="has-text-centered	">{{trabajo.titulo}}</h2>
-                    <p class="has-text-centered	">{{trabajo.descripcion}} </p>
+                    <h2 class="has-text-centered">{{trabajo.titulo}}</h2>
+                    <p class="has-text-centered">{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
+                    <p class="has-text-centered">Cargo: {{trabajo.descripcion}}</p>
                     <a href="{{trabajo.url}}"></a>
                 </figcaption>
             </figure>
@@ -39,10 +40,10 @@
                                 <p class="title is-4 no-padding "> {{trabajo.titulo}} </p>
                                 <p>
                                     <span class="subtitle is-6">
-                            <p>
-                              {{trabajo.descripcion}}
-                            </p>
-                          </span>
+                                      <p>{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
+                                      <p>Cargo:</p>
+                                      <p>{{trabajo.descripcion}}</p>
+                                    </span>
                                 </p>
                             </div>
                         </div>
