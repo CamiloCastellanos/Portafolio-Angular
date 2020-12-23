@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Work } from 'src/app/models/work.model';
 import { WorksService } from 'src/app/services/works.service';
 
@@ -11,11 +12,13 @@ export class WorkComponent implements OnInit {
 
   listaTrabajo: Work[] = [];
 
-  constructor(private servicioTrabajo: WorksService) {
+  constructor(private servicioTrabajo: WorksService,
+    private spinnerService: NgxSpinnerService) {
     this.listaTrabajos();
   }
 
   ngOnInit(): void {
+    this.spinnerService.show();
   }
 
   listaTrabajos() {
@@ -35,6 +38,7 @@ export class WorkComponent implements OnInit {
         this.listaTrabajo.push(trabajo);
       });
 
+      this.spinnerService.hide();
     });
 
   }

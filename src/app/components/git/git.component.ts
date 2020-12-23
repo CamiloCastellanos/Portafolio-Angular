@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Project } from 'src/app/models/project.model';
 import { ProjectsService } from 'src/app/services/projects.service';
 
@@ -9,19 +10,21 @@ import { ProjectsService } from 'src/app/services/projects.service';
 })
 export class GitComponent implements OnInit {
 
-  listaProyecto: Project[] = []
+  listaProyecto: Project[] = [];
 
-  constructor(private servicioProyecto: ProjectsService) {
+  constructor(private servicioProyecto: ProjectsService,
+              private spinnerService: NgxSpinnerService) {
     this.listaProyectos();
   }
 
   ngOnInit(): void {
+    this.spinnerService.show();
   }
 
   listaProyectos() {
     this.listaProyecto = [];
-    this.servicioProyecto.cargarProyectos().subscribe(data => {
 
+    this.servicioProyecto.cargarProyectos().subscribe(data => {
       data.forEach(element => {
 
         let proyecto = new Project();
@@ -34,6 +37,7 @@ export class GitComponent implements OnInit {
         this.listaProyecto.push(proyecto);
       });
 
+      this.spinnerService.hide();
     });
 
   }
