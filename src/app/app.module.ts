@@ -12,6 +12,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from "ngx-spinner";
+
 /*Componentes*/
 import { AppComponent } from './app.component';
 import { GitComponent } from './components/git/git.component';
@@ -45,7 +47,8 @@ import { LearningComponent } from './components/learning/learning.component';
     AngularFirestoreModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
