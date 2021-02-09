@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
 /*Estilo del Hover*/
 
 .imagen {
@@ -118,7 +120,6 @@ figure.snip0015:hover figcaption::before {
     transition-delay: 0s;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 
 /*Linea de Tiempo*/
 
