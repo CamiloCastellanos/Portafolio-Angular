@@ -22,6 +22,10 @@ export class LearningService {
         {
           "titulo": "Matemáticas Aplicadas a la Ciencia de Datos",
           "imagen": "https://i.postimg.cc/rw5RF8Kt/Matem-ticas-Aplicadas-a-la-Ciencia-de-Datos-pages-to-jpg-0001.jpg"
+        },
+        {
+          "titulo": "Fundamentos de Typescript",
+          "imagen": "https://i.postimg.cc/X7kptbQB/diploma-fundamentos-typescript.jpg"
         }
       ]
     }
