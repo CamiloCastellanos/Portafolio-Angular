@@ -6,12 +6,28 @@
                 <h1 class="textoEncima title is-1 has-text-centered is-uppercase">Proyectos</h1>
             </div>
         </div>
-        <div id="app" class="row columns is-multiline">
-            <div *ngFor="let proyecto of listaProyecto" class="column is-3">
+
+        <div class="containerLibro mt-6 my-3 is-hidden-touch" href="#">
+            <div *ngFor="let proyecto of listaProyecto" class="libro">
+                <a href="{{proyecto.url}}">
+                    <div class="imagenLibro image is-4by5">
+                        <img src="{{proyecto.imagen2}}" alt="Camilo Castellanos - {{proyecto.titulo}}" width=" 300px" height="400px">
+                    </div>
+                    <div class="contenido">
+                        <h2 class="title is-3 has-text-centered">{{proyecto.titulo}}</h2>
+                        <p class="has-text-justified "> {{proyecto.descripcion}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="app" class="row columns is-multiline is-hidden-desktop">
+            <div *ngFor="let proyecto of listaProyecto" class="column is-5">
                 <div class="card large">
                     <div class="card-image">
                         <figure class="image is-16by9">
-                            <img src="{{proyecto.imagen}}" alt="Imagen del Proyecto">
+                            <img src="{{proyecto.imagen}}" alt="Camilo Castellanos - {{proyecto.titulo}}">
                         </figure>
                     </div>
                     <div class="card-content">
@@ -22,10 +38,10 @@
                                 </figure>
                             </div>
                             <div class="media-content">
-                                <p class="title is-4 no-padding "> {{proyecto.titulo}} </p>
+                                <p class="title is-4 no-padding"> {{proyecto.titulo}} </p>
                                 <p>
                                     <span class="is-6">
-                                      <p> {{proyecto.descripcion}}
+                                      <p class="has-text-justified"> {{proyecto.descripcion}}
                                       </p>
                                     </span>
                                 </p>
@@ -34,7 +50,7 @@
                     </div>
                     <footer class="card-footer">
                         <a href="{{proyecto.url}}" class="card-footer-item">
-                            <i class="fa fa-code-fork fa-lg" aria-hidden="true"></i>
+                            <i class="fa fa-code-fork fa-3x iconcolor" aria-hidden="true"></i>
                         </a>
                     </footer>
                 </div>
@@ -43,6 +59,7 @@
         </div>
     </div>
 </div>
+
 <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="large" color="#fff" type="ball-atom" [fullScreen]="true">
     <p style="color: white"> Loading... </p>
 </ngx-spinner>
