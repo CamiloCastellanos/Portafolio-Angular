@@ -22,9 +22,10 @@ export class GitComponent implements OnInit {
   }
 
   listaProyectos() {
-    this.listaProyecto = [];
 
     this.servicioProyecto.cargarProyectos().subscribe(data => {
+      this.listaProyecto = [];
+
       data.forEach(element => {
 
         let proyecto = new Project();
