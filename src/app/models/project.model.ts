@@ -3,6 +3,7 @@ export class Project {
   lenguaje: string;
   descripcion: string;
   imagen: string;
+  imagen2: string;
   url: string;
 
   constructor() {
@@ -10,6 +11,7 @@ export class Project {
     this.lenguaje = "";
     this.descripcion = "";
     this.imagen = "";
+    this.imagen2 = "";
     this.url;
   }
 
