@@ -12,7 +12,7 @@
     <div class="container">
         <div class="columns is-multiline momentoLineaTiempo" *ngFor="let trabajo of listaTrabajo">
             <figure class="image snip0015 mt-6 mb-6 mr-6 ml-6">
-                <img src="{{trabajo.imagen}}" class="imagen" />
+                <img src="{{trabajo.imagen}}" class="imagen" alt="Camilo Castellanos trabajo en {{trabajo.titulo | uppercase}}" />
                 <figcaption>
                     <h2 class="has-text-centered">{{trabajo.titulo | uppercase}}</h2>
                     <p class="has-text-centered">{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
@@ -31,7 +31,7 @@
                 <div class="card large">
                     <div class="card-image">
                         <figure class="image snip0015">
-                            <img src="{{trabajo.imagen}}" alt="Imagen del trabajo">
+                            <img src="{{trabajo.imagen}}" alt="Camilo Castellanos trabajo en {{trabajo.titulo | uppercase}}">
                         </figure>
                     </div>
                     <div class="card-content">
@@ -40,9 +40,9 @@
                                 <p class="title is-4 no-padding "> {{trabajo.titulo | uppercase}} </p>
                                 <p>
                                     <span class="subtitle is-6">
-                                      <p>{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
-                                      <p>Cargo:</p>
-                                      <p>{{trabajo.descripcion | uppercase}}</p>
+                                        <p>{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
+                                        <p>Cargo:</p>
+                                        <p>{{trabajo.descripcion | uppercase}}</p>
                                     </span>
                                 </p>
                             </div>
