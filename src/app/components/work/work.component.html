@@ -17,7 +17,7 @@
                     <h2 class="has-text-centered">{{trabajo.titulo | uppercase}}</h2>
                     <p class="has-text-centered">{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
                     <p class="has-text-centered">Cargo: {{trabajo.descripcion | uppercase}}</p>
-                    <a href="{{trabajo.url}}"></a>
+                    <a href="{{trabajo.url}}" target="_blank"></a>
                 </figcaption>
             </figure>
         </div>
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <footer class="card-footer">
-                        <a href="{{trabajo.url}}" class="card-footer-item">
+                        <a href="{{trabajo.url}}" class="card-footer-item" target="_blank">
                             <i class="fa fa-globe fa-lg" aria-hidden="true"></i>
                         </a>
                     </footer>
