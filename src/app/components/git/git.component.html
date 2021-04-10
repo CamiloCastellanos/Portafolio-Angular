@@ -6,7 +6,7 @@
                 <h1 class="textoEncima title is-1 has-text-centered is-uppercase">Proyectos</h1>
             </div>
         </div>
-
+        <!-- Vista para Computadores -->
         <div class="containerLibro mt-6 my-3 is-hidden-touch" href="#">
             <div *ngFor="let proyecto of listaProyecto" class="libro">
                 <a href="{{proyecto.url}}" target="_blank">
@@ -20,8 +20,7 @@
                 </a>
             </div>
         </div>
-
-
+        <!-- Vista para los Dispositivos Moviles -->
         <div id="app" class="row columns is-multiline is-hidden-desktop">
             <div *ngFor="let proyecto of listaProyecto" class="column is-5">
                 <div class="card large">
@@ -57,6 +56,10 @@
             </div>
 
         </div>
+    </div>
+    <!-- Lista de Herramientas -->
+    <div id="Herramientas">
+        <app-tools-languages></app-tools-languages>
     </div>
 </div>
 

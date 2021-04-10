@@ -27,6 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { WorkComponent } from './components/work/work.component';
 import { LearningComponent } from './components/learning/learning.component';
+import { ToolsLanguagesComponent } from './components/tools-languages/tools-languages.component';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { LearningComponent } from './components/learning/learning.component';
     FooterComponent,
     ContactFormComponent,
     WorkComponent,
-    LearningComponent
+    LearningComponent,
+    ToolsLanguagesComponent
   ],
   imports: [
     BrowserModule,
