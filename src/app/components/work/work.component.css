@@ -180,3 +180,10 @@ figure.snip0015:hover figcaption::before {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
+
+/*Estilo Buttons*/
+
+.iconcolor {
+    color: #007F6E;
+}
