@@ -22,7 +22,7 @@ export class ToolsLanguagesService {
         },
         {
           "nombre": "C#",
-          "imagen": "https://i.postimg.cc/TYYtD4rw/Csharp.png",
+          "imagen": "https://i.postimg.cc/6qyyjjcK/CSharp.png",
           "estado": 2
         },
         {
