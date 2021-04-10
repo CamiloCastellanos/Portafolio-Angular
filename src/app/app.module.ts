@@ -14,6 +14,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { HttpClientModule } from '@angular/common/http';
+import {NgParticlesModule} from "ng-particles";
 
 /*Componentes*/
 import { AppComponent } from './app.component';
@@ -43,6 +44,7 @@ import { LearningComponent } from './components/learning/learning.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgParticlesModule,
     APP_ROUTING,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
