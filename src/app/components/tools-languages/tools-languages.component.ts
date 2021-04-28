@@ -19,7 +19,11 @@ export class ToolsLanguagesComponent implements OnInit {
   /// Estado = 1 (Solo Proyectos Personales)
   /// Estado = 2 (Aplica para las 2)
   ngOnInit(): void {
-    this.listaHerramientas = this.serviceTool.listaHerramientas.filter(h => h.estado == this.tipoListaDefault);
+    this.listaHerramientas = this.serviceTool.listaHerramientas.filter(h =>
+                                                                            h.estado == this.tipoListaDefault
+                                                                            ||
+                                                                            h.estado == this.tipoLista
+                                                                      );
   }
 
 }
