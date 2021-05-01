@@ -16,15 +16,35 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.70rem!important;
+    font-size: 3rem!important;
     width: 100%!important;
+    font-weight: 610!important;
 }
 
 .textoDetras {
     font-size: calc(1.95rem + 4.4vw)!important;
     color: #C0C0C0!important;
     opacity: .5;
-    font-weight: 600!important;
+    font-weight: 610!important;
+    width: 100%!important;
+    margin-bottom: 0!important;
+}
+
+.textoEncimaMovil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.95rem!important;
+    width: 100%!important;
+    font-weight: 610!important;
+}
+
+.textoDetrasMovil {
+    font-size: calc(1.95rem + 2.0vw)!important;
+    color: #C0C0C0!important;
+    opacity: .5;
+    font-weight: 610!important;
     width: 100%!important;
     margin-bottom: 0!important;
 }
