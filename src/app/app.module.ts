@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { HttpClientModule } from '@angular/common/http';
 import {NgParticlesModule} from "ng-particles";
+import {NgxTypedJsModule} from 'ngx-typed-js';
 
 /*Componentes*/
 import { AppComponent } from './app.component';
@@ -55,7 +56,8 @@ import { ToolsLanguagesComponent } from './components/tools-languages/tools-lang
     BrowserAnimationsModule,
     ReactiveFormsModule,
     NgxSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxTypedJsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
