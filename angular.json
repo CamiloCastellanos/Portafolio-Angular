@@ -119,7 +119,10 @@
                 },
                 "deploy": {
                     "builder": "@angular/fire:deploy",
-                    "builder-2": "angular-cli-ghpages:deploy",
+                    "options": {}
+                },
+                "deploy-ServerTest": {
+                    "builder": "angular-cli-ghpages:deploy",
                     "options": {}
                 }
             }
