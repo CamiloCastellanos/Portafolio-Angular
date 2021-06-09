@@ -33,6 +33,7 @@ nav.relleno a:after {
 
 nav.relleno a {
     transition: all 2s;
+    background: #007F6E;
 }
 
 nav.relleno a:hover {

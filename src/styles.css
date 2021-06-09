@@ -1,4 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --colorPrimario: #007F6E;
+    --colorSecundario: #00C2A5;
+    --textoDetras: #C0C0C0;
+}
 
 * {
     font-family: 'Open Sans', sans-serif;
@@ -23,7 +27,7 @@
 
 .textoDetras {
     font-size: calc(1.95rem + 4.4vw)!important;
-    color: #C0C0C0!important;
+    color: --textoDetras!important;
     opacity: .5;
     font-weight: 610!important;
     width: 100%!important;
@@ -42,7 +46,7 @@
 
 .textoDetrasMovil {
     font-size: calc(1.95rem + 2.0vw)!important;
-    color: #C0C0C0!important;
+    color: --textoDetras !important;
     opacity: .5;
     font-weight: 610!important;
     width: 100%!important;
@@ -53,20 +57,20 @@
 /*Cambio en el ScrollBar del Navegador*/
 
 body::-webkit-scrollbar {
-    background: #007F6E;
+    background: --colorPrimario;
     width: 0.7rem;
 }
 
 body::-webkit-scrollbar-track {
-    background: #007F6E;
+    background: --colorPrimario;
     border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #00C2A5;
+    background: --colorSecundario;
     border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb:active {
-    background: #00C2A5;
+    background: --colorSecundario;
 }
