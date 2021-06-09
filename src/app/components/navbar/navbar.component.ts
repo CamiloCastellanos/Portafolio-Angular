@@ -19,9 +19,11 @@ export class NavbarComponent implements OnInit {
     menu.classList.toggle('is-active');
   }
 
-  menuLateral(): void {
-    document.getElementById("menuLateral").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+  recoger(): void {
+    var burger = document.querySelector('.burger');
+    var menu = document.querySelector('#navBarMenu');
+    burger.classList.remove('is-active');
+    menu.classList.remove('is-active');
   }
 
 }
