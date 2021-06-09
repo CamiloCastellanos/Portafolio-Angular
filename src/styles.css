@@ -1,9 +1,3 @@
-:root {
-    --colorPrimario: #007F6E;
-    --colorSecundario: #00C2A5;
-    --textoDetras: #C0C0C0;
-}
-
 * {
     font-family: 'Open Sans', sans-serif;
 }
@@ -27,7 +21,7 @@
 
 .textoDetras {
     font-size: calc(1.95rem + 4.4vw)!important;
-    color: --textoDetras!important;
+    color: #c0c0c0!important;
     opacity: .5;
     font-weight: 610!important;
     width: 100%!important;
@@ -46,7 +40,7 @@
 
 .textoDetrasMovil {
     font-size: calc(1.95rem + 2.0vw)!important;
-    color: --textoDetras !important;
+    color: #c0c0c0 !important;
     opacity: .5;
     font-weight: 610!important;
     width: 100%!important;
@@ -57,20 +51,20 @@
 /*Cambio en el ScrollBar del Navegador*/
 
 body::-webkit-scrollbar {
-    background: --colorPrimario;
+    background: #007F6E;
     width: 0.7rem;
 }
 
 body::-webkit-scrollbar-track {
-    background: --colorPrimario;
+    background: #007F6E;
     border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: --colorSecundario;
+    background: #00C2A5;
     border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb:active {
-    background: --colorSecundario;
+    background: #00C2A5;
 }
