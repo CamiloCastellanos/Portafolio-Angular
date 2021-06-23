@@ -24,14 +24,6 @@ export class AppComponent {
     interactivity: {
       detectsOn: "canvas",
       events: {
-        onClick: {
-          enable: true,
-          mode: "push"
-        },
-        onHover: {
-          enable: true,
-          mode: "repulse"
-        },
         resize: true
       },
       modes: {
@@ -52,10 +44,10 @@ export class AppComponent {
     },
     particles: {
       color: {
-        value: "#000"
+        value: "#00C2A5"
       },
       links: {
-        color: "#000",
+        color: "#007F6E",
         distance: 150,
         enable: true,
         opacity: 0.2,
