@@ -26,6 +26,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { LearningModule } from './Pages/Learning/learning.module';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LearningModule } from './Pages/Learning/learning.module';
     SocialNetworkComponent,
     NavbarComponent,
     FooterComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
