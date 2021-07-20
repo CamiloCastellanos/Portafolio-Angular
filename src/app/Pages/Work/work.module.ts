@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WorkRoutingModule } from './work.routes';
 import { WorkComponent } from './components/work/work.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
-
-
 
 @NgModule({
   declarations: [
@@ -12,7 +9,6 @@ import { NgxSpinnerModule } from 'ngx-spinner';
   ],
   imports: [
     CommonModule,
-    NgxSpinnerModule,
     WorkRoutingModule
   ]
 })

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { ToolsLanguages } from 'src/app/models/ToolsLanguages.model';
-import { ToolsLanguagesService } from 'src/app/services/tools-languages.service';
+import { ToolsLanguages } from '../../../models/ToolsLanguages.model';
+import { ToolsLanguagesService } from '../../../core/services/tools-languages.service';
 
 @Component({
   selector: 'app-tools-languages',

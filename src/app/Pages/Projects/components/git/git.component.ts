@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { Project } from 'src/app/models/project.model';
-import { ProjectsService } from 'src/app/services/projects.service';
+import { Project } from '../../../../models/project.model';
+import { ProjectsService } from '../../../../core/services/projects.service';
 
 @Component({
   selector: 'app-git',

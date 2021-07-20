@@ -3,17 +3,16 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { HomeRoutingModule } from './home.routes';
 import { NgxTypedJsModule } from 'ngx-typed-js';
-import { ToolsLanguagesComponent } from '../../components/tools-languages/tools-languages.component';
-
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    ToolsLanguagesComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,
     NgxTypedJsModule,
+    SharedModule,
     HomeRoutingModule
   ]
 })

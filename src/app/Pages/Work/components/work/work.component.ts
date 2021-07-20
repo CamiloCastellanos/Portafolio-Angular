@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Work } from 'src/app/models/work.model';
-import { WorksService } from 'src/app/services/works.service';
+import { WorksService } from '../../../../core/services/works.service';
 
 @Component({
   selector: 'app-work',

@@ -3,7 +3,7 @@ import { HomeModule } from './Pages/Home/home.module';
 import { ProjectsModule } from './Pages/Projects/projects.module';
 import { WorkModule } from './Pages/Work/work.module';
 import { LearningModule } from './Pages/Learning/learning.module';
-import { LayoutComponent } from './components/layout/layout.component';
+import { LayoutComponent } from './layout/layout.component';
 
 const APP_ROUTES: Routes = [
   {
@@ -15,9 +15,9 @@ const APP_ROUTES: Routes = [
         { path: 'seguirAprendiendo', loadChildren: () => import('./Pages/Learning/learning.module').then(learning => LearningModule) },
         { path: '**', pathMatch: 'full', redirectTo: 'home' },
         { path: '', pathMatch: 'full', redirectTo: 'home' }
-      ]
+      ],
   },
-
+  { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, { relativeLinkResolution: 'legacy' });

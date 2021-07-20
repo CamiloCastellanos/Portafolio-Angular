@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Learning } from 'src/app/models/learning.model';
-import { LearningService } from 'src/app/services/learning.service';
+import { Learning } from '../../../../models/Learning.model';
+import { LearningService } from '../../../../core/services/learning.service';
 
 @Component({
   selector: 'app-learning',

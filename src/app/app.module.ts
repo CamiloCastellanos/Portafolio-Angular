@@ -18,23 +18,17 @@ import {NgxTypedJsModule} from 'ngx-typed-js';
 import { HomeModule } from './Pages/Home/home.module';
 import { WorkModule } from './Pages/Work/work.module';
 import { ProjectsModule } from './Pages/Projects/projects.module';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 /*Componentes*/
 import { AppComponent } from './app.component';
-import { SocialNetworkComponent } from './components/social-network/social-network.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { LayoutComponent } from './layout/layout.component';
 import { LearningModule } from './Pages/Learning/learning.module';
-import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SocialNetworkComponent,
-    NavbarComponent,
-    FooterComponent,
-    ContactFormComponent,
     LayoutComponent
   ],
   imports: [
@@ -44,15 +38,16 @@ import { LayoutComponent } from './components/layout/layout.component';
     APP_ROUTING,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    NgxSpinnerModule,
     HttpClientModule,
     NgxTypedJsModule,
+    NgxSpinnerModule,
     HomeModule,
     WorkModule,
     ProjectsModule,
-    LearningModule
+    LearningModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
