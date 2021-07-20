@@ -5,6 +5,7 @@ import { SocialNetworkComponent } from './components/social-network/social-netwo
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,8 +14,15 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     ContactFormComponent,
     SocialNetworkComponent
   ],
+  exports: [
+    NavbarComponent,
+    FooterComponent,
+    ContactFormComponent,
+    SocialNetworkComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SharedModule { }
