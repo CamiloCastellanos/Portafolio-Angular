@@ -17,28 +17,24 @@ import {NgParticlesModule} from "ng-particles";
 import {NgxTypedJsModule} from 'ngx-typed-js';
 import { HomeModule } from './Pages/Home/home.module';
 import { WorkModule } from './Pages/Work/work.module';
+import { ProjectsModule } from './Pages/Projects/projects.module';
 
 /*Componentes*/
 import { AppComponent } from './app.component';
-import { GitComponent } from './components/git/git.component';
 import { SocialNetworkComponent } from './components/social-network/social-network.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { LearningComponent } from './components/learning/learning.component';
-//import { ToolsLanguagesComponent } from './components/tools-languages/tools-languages.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    GitComponent,
     SocialNetworkComponent,
     NavbarComponent,
     FooterComponent,
     ContactFormComponent,
     LearningComponent
-  //  ToolsLanguagesComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +49,8 @@ import { LearningComponent } from './components/learning/learning.component';
     HttpClientModule,
     NgxTypedJsModule,
     HomeModule,
-    WorkModule
+    WorkModule,
+    ProjectsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
