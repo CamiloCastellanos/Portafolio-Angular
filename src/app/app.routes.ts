@@ -1,14 +1,14 @@
 import { RouterModule, Routes } from '@angular/router'
-import { LearningComponent } from './components/learning/learning.component';
 import { HomeModule } from './Pages/Home/home.module';
 import { ProjectsModule } from './Pages/Projects/projects.module';
 import { WorkModule } from './Pages/Work/work.module';
+import { LearningModule } from './Pages/Learning/learning.module';
 
 const APP_ROUTES: Routes = [
   { path: 'home', loadChildren: () => import('./Pages/Home/home.module').then(home => HomeModule) },
   { path: 'proyectosPersonales', loadChildren: () => import('./Pages/Projects/projects.module').then(projects => ProjectsModule) },
   { path: 'trabajos', loadChildren: () => import('./Pages/Work/work.module').then(work => WorkModule)  },
-  { path: 'seguirAprendiendo', component: LearningComponent },
+  { path: 'seguirAprendiendo', loadChildren: () => import('./Pages/Learning/learning.module').then(learning => LearningModule)  },
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
   { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];

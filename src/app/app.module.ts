@@ -25,7 +25,7 @@ import { SocialNetworkComponent } from './components/social-network/social-netwo
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
-import { LearningComponent } from './components/learning/learning.component';
+import { LearningModule } from './Pages/Learning/learning.module';
 
 @NgModule({
   declarations: [
@@ -33,8 +33,7 @@ import { LearningComponent } from './components/learning/learning.component';
     SocialNetworkComponent,
     NavbarComponent,
     FooterComponent,
-    ContactFormComponent,
-    LearningComponent
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +49,8 @@ import { LearningComponent } from './components/learning/learning.component';
     NgxTypedJsModule,
     HomeModule,
     WorkModule,
-    ProjectsModule
+    ProjectsModule,
+    LearningModule
   ],
   providers: [],
   bootstrap: [AppComponent]
