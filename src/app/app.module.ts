@@ -25,6 +25,7 @@ import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LearningModule } from './Pages/Learning/learning.module';
+import { ProfileModule } from './Pages/Profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { LearningModule } from './Pages/Learning/learning.module';
     ProjectsModule,
     LearningModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    ProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]
