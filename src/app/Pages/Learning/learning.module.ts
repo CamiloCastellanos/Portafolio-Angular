@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { LearningComponent } from './components/learning/learning.component';
 import { LearningRoutingModule } from './learning.routes';
 
-
-
 @NgModule({
   declarations: [
     LearningComponent
