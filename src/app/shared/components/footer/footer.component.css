@@ -1,12 +1,3 @@
 .footer {
-    background: #007F6E;
-}
-
-i {
-    color: #ffffff;
-}
-
-#logoFooter {
-    width: 9rem;
-    height: 9rem;
+    background-color: transparent;
 }
