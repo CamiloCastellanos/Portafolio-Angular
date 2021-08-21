@@ -1,67 +1,69 @@
-<div class="container mt-6 mb-6">
-    <div class="section">
-        <div class="mb-6">
-            <div class="contenedorTitulo is-hidden-touch">
-                <h1 class="textoDetras title is-1 has-text-centered is-uppercase">Proyectos Personales</h1>
-                <h1 class="textoEncima title is-1 has-text-centered is-uppercase">Creaciones</h1>
-            </div>
-            <div class="contenedorTitulo is-hidden-desktop">
-                <h1 class="textoDetrasMovil title is-1 has-text-centered is-uppercase">Proyectos Personales</h1>
-                <h1 class="textoEncimaMovil title is-1 has-text-centered is-uppercase">Creaciones</h1>
-            </div>
-        </div>
-        <!-- Vista para Computadores -->
-        <div class="containerLibro mt-6 my-3 is-hidden-touch" href="#">
-            <div *ngFor="let proyecto of listaProyecto" class="libro">
-                <a href="{{proyecto.url}}" target="_blank">
-                    <div class="imagenLibro image is-4by5">
-                        <img src="{{proyecto.imagen2}}" alt="Camilo Castellanos - {{proyecto.titulo}}" width=" 300px" height="400px">
-                    </div>
-                    <div class="contenido">
-                        <h2 class="title is-3 has-text-centered">{{proyecto.titulo}}</h2>
-                        <p class="has-text-justified "> {{proyecto.descripcion}}</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- Vista para los Dispositivos Moviles -->
-        <div id="app" class="row columns is-multiline is-hidden-desktop">
-            <div *ngFor="let proyecto of listaProyecto" class="column is-5">
-                <div class="card large">
-                    <div class="card-image">
-                        <figure class="image is-16by9">
-                            <img src="{{proyecto.imagen}}" alt="Camilo Castellanos - {{proyecto.titulo}}">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-left">
-                                <figure class="image is-48x48">
-                                    <img :src="{{proyecto.lenguaje}}" alt="Lenguaje de Programacion">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <p class="title is-4 no-padding"> {{proyecto.titulo | uppercase}} </p>
-                                <p>
-                                    <span class="is-6">
-                                        <p class="has-text-justified"> {{proyecto.descripcion}}</p>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <footer class="card-footer">
-                        <a href="{{proyecto.url}}" class="card-footer-item" target="_blank">
-                            <i class="fa fa-code-fork fa-3x iconcolor" aria-hidden="true"></i>
-                        </a>
-                    </footer>
+<section class="section">
+    <div class="container mt-6 mb-6">
+        <div class="section">
+            <div class="mb-6">
+                <div class="contenedorTitulo is-hidden-touch">
+                    <h1 class="textoDetras title is-1 has-text-centered is-uppercase">Proyectos Personales</h1>
+                    <h1 class="textoEncima title is-1 has-text-centered is-uppercase">Creaciones</h1>
+                </div>
+                <div class="contenedorTitulo is-hidden-desktop">
+                    <h1 class="textoDetrasMovil title is-1 has-text-centered is-uppercase">Proyectos Personales</h1>
+                    <h1 class="textoEncimaMovil title is-1 has-text-centered is-uppercase">Creaciones</h1>
                 </div>
             </div>
+            <!-- Vista para Computadores -->
+            <div class="containerLibro mt-6 my-3 is-hidden-touch" href="#">
+                <div *ngFor="let proyecto of listaProyecto" class="libro">
+                    <a href="{{proyecto.url}}" target="_blank">
+                        <div class="imagenLibro image is-4by5">
+                            <img src="{{proyecto.imagen2}}" alt="Camilo Castellanos - {{proyecto.titulo}}" width=" 300px" height="400px">
+                        </div>
+                        <div class="contenido">
+                            <h2 class="title is-3 has-text-centered">{{proyecto.titulo}}</h2>
+                            <p class="has-text-justified "> {{proyecto.descripcion}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Vista para los Dispositivos Moviles -->
+            <div class="row columns is-multiline is-hidden-desktop">
+                <div *ngFor="let proyecto of listaProyecto" class="column is-5">
+                    <div class="card large">
+                        <div class="card-image">
+                            <figure class="image is-16by9">
+                                <img src="{{proyecto.imagen}}" alt="Camilo Castellanos - {{proyecto.titulo}}">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img :src="{{proyecto.lenguaje}}" alt="Lenguaje de Programacion">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4 no-padding"> {{proyecto.titulo | uppercase}} </p>
+                                    <p>
+                                        <span class="is-6">
+                                        <p class="has-text-justified"> {{proyecto.descripcion}}</p>
+                                    </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="{{proyecto.url}}" class="card-footer-item" target="_blank">
+                                <i class="fa fa-code-fork fa-3x iconcolor" aria-hidden="true"></i>
+                            </a>
+                        </footer>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+        <!-- Lista de Herramientas -->
+        <div id="Herramientas">
+            <app-tools-languages [tipoListaDefault]="2" [tipoLista]="1"></app-tools-languages>
         </div>
     </div>
-    <!-- Lista de Herramientas -->
-    <div id="Herramientas">
-        <app-tools-languages [tipoListaDefault]="2" [tipoLista]="1"></app-tools-languages>
-    </div>
-</div>
+</section>
