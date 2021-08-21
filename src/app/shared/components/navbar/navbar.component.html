@@ -1,9 +1,9 @@
-<nav class="navbar relleno is-fixed-top" aria-label="main navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" routerLink="home" (click)="recoger()">
+        <span id="logo" class="navbar-item has-text-white-ter">
             <img src="assets/image/logo/multiPlatform2.gif" width="30" height="100%" alt="DevCastellanos">
-            <h1 class="has-text-white-ter">Dev-Castellanos</h1>
-        </a>
+            <h1 class="has-text-white-ter no-seleccion-texto">Dev-Castellanos</h1>
+        </span>
 
         <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navBarMenu" id="burger" (click)="desplegar()">
             <span class="has-text-white-ter"></span>
@@ -16,8 +16,8 @@
         <div class="navbar-end">
             <a class="navbar-item has-text-white-ter" routerLink="home" (click)="recoger()">
                 <span class="icon">
-              <i class="fa fa-home" aria-hidden="true"></i>
-            </span>
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                </span>
                 <span>Home</span>
             </a>
             <a class="navbar-item has-text-white-ter" routerLink="perfil" (click)="recoger()">
@@ -32,6 +32,12 @@
                 </span>
                 <span>Trabajos</span>
             </a>
+
+            <span class="navbar-item force-center is-hidden-touch" routerLink="home" (click)="recoger()">
+                <img src="assets/image/logo/multiPlatform2.gif" width="30" height="100%" alt="DevCastellanos">
+                <h1 class="has-text-white-ter no-seleccion-texto">Dev-Castellanos</h1>
+            </span>
+
             <a class="navbar-item has-text-white-ter" routerLink="proyectosPersonales" routerLinkActive="activo" (click)="recoger()">
                 <span class="icon">
                     <i class="fa fa-code-fork" aria-hidden="true"></i>
