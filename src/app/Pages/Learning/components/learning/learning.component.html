@@ -1,4 +1,6 @@
-<div class="section">
+<section class="section">
+
+    <!-- Titulos -->
     <div class="mt-6 mb-6">
         <div class="contenedorTitulo is-hidden-touch">
             <h1 class="textoDetras title is-1 has-text-centered is-uppercase">Seguir Aprendiendo</h1>
@@ -9,40 +11,26 @@
             <h1 class="textoEncimaMovil title is-1 has-text-centered is-uppercase">Conocimiento</h1>
         </div>
     </div>
-</div>
-<div class="container mg-large mt-6 mb-6 is-hidden-touch">
-    <div class="section">
-        <div class="row columns is-multiline">
-            <div class="column is-4" *ngFor="let item of listaTitulos">
-                <figure class="image zoom is-16by9">
-                    <img src="{{item.imagen}}" alt="Camilo Castellanos - {{item.titulo}}" />
-                </figure>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="container mt-6 mb-6 is-centered is-hidden-desktop">
-    <div class="timeline">
-        <div class="timeline-month has-text-white">
-            Cerificados
-            <span> Total de Certificados: {{listaTitulos.length}}</span>
-        </div>
-
-        <div class="timeline-section" *ngFor="let item of listaTitulos">
-            <div class="timeline-date has-text-light">
-                {{item.titulo}}
-            </div>
-            <div class="row">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img src="{{item.imagen}}" alt="Camilo Castellanos - {{item.titulo}}" />
-                        </figure>
-                    </div>
+    <!-- Imagenes Zoom -->
+    <div class="container is-hidden-touch">
+        <div class="section">
+            <div class="row columns is-multiline">
+                <div class="column is-4" *ngFor="let item of listaTitulos">
+                    <figure class="image zoom is-16by9">
+                        <img src="{{item.imagen}}" alt="Camilo Castellanos - {{item.titulo}}" />
+                    </figure>
                 </div>
             </div>
         </div>
-
     </div>
-</div>
+
+    <!-- Imagenes Lista -->
+    <div class="container is-hidden-desktop">
+        <div class="box" *ngFor="let item of listaTitulos">
+            <figure class="image is-5by3">
+                <img src="{{item.imagen}}" alt="Camilo Castellanos - {{item.titulo}}" />
+            </figure>
+        </div>
+    </div>
+</section>
