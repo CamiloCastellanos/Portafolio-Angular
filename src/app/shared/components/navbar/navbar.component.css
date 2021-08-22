@@ -1,9 +1,9 @@
 .navbar {
-    background: #007F6E;
+    background-color: transparent;
 }
 
 .navbar-menu {
-    background: #007F6E;
+    background-color: transparent;
 }
 
 nav a,
@@ -12,58 +12,79 @@ nav a:before {
     transition: all .5s;
 }
 
+#logo {
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar-end {
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.no-seleccion-texto {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+      supported by Chrome, Edge, Opera and Firefox
+      */
+}
+
 
 /*Color del Hover en el navBar*/
 
-nav.relleno a {
-    position: relative;
+.navbar-item:hover,
+.navbar-item:focus {
+    background-color: transparent;
+    border-radius: 50px;
 }
 
-nav.relleno a:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0%;
-    content: '.';
-    color: transparent;
-    background: white;
+a {
+    text-decoration: none;
+    background-image: -webkit-linear-gradient(currentColor, currentColor);
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.5rem;
+    transition: background-size .3s;
+    border-bottom: 4px solid transparent;
 }
 
-nav.relleno a {
-    transition: all 2s;
-    background: #007F6E;
-}
-
-nav.relleno a:hover {
-    color: white;
-    z-index: 1;
-}
-
-nav.relleno a:hover:after {
-    z-index: -10;
-    animation: relleno 1s forwards;
-    -webkit-animation: relleno 1s forwards;
-    -moz-animation: relleno 1s forwards;
-    opacity: 1;
+a:hover {
+    background-size: 100% 0.5rem;
 }
 
 
-/* Keyframes */
+/* Manejo responsive menu */
 
-@-webkit-keyframes relleno {
-    0% {
-        width: 0%;
-        height: 1px;
+@media screen and (max-width: 1024px - 1px) {
+    #logo {
+        display: none;
     }
-    50% {
-        width: 100%;
-        height: 1px;
+    .force-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    100% {
-        width: 100%;
-        height: 100%;
-        background: #00C2A5;
+    .navbar-end {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar-brand {
+        display: none;
     }
 }

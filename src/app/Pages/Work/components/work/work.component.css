@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 
+/*
+Credits https://codepen.io/letsbleachthis/pen/YJgNpv
+https://freefrontend.com/css-timelines/
+*/
+
+
 /*Estilo del Hover*/
 
 .imagen {
@@ -134,7 +140,8 @@ figure.snip0015:hover figcaption::before {
     font-size: 1em;
     line-height: 1.75em;
     border-top: 3px solid;
-    border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+    border-image: -webkit-linear-gradient(to left, #bbd2c5, #536976, #292e49);
+    border-image: linear-gradient(to left, #bbd2c5, #536976, #292e49);
     border-image-slice: 1;
     border-width: 3px;
     counter-increment: section;

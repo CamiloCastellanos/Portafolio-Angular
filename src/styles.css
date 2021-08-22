@@ -2,6 +2,15 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html {
+    background: #348F50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #56B4D3, #348F50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #56B4D3, #348F50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .contenedorTitulo {
     width: 100%;
     margin-right: auto;
@@ -21,8 +30,8 @@
 
 .textoDetras {
     font-size: calc(1.95rem + 4.4vw)!important;
-    color: #c0c0c0!important;
-    opacity: .5;
+    color: #dee9ed!important;
+    opacity: .7;
     font-weight: 610!important;
     width: 100%!important;
     margin-bottom: 0!important;
@@ -40,8 +49,8 @@
 
 .textoDetrasMovil {
     font-size: calc(1.95rem + 2.0vw)!important;
-    color: #c0c0c0 !important;
-    opacity: .5;
+    color: #dee9ed !important;
+    opacity: .7;
     font-weight: 610!important;
     width: 100%!important;
     margin-bottom: 0!important;
@@ -51,20 +60,20 @@
 /*Cambio en el ScrollBar del Navegador*/
 
 body::-webkit-scrollbar {
-    background: #007F6E;
+    background: #348F50;
     width: 0.7rem;
 }
 
 body::-webkit-scrollbar-track {
-    background: #007F6E;
+    background: #348F50;
     border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #00C2A5;
+    background: #4FDB79;
     border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb:active {
-    background: #00C2A5;
+    background: #4FDB79;
 }

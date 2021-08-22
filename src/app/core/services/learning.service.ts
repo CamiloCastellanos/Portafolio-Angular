@@ -26,6 +26,18 @@ export class LearningService {
         {
           "titulo": "Fundamentos de Typescript",
           "imagen": "https://i.postimg.cc/X7kptbQB/diploma-fundamentos-typescript.jpg"
+        },
+        {
+          "titulo": "Curso Profesional de Git y GitHub",
+          "imagen": "https://i.postimg.cc/7YL1yZ5n/diploma-git-github.jpg"
+        },
+        {
+          "titulo": "Markdown Desde Cero",
+          "imagen": "https://i.postimg.cc/ZRKnyCtf/certificado-curso-markdown.png"
+        },
+        {
+          "titulo": "Aprende Typescript",
+          "imagen": "https://i.postimg.cc/SKXz2sB7/Aprende-Type-Script.jpg"
         }
       ]
     }
