@@ -19,7 +19,7 @@ export class LayoutComponent implements OnInit {
   particlesOptions = {
     background: {
       color: {
-        value: "#fff"
+        value: "transparent"
       }
     },
     fullScreen: {
@@ -50,10 +50,10 @@ export class LayoutComponent implements OnInit {
     },
     particles: {
       color: {
-        value: "#00C2A5"
+        value: ["#dee9ed","#4BF27D","#348F50","#56B4D3","#4BF2CE"]
       },
       links: {
-        color: "#007F6E",
+        color: ["#dee9ed"],
         distance: 150,
         enable: true,
         opacity: 0.2,

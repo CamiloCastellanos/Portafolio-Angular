@@ -17,7 +17,7 @@ export class ToolsLanguagesService {
       "aprendiendo": [
         {
           "nombre": ".NET",
-          "imagen": "https://i.postimg.cc/k4wcJqjN/net.png",
+          "imagen": "https://i.postimg.cc/pd085GYw/net.png",
           "estado": 2
         },
         {
@@ -57,7 +57,7 @@ export class ToolsLanguagesService {
         },
         {
           "nombre": "Oracle SQL",
-          "imagen": "https://i.postimg.cc/MH6jGBcX/Oracle-SQL.png",
+          "imagen": "https://i.postimg.cc/MpfVfbrH/Oracle-SQL.png",
           "estado":0
         },
         {
@@ -94,6 +94,11 @@ export class ToolsLanguagesService {
           "nombre": "Postman",
           "imagen": "https://i.postimg.cc/25v1CG5C/Postman.png",
           "estado":2
+        },
+        {
+          "nombre": "Firebase",
+          "imagen": "https://i.postimg.cc/pLkHFTq6/firebase.png",
+          "estado":1
         }
       ]
     }
