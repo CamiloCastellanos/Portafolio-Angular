@@ -41,12 +41,9 @@ li:nth-child(2) i:hover {
     color: #ffffff;
 }
 
-li:hover:nth-child(3) {
+li:nth-child(3) i:hover {
     background: #47b6f5;
-}
-
-li:hover:nth-child(4) {
-    background: #47b6f5;
+    color: #ffffff;
 }
 
 i {
