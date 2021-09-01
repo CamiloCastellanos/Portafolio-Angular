@@ -11,20 +11,7 @@ html {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.contenedorTitulo {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
-}
-
 .textoEncima {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem!important;
-    width: 100%!important;
     font-weight: 610!important;
 }
 
@@ -33,17 +20,9 @@ html {
     color: #dee9ed!important;
     opacity: .7;
     font-weight: 610!important;
-    width: 100%!important;
-    margin-bottom: 0!important;
 }
 
 .textoEncimaMovil {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.95rem!important;
-    width: 100%!important;
     font-weight: 610!important;
 }
 
@@ -52,8 +31,6 @@ html {
     color: #dee9ed !important;
     opacity: .7;
     font-weight: 610!important;
-    width: 100%!important;
-    margin-bottom: 0!important;
 }
 
 
