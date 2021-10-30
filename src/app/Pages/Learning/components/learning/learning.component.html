@@ -1,15 +1,9 @@
 <section class="section">
 
     <!-- Titulos -->
-    <div class="has-text-centered mt-6">
-        <div class="is-hidden-touch">
-            <h1 class="textoDetras title is-1 is-uppercase">Seguir Aprendiendo</h1>
-            <h1 class="textoEncima title is-2 is-uppercase">Conocimiento</h1>
-        </div>
-        <div class="contenedorTitulo is-hidden-desktop">
-            <h1 class="textoDetrasMovil title is-1 is-uppercase">Seguir Aprendiendo</h1>
-            <h1 class="textoEncimaMovil title is-2 is-uppercase">Conocimiento</h1>
-        </div>
+    <div class="has-text-centered">
+        <h1 class="textoDetras title is-2 is-uppercase">Seguir Aprendiendo</h1>
+        <h1 class="textoEncima subtitle is-uppercase">Conocimiento</h1>
     </div>
 
     <!-- Imagenes Zoom -->
@@ -27,7 +21,7 @@
 
     <!-- Imagenes Lista -->
     <div class="container is-hidden-desktop">
-        <div class="section">
+        <div class="section transparent">
             <div class="box" *ngFor="let item of listaTitulos">
                 <figure class="image is-5by3">
                     <img src="{{item.imagen}}" alt="Camilo Castellanos - {{item.titulo}}" />

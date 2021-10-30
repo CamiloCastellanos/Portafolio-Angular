@@ -1,34 +1,12 @@
-<div class="section">
-    <div class="has-text-centered mt-6">
-        <div class="is-hidden-touch">
-            <h1 class="textoDetras title is-1 is-uppercase">Donde he Trabajado</h1>
-            <h1 class="textoEncima title is-2 is-uppercase">Mi Experiencia</h1>
-        </div>
-        <div class="is-hidden-desktop">
-            <h1 class="textoDetrasMovil title is-1 is-uppercase">Donde he Trabajado</h1>
-            <h1 class="textoEncimaMovil title is-2 is-uppercase">Mi Experiencia</h1>
-        </div>
-    </div>
-</div>
-<div class="is-centered contenedorLineaTiempo mb-6 is-hidden-touch">
+<div class=" section">
     <div class="container">
-        <div class="columns is-multiline momentoLineaTiempo" *ngFor="let trabajo of listaTrabajo">
-            <figure class="image snip0015 mt-6 mb-6 mr-6 ml-6">
-                <img src="{{trabajo.imagen}}" class="imagen" alt="Camilo Castellanos trabajo en {{trabajo.titulo | uppercase}}" />
-                <figcaption>
-                    <h2 class="has-text-centered">{{trabajo.titulo | uppercase}}</h2>
-                    <p class="has-text-centered">{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
-                    <p class="has-text-centered">Cargo: {{trabajo.descripcion | uppercase}}</p>
-                    <a href="{{trabajo.url}}" target="_blank"></a>
-                </figcaption>
-            </figure>
-        </div>
-    </div>
-</div>
 
-<div class="container">
-    <div class="section">
-        <div class="row columns is-multiline is-hidden-desktop">
+        <div class="has-text-centered">
+            <h1 class="textoDetras title is-2 is-uppercase">Donde he Trabajado</h1>
+            <h1 class="textoEncima subtitle is-uppercase">Mi Experiencia</h1>
+        </div>
+
+        <div class="row mt-6 columns is-multiline is-hidden-desktop">
             <div *ngFor="let trabajo of listaTrabajo" class="column is-4">
                 <div class="card large">
                     <div class="card-image">
@@ -59,5 +37,22 @@
             </div>
 
         </div>
+
+        <div class="mt-6 is-centered contenedorLineaTiempo is-hidden-touch">
+            <div class="container">
+                <div class="columns is-multiline momentoLineaTiempo" *ngFor="let trabajo of listaTrabajo">
+                    <figure class="image snip0015 mt-6 mb-6 mr-6 ml-6">
+                        <img src="{{trabajo.imagen}}" class="imagen" alt="Camilo Castellanos trabajo en {{trabajo.titulo | uppercase}}" />
+                        <figcaption>
+                            <h2 class="has-text-centered">{{trabajo.titulo | uppercase}}</h2>
+                            <p class="has-text-centered">{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
+                            <p class="has-text-centered">Cargo: {{trabajo.descripcion | uppercase}}</p>
+                            <a href="{{trabajo.url}}" target="_blank"></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

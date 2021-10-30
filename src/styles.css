@@ -16,41 +16,12 @@ html {
 }
 
 .textoDetras {
-    font-size: calc(1.95rem + 4.4vw)!important;
+    /* font-size: calc(1.95rem + 4.4vw)!important; */
     color: #dee9ed!important;
     opacity: .7;
     font-weight: 610!important;
 }
 
-.textoEncimaMovil {
-    font-weight: 610!important;
-}
-
-.textoDetrasMovil {
-    font-size: calc(1.95rem + 2.0vw)!important;
-    color: #dee9ed !important;
-    opacity: .7;
-    font-weight: 610!important;
-}
-
-
-/*Cambio en el ScrollBar del Navegador*/
-
-body::-webkit-scrollbar {
-    background: #348F50;
-    width: 0.7rem;
-}
-
-body::-webkit-scrollbar-track {
-    background: #348F50;
-    border-radius: 5px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #4FDB79;
-    border-radius: 5px;
-}
-
-body::-webkit-scrollbar-thumb:active {
-    background: #4FDB79;
+.transparente {
+    opacity: .6;
 }
