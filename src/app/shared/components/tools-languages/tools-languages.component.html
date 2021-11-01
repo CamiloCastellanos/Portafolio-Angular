@@ -5,9 +5,21 @@
             <h3 class="subtitle is-muted">Frameworks / Tecnologias / Lenguajes / Herramientas</h3>
         </div>
 
-        <div class="content-wrapper mt-6">
+        <div class="content-wrapper mt-6 is-hidden-touch">
             <div class="row columns is-centered is-multiline has-text-centered">
                 <div class="column is-3" *ngFor="let herramienta of listaHerramientas">
+                    <figure class="icon is-large">
+                        <img src="{{herramienta.imagen}}" alt="Camilo Castellanos - Ha utilizado {{herramienta.nombre}}">
+                    </figure>
+                    <h4>{{herramienta.nombre}}</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 is-hidden-desktop">
+            <!-- Start Carousel -->
+            <div id="carousel" class="carousel has-text-centered">
+                <div class="item-1" *ngFor="let herramienta of listaHerramientas">
                     <figure class="icon is-large">
                         <img src="{{herramienta.imagen}}" alt="Camilo Castellanos - Ha utilizado {{herramienta.nombre}}">
                     </figure>

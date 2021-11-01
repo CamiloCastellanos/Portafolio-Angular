@@ -25,3 +25,7 @@ html {
 .transparente {
     opacity: .6;
 }
+
+.carousel {
+    overflow: hidden;
+}
