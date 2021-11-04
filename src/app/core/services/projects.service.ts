@@ -13,6 +13,10 @@ export class ProjectsService {
   constructor(private fireStore: AngularFirestore) {
   }
 
+  /**
+   * Lista de Proyectos Personales
+   * @returns
+   */
   cargarProyectos(): Observable<any> {
     return this.fireStore.collection("proyectos").snapshotChanges();
   }

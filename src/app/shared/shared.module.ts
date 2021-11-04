@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { RouterModule } from '@angular/router';
 import { ToolsLanguagesComponent } from './components/tools-languages/tools-languages.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,13 @@ import { ToolsLanguagesComponent } from './components/tools-languages/tools-lang
     FooterComponent,
     ContactFormComponent,
     SocialNetworkComponent,
-    ToolsLanguagesComponent
+    ToolsLanguagesComponent,
+    TranslateModule
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ]
 })
 export class SharedModule { }

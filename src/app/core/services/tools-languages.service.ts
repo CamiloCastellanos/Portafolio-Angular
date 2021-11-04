@@ -11,7 +11,9 @@ export class ToolsLanguagesService {
   constructor() {
     this.cargarHerramientas();
   }
-
+  /**
+   * Lista de Herramientas de desarrollo
+   */
   cargarHerramientas() {
     let learningJSON = {
       "aprendiendo": [
@@ -38,27 +40,27 @@ export class ToolsLanguagesService {
         {
           "nombre": "SQL Server",
           "imagen": "https://i.postimg.cc/3JpHwqT4/SQLServer.png",
-          "estado":2
+          "estado": 2
         },
         {
           "nombre": "Visual Studio",
           "imagen": "https://i.postimg.cc/T1GyhD4B/Visual-Studio.png",
-          "estado":2
+          "estado": 2
         },
         {
           "nombre": "Visual Studio Code",
           "imagen": "https://i.postimg.cc/Prk2HVr5/Visual-Studio-Code.png",
-          "estado":2
+          "estado": 2
         },
         {
           "nombre": "Power BI",
           "imagen": "https://i.postimg.cc/Pf0jTjBn/PowerBi.png",
-          "estado":2
+          "estado": 2
         },
         {
           "nombre": "Oracle SQL",
           "imagen": "https://i.postimg.cc/MpfVfbrH/Oracle-SQL.png",
-          "estado":0
+          "estado": 0
         },
         {
           "nombre": "Ionic",
@@ -93,12 +95,12 @@ export class ToolsLanguagesService {
         {
           "nombre": "Postman",
           "imagen": "https://i.postimg.cc/25v1CG5C/Postman.png",
-          "estado":2
+          "estado": 2
         },
         {
           "nombre": "Firebase",
           "imagen": "https://i.postimg.cc/pLkHFTq6/firebase.png",
-          "estado":1
+          "estado": 1
         }
       ]
     }

@@ -12,6 +12,9 @@ export class LearningService {
     this.cargarAprendiendo();
   }
 
+  /**
+   * Lista de Certificados
+   */
   cargarAprendiendo() {
     let learningJSON = {
       "aprendiendo": [

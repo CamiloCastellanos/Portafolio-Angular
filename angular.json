@@ -26,7 +26,8 @@
                             "src/styles.css",
                             "node_modules/bulma/css/bulma.min.css",
                             "node_modules/font-awesome/css/font-awesome.min.css",
-                            "node_modules/bulma-carousel/dist/css/bulma-carousel.min.css"
+                            "node_modules/bulma-carousel/dist/css/bulma-carousel.min.css",
+                            "node_modules/@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css"
                         ],
                         "scripts": [
                             "node_modules/bulma-carousel/dist/js/bulma-carousel.min.js"
@@ -102,7 +103,8 @@
                             "src/styles.css",
                             "node_modules/bulma/css/bulma.min.css",
                             "node_modules/font-awesome/css/font-awesome.min.css",
-                            "node_modules/bulma-carousel/dist/css/bulma-carousel.min.css"
+                            "node_modules/bulma-carousel/dist/css/bulma-carousel.min.css",
+                            "node_modules/@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css"
                         ],
                         "scripts": [
                             "node_modules/bulma-carousel/dist/js/bulma-carousel.min.js"

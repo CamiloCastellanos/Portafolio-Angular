@@ -2,8 +2,8 @@
     <div class="container">
 
         <div class="has-text-centered">
-            <h1 class="textoDetras title is-2 is-uppercase">Donde he Trabajado</h1>
-            <h1 class="textoEncima subtitle is-uppercase">Mi Experiencia</h1>
+            <h1 class="textoDetras title is-2 is-uppercase">{{ "TITULO_WORK" | translate }}</h1>
+            <h1 class="textoEncima subtitle is-uppercase">{{ "SUBTITULO_WORK" | translate }}</h1>
         </div>
 
         <div class="row mt-6 columns is-multiline is-hidden-desktop">
@@ -21,8 +21,11 @@
                                 <p>
                                     <span class="subtitle is-6">
                                         <p>{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
-                                        <p>Cargo:</p>
-                                        <p>{{trabajo.descripcion | uppercase}}</p>
+                                        <p *ngIf="idiomaPagina == 'es'">Cargo:</p>
+                                        <p *ngIf="idiomaPagina == 'es'">{{trabajo.descripcion | uppercase}}</p>
+
+                                        <p *ngIf="idiomaPagina == 'en'">Position :</p>
+                                        <p *ngIf="idiomaPagina == 'en'">{{trabajo.descripcionEN | uppercase}}</p>
                                     </span>
                                 </p>
                             </div>
@@ -46,7 +49,8 @@
                         <figcaption>
                             <h2 class="has-text-centered">{{trabajo.titulo | uppercase}}</h2>
                             <p class="has-text-centered">{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
-                            <p class="has-text-centered">Cargo: {{trabajo.descripcion | uppercase}}</p>
+                            <p class="has-text-centered" *ngIf="idiomaPagina == 'es'">Cargo: {{trabajo.descripcion | uppercase}}</p>
+                            <p class="has-text-centered" *ngIf="idiomaPagina == 'en'">Position: {{trabajo.descripcionEn | uppercase}}</p>
                             <a href="{{trabajo.url}}" target="_blank"></a>
                         </figcaption>
                     </figure>

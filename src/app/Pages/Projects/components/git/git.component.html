@@ -2,8 +2,8 @@
     <div>
         <div class="container">
             <div class="has-text-centered mb-6">
-                <h1 class="textoDetras title is-2 is-uppercase">Proyectos Personales</h1>
-                <h1 class="textoEncima subtitle is-uppercase">Creaciones</h1>
+                <h1 class="textoDetras title is-2 is-uppercase">{{ "TITULO_PROJECT" | translate }}</h1>
+                <h1 class="textoEncima subtitle is-uppercase">{{ "SUBTITULO_PROJECT" | translate }}</h1>
             </div>
             <!-- Vista para Computadores -->
             <div class="containerLibro mt-6 my-3 is-hidden-touch" href="#">
@@ -13,8 +13,10 @@
                             <img src="{{proyecto.imagen2}}" alt="Camilo Castellanos - {{proyecto.titulo}}" width=" 300px" height="400px">
                         </div>
                         <div class="contenido">
-                            <h2 class="title is-3 has-text-centered">{{proyecto.titulo}}</h2>
-                            <p class="has-text-justified "> {{proyecto.descripcion}}</p>
+                            <h2 class="title is-3 has-text-centered" *ngIf="idiomaPagina == 'es'">{{proyecto.titulo}}</h2>
+                            <p class="has-text-justified " *ngIf="idiomaPagina == 'es'"> {{proyecto.descripcion}}</p>
+                            <h2 class="title is-3 has-text-centered" *ngIf="idiomaPagina == 'en'">{{proyecto.tituloEN}}</h2>
+                            <p class="has-text-justified " *ngIf="idiomaPagina == 'en'"> {{proyecto.descripcionEN}}</p>
                         </div>
                     </a>
                 </div>
@@ -36,10 +38,12 @@
                                     </figure>
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4 no-padding"> {{proyecto.titulo | uppercase}} </p>
+                                    <p class="title is-4 no-padding" *ngIf="idiomaPagina == 'es'"> {{proyecto.titulo | uppercase}} </p>
+                                    <p class="title is-4 no-padding" *ngIf="idiomaPagina == 'en'"> {{proyecto.tituloEN | uppercase}} </p>
                                     <p>
                                         <span class="is-6">
-                                        <p class="has-text-justified"> {{proyecto.descripcion}}</p>
+                                        <p class="has-text-justified" *ngIf="idiomaPagina == 'es'"> {{proyecto.descripcion}}</p>
+                                        <p class="has-text-justified" *ngIf="idiomaPagina == 'en'"> {{proyecto.descripcionEN}}</p>
                                     </span>
                                     </p>
                                 </div>

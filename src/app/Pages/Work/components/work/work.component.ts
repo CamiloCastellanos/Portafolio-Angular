@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Work } from 'src/app/models/work.model';
 import { WorksService } from '../../../../core/services/works.service';
+import { TranslateService } from '@ngx-translate/core';
+import { frases, lenguajes } from 'src/app/Common/GlobalVariables';
 
 @Component({
   selector: 'app-work',
@@ -11,10 +13,18 @@ import { WorksService } from '../../../../core/services/works.service';
 export class WorkComponent implements OnInit {
 
   listaTrabajo: Work[] = [];
+  idiomaPagina: String = "es";
 
-  constructor(private servicioTrabajo: WorksService,
-    private spinnerService: NgxSpinnerService) {
+  constructor(
+    private servicioTrabajo: WorksService,
+    private spinnerService: NgxSpinnerService,
+    private translate: TranslateService) {
     this.listaTrabajos();
+    if (this.translate.currentLang == lenguajes.es) {
+      this.idiomaPagina = lenguajes.es;
+    } else {
+      this.idiomaPagina = lenguajes.en;
+    }
   }
 
   ngOnInit(): void {
@@ -27,10 +37,10 @@ export class WorkComponent implements OnInit {
     this.servicioTrabajo.cargarTrabajos().subscribe(data => {
 
       data.forEach(element => {
-
         let trabajo = new Work();
         trabajo.titulo = element.payload.doc.data().titulo;
         trabajo.descripcion = element.payload.doc.data().descripcion;
+        trabajo.descripcionEN = element.payload.doc.data().descripcionEN;
         trabajo.imagen = element.payload.doc.data().imagen;
         trabajo.url = element.payload.doc.data().url;
         trabajo.fechaInicio = element.payload.doc.data().fechaInicio;

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LearningComponent } from './components/learning/learning.component';
 import { LearningRoutingModule } from './learning.routes';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { LearningRoutingModule } from './learning.routes';
   ],
   imports: [
     CommonModule,
-    LearningRoutingModule
+    LearningRoutingModule,
+    SharedModule
   ]
 })
 export class LearningModule { }

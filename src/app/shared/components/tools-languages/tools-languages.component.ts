@@ -38,7 +38,7 @@ export class ToolsLanguagesComponent implements OnInit, AfterViewInit {
       slidesToShow: 1,
       autoplay: true,
       loop: true,
-      pagination: true,
+      pagination: false,
       infinite: true
     });
   }

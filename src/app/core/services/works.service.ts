@@ -10,9 +10,12 @@ export class WorksService {
 
   constructor(private fireStore: AngularFirestore) {
   }
-
+  /**
+   * Lista de Trabajos
+   * @returns
+   */
   cargarTrabajos(): Observable<any> {
-    return this.fireStore.collection("trabajos",ref => ref.orderBy('orden','desc')).snapshotChanges();
+    return this.fireStore.collection("trabajos", ref => ref.orderBy('orden', 'desc')).snapshotChanges();
   }
 
 }
