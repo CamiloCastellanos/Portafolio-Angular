@@ -26,6 +26,7 @@
     "@ngx-translate/http-loader": "^6.0.0",
     "bulma": "^0.9.3",
     "bulma-carousel": "^4.0.24",
+    "bulma-tooltip": "^3.0.2",
     "firebase": "^8.7.1",
     "font-awesome": "^4.7.0",
     "fs-extra": "^10.0.0",

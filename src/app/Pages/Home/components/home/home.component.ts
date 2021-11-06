@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { lenguajes } from 'src/app/Common/GlobalVariables';
 import { frases } from '../../../../Common/GlobalVariables';
 @Component({
@@ -9,14 +9,13 @@ import { frases } from '../../../../Common/GlobalVariables';
 })
 export class HomeComponent implements OnInit {
 
-  public fraseHome: string[] = [];
+  fraseHome: string[] = [frases.es,frases.en];
+  idiomaPagina: String = "es";
 
   constructor(private translate: TranslateService) {
-    if (this.translate.currentLang == lenguajes.es) {
-      this.fraseHome.push(frases.es);
-    } else {
-      this.fraseHome.push(frases.en);
-    }
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.idiomaPagina = event.lang
+    });
   }
 
   ngOnInit(): void {

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Work } from 'src/app/models/work.model';
 import { WorksService } from '../../../../core/services/works.service';
-import { TranslateService } from '@ngx-translate/core';
-import { frases, lenguajes } from 'src/app/Common/GlobalVariables';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-work',
@@ -20,11 +19,9 @@ export class WorkComponent implements OnInit {
     private spinnerService: NgxSpinnerService,
     private translate: TranslateService) {
     this.listaTrabajos();
-    if (this.translate.currentLang == lenguajes.es) {
-      this.idiomaPagina = lenguajes.es;
-    } else {
-      this.idiomaPagina = lenguajes.en;
-    }
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.idiomaPagina = event.lang
+    });
   }
 
   ngOnInit(): void {

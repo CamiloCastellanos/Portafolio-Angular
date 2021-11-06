@@ -30,9 +30,4 @@ export class AppComponent {
       window.scrollTo(0, 0)
     });
   }
-
-  CambioIdioma(idiomaSeleccionado: lenguajes) {
-    this.translate.use(idiomaSeleccionado.valueOf());
-  }
-
 }
