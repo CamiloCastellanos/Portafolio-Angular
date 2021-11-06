@@ -75,6 +75,11 @@ a:hover {
     background-size: 100% 0.5rem;
 }
 
+.idiomas {
+    border-radius: 50px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 
 /* Manejo responsive menu */
 
