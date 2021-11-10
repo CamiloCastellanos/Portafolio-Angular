@@ -18,7 +18,7 @@ export class AppComponent {
     if (lenguajeNavegador.toString().indexOf("en") !== -1) {
       this.translate.use(lenguajes.en.toString());
     } else {
-      this.translate.use(lenguajes.en.toString());
+      this.translate.use(lenguajes.es.toString());
     }
   }
 
