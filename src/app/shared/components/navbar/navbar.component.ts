@@ -18,6 +18,16 @@ export class NavbarComponent implements OnInit {
     var menu = document.querySelector('#navBarMenu');
     burger.classList.toggle('is-active');
     menu.classList.toggle('is-active');
+
+    if(document.getElementById("overlay").classList.contains("overlay") ){
+      document.getElementById("overlay").classList.remove("overlay");
+      document.getElementById("menuMovil").classList.remove("is-fixed-top");
+
+    }else{
+      document.getElementById("overlay").classList.add("overlay");
+      document.getElementById("menuMovil").classList.add("is-fixed-top");
+    }
+    window.scrollTo(0, 0)
   }
 
   recoger(): void {
@@ -25,6 +35,8 @@ export class NavbarComponent implements OnInit {
     var menu = document.querySelector('#navBarMenu');
     burger.classList.remove('is-active');
     menu.classList.remove('is-active');
+    document.getElementById("overlay").classList.remove("overlay");
+    window.scrollTo(0, 0)
   }
 
   CambioIdioma(idiomaSeleccionado: string) {
