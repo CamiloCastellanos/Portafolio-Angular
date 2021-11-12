@@ -39,7 +39,7 @@ export class GitComponent implements OnInit {
         proyecto.tituloEN = element.payload.doc.data().tituloEN;
         proyecto.lenguaje = element.payload.doc.data().lenguaje;
         proyecto.descripcion = element.payload.doc.data().descripcion;
-        proyecto.descipcionEN = element.payload.doc.data().descripcionEN;
+        proyecto.descripcionEN = element.payload.doc.data().descripcionEN;
         proyecto.imagen = element.payload.doc.data().imagen;
         proyecto.imagen2 = element.payload.doc.data().imagen2;
         proyecto.url = element.payload.doc.data().url;

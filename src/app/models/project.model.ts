@@ -3,7 +3,7 @@ export class Project {
   tituloEN: String;
   lenguaje: string;
   descripcion: string;
-  descipcionEN: string;
+  descripcionEN: string;
   imagen: string;
   imagen2: string;
   url: string;
@@ -13,7 +13,7 @@ export class Project {
     this.tituloEN = "";
     this.lenguaje = "";
     this.descripcion = "";
-    this.descipcionEN = "";
+    this.descripcionEN = "";
     this.imagen = "";
     this.imagen2 = "";
     this.url;

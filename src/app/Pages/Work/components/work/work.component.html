@@ -50,7 +50,7 @@
                             <h2 class="has-text-centered">{{trabajo.titulo | uppercase}}</h2>
                             <p class="has-text-centered">{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
                             <p class="has-text-centered" *ngIf="idiomaPagina == 'es'">Cargo: {{trabajo.descripcion | uppercase}}</p>
-                            <p class="has-text-centered" *ngIf="idiomaPagina == 'en'">Position: {{trabajo.descripcionEn | uppercase}}</p>
+                            <p class="has-text-centered" *ngIf="idiomaPagina == 'en'">Position: {{trabajo.descripcionEN | uppercase}}</p>
                             <a href="{{trabajo.url}}" target="_blank"></a>
                         </figcaption>
                     </figure>
