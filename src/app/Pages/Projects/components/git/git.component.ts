@@ -25,6 +25,7 @@ export class GitComponent implements OnInit {
 
   ngOnInit(): void {
     this.spinnerService.show();
+    this.idiomaPagina =  this.translate.currentLang;
   }
 
   listaProyectos() {

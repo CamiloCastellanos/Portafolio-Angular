@@ -6,6 +6,7 @@ export class Work {
   url: string;
   fechaInicio: string;
   fechaFin: string;
+  fechaFinEN: string;
 
   constructor() {
     this.titulo = "";
@@ -15,6 +16,7 @@ export class Work {
     this.url = "#";
     this.fechaFin = "Actual";
     this.fechaInicio = "";
+    this.fechaFin = "Present";
   }
 
 }

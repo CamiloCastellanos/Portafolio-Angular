@@ -26,6 +26,7 @@ export class WorkComponent implements OnInit {
 
   ngOnInit(): void {
     this.spinnerService.show();
+    this.idiomaPagina =  this.translate.currentLang;
   }
 
   listaTrabajos() {
@@ -42,6 +43,7 @@ export class WorkComponent implements OnInit {
         trabajo.url = element.payload.doc.data().url;
         trabajo.fechaInicio = element.payload.doc.data().fechaInicio;
         trabajo.fechaFin = element.payload.doc.data().fechaFin;
+        trabajo.fechaFinEN =element.payload.doc.data().fechaFinEN;
         this.listaTrabajo.push(trabajo);
       });
 
