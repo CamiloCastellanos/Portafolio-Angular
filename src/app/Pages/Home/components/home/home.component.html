@@ -1,38 +1,31 @@
 <section class="section is-fullheight">
     <div class="container">
-        <div class="has-text-centered  is-hidden-touch">
-            <div class="columns">
+        <div class="cajaPadre has-text-centered is-hidden-touch">
+            <div class="cajaFoto">
+                <figure class="image">
+                    <img src="https://i.postimg.cc/TwbjKTTK/Camilo-Castellanos.jpg" class="is-rounded" alt="Juan Camilo Castellanos Puentes - Camilo Castellanos">
+                </figure>
+            </div>
+            <div class="cajaSaludo">
+                <h1 class="has-text-centered is-size-4">
+                    <strong class="title is-2">{{ "SALUDO_HOME" | translate }}</strong>
+                </h1>
+                <p class="has-text-centered is-size-4">
+                    <strong class="has-text-light">{{"NOMBRE_HOME"|translate}}</strong>
+                </p>
+                <p class="has-text-centered is-size-4">
+                    <strong class="">{{"SUBTITULO_HOME"|translate}}</strong>
+                </p>
+            </div>
+            <div class="cajaFrase pl-1">
+                <div class="box has-background-success-dark transparente ">
+                    <ngx-typed-js [strings]="[fraseHome[0]]" [shuffle]="true" [typeSpeed]="150" [backSpeed]="50" [backDelay]="500" [startDelay]="1000" [loop]="true" class="is-size-5 is-uppercase has-text-white-ter" *ngIf="idiomaPagina == 'es'">
+                        <span class="typing"></span>
+                    </ngx-typed-js>
 
-                <div class="column">
-                    <figure class="image">
-                        <img src="https://i.postimg.cc/TwbjKTTK/Camilo-Castellanos.jpg" class="is-rounded" alt="Juan Camilo Castellanos Puentes - Camilo Castellanos">
-                    </figure>
-                </div>
-
-                <!-- Descripcion -->
-
-                <div class="column">
-                    <div class="row">
-                        <h1 class="has-text-centered is-size-4">
-                            <strong class="title is-2">{{ "SALUDO_HOME" | translate }}</strong>
-                        </h1>
-                        <p class="has-text-centered is-size-4">
-                            <strong class="has-text-light">{{"NOMBRE_HOME"|translate}}</strong>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <div class="row">
-                            <div class="box has-background-success-dark transparente">
-                                <ngx-typed-js [strings]="[fraseHome[0]]" [shuffle]="true" [typeSpeed]="150" [backSpeed]="50" [backDelay]="500" [startDelay]="1000" [loop]="true" class="title is-3 is-uppercase has-text-white-ter" *ngIf="idiomaPagina == 'es'">
-                                    <span class="typing"></span>
-                                </ngx-typed-js>
-
-                                <ngx-typed-js [strings]="[fraseHome[1]]" [shuffle]="true" [typeSpeed]="150" [backSpeed]="50" [backDelay]="500" [startDelay]="1000" [loop]="true" class="title is-3 is-uppercase has-text-white-ter" *ngIf="idiomaPagina == 'en'">
-                                    <span class="typing"></span>
-                                </ngx-typed-js>
-                            </div>
-                        </div>
-                    </div>
+                    <ngx-typed-js [strings]="[fraseHome[1]]" [shuffle]="true" [typeSpeed]="150" [backSpeed]="50" [backDelay]="500" [startDelay]="1000" [loop]="true" class="is-size-5 is-uppercase has-text-white-ter" *ngIf="idiomaPagina == 'en'">
+                        <span class="typing"></span>
+                    </ngx-typed-js>
                 </div>
             </div>
         </div>
@@ -45,8 +38,6 @@
                         <img src="https://i.postimg.cc/TwbjKTTK/Camilo-Castellanos.jpg" class="is-rounded" alt="Juan Camilo Castellanos Puentes - Camilo Castellanos">
                     </figure>
                 </div>
-
-                <!-- Descripcion -->
 
                 <div class="column">
                     <div class="row">
