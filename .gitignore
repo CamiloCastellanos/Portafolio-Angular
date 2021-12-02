@@ -46,3 +46,5 @@ testem.log
 Thumbs.db
 .firebase/hosting.ZGlzdFxQb3J0YWZvbGlvLUFuZ3VsYXI.cache
 (public)/index.html
+src/environments/environment.ts
+src/environments/environment.prod.ts
