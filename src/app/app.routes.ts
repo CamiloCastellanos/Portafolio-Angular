@@ -1,4 +1,4 @@
-import { RouterModule, Routes } from '@angular/router'
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router'
 import { HomeModule } from './Pages/Home/home.module';
 import { ProjectsModule } from './Pages/Projects/projects.module';
 import { WorkModule } from './Pages/Work/work.module';
@@ -22,4 +22,11 @@ const APP_ROUTES: Routes = [
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 
-export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, { relativeLinkResolution: 'legacy' });
+export const APP_ROUTING = RouterModule.forRoot
+  (
+    APP_ROUTES,
+    {
+      preloadingStrategy: PreloadAllModules,
+      relativeLinkResolution: 'legacy'
+    }
+  );
