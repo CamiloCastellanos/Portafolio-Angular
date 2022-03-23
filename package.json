@@ -32,6 +32,7 @@
     "font-awesome": "^4.7.0",
     "fs-extra": "^10.0.0",
     "ng-particles": "^2.16.3",
+    "ngx-mzd-timeline": "^1.0.3",
     "ngx-spinner": "^10.0.1",
     "ngx-toastr": "^13.2.1",
     "ngx-typed-js": "^2.1.0",

@@ -21,15 +21,20 @@
 
     <!-- Imagenes Lista -->
     <div class="container is-hidden-desktop">
-        <div class="section transparent">
-            <figure class="image is-1by1">
-                <img src="https://i.postimg.cc/d3ZQvhYp/Cursos-Online.png" alt="Camilo Castellanos - Learning" />
-            </figure>
-            <div class="box transparente" *ngFor="let item of listaTitulos">
-                <figure class="image is-5by3">
-                    <img src="{{item.imagen}}" alt="Camilo Castellanos - {{item.titulo}}" />
+        <mzd-timeline>
+            <mzd-timeline-content [border]="true">
+                <figure class="image is-1by1">
+                    <img src="https://i.postimg.cc/d3ZQvhYp/Cursos-Online.png" alt="Camilo Castellanos - Learning" />
                 </figure>
-            </div>
-        </div>
+            </mzd-timeline-content>
+            <mzd-timeline-content [border]="true" *ngFor="let item of listaTitulos">
+                <div class="">
+                    <figure class="image is-5by3">
+                        <img src="{{item.imagen}}" alt="Camilo Castellanos - {{item.titulo}}" />
+                    </figure>
+                </div>
+            </mzd-timeline-content>
+        </mzd-timeline>
     </div>
+
 </section>
