@@ -1,87 +1,87 @@
 {
     "herramientas": [{
             "nombre": ".NET",
-            "imagen": "https://i.postimg.cc/pd085GYw/net.png",
+            "imagen": "https://i.postimg.cc/ZYrHKM85/net.webp",
             "estado": 2
         },
         {
             "nombre": "C#",
-            "imagen": "https://i.postimg.cc/6qyyjjcK/CSharp.png",
+            "imagen": "https://i.postimg.cc/s27Q9tDB/CSharp.webp",
             "estado": 2
         },
         {
             "nombre": "Github",
-            "imagen": "https://i.postimg.cc/mry0D2wh/GitHub.png",
+            "imagen": "https://i.postimg.cc/FszYnfHX/GitHub.webp",
             "estado": 2
         },
         {
             "nombre": "Angular",
-            "imagen": "https://i.postimg.cc/xjPsq2Nh/angular.png",
+            "imagen": "https://i.postimg.cc/hvVnLNh8/angular.webp",
             "estado": 2
         },
         {
             "nombre": "SQL Server",
-            "imagen": "https://i.postimg.cc/3JpHwqT4/SQLServer.png",
+            "imagen": "https://i.postimg.cc/tgLxPF0z/SQLServer.webp",
             "estado": 2
         },
         {
             "nombre": "Visual Studio",
-            "imagen": "https://i.postimg.cc/T1GyhD4B/Visual-Studio.png",
+            "imagen": "https://i.postimg.cc/qqgHT6R9/Visual-Studio.webp",
             "estado": 2
         },
         {
             "nombre": "Visual Studio Code",
-            "imagen": "https://i.postimg.cc/Prk2HVr5/Visual-Studio-Code.png",
+            "imagen": "https://i.postimg.cc/nLcJkWxF/Visual-Studio-Code.webp",
             "estado": 2
         },
         {
             "nombre": "Power BI",
-            "imagen": "https://i.postimg.cc/Pf0jTjBn/PowerBi.png",
+            "imagen": "https://i.postimg.cc/8PPmTBTF/PowerBi.webp",
             "estado": 2
         },
         {
             "nombre": "Oracle SQL",
-            "imagen": "https://i.postimg.cc/MpfVfbrH/Oracle-SQL.png",
+            "imagen": "https://i.postimg.cc/x1Fy4D2t/Oracle-SQL.webp",
             "estado": 0
         },
         {
             "nombre": "Ionic",
-            "imagen": "https://i.postimg.cc/TY7CqJ9c/ionic.png",
+            "imagen": "https://i.postimg.cc/X7PrMVrG/ionic.webp",
             "estado": 1
         },
         {
             "nombre": "Python",
-            "imagen": "https://i.postimg.cc/FRVxfyz3/python.png",
+            "imagen": "https://i.postimg.cc/vmd1Zb5P/python.webp",
             "estado": 1
         },
         {
             "nombre": "Colab",
-            "imagen": "https://i.postimg.cc/4yXBw8qW/colab.png",
+            "imagen": "https://i.postimg.cc/X7Y5SHxh/colab.webp",
             "estado": 1
         },
         {
             "nombre": "MongoDB",
-            "imagen": "https://i.postimg.cc/7Z5XBJtr/mongo.png",
+            "imagen": "https://i.postimg.cc/7hWZyVZ8/mongo.webp",
             "estado": 1
         },
         {
             "nombre": "Node JS",
-            "imagen": "https://i.postimg.cc/7L7948yB/nodejs.png",
+            "imagen": "https://i.postimg.cc/Nj0kDGWK/nodejs.webp",
             "estado": 1
         },
         {
             "nombre": "Bulma CSS",
-            "imagen": "https://i.postimg.cc/T1QQsVXf/bulmacss.png",
+            "imagen": "https://i.postimg.cc/2SJhxQQt/bulmacss.webp",
             "estado": 1
         },
         {
             "nombre": "Postman",
-            "imagen": "https://i.postimg.cc/25v1CG5C/Postman.png",
+            "imagen": "https://i.postimg.cc/WbkbFxNx/Postman.webp",
             "estado": 2
         },
         {
             "nombre": "Firebase",
-            "imagen": "https://i.postimg.cc/pLkHFTq6/firebase.png",
+            "imagen": "https://i.postimg.cc/T2Cy9jGc/firebase.webp",
             "estado": 1
         }
     ]
