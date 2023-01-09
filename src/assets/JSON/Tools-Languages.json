@@ -36,7 +36,7 @@
         },
         {
             "nombre": "Power BI",
-            "imagen": "https://i.postimg.cc/8PPmTBTF/PowerBi.webp",
+            "imagen": "https://i.postimg.cc/xTLZ2fRx/PowerBi.webp",
             "estado": 2
         },
         {
@@ -83,6 +83,11 @@
             "nombre": "Firebase",
             "imagen": "https://i.postimg.cc/T2Cy9jGc/firebase.webp",
             "estado": 1
+        },
+        {
+            "nombre": "JQuery",
+            "imagen": "https://i.postimg.cc/T1vBJqT0/JQuery.webp",
+            "estado": 0
         }
     ]
 }
