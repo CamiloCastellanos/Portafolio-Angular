@@ -1,5 +1,13 @@
 {
     "aprendiendo": [{
+            "titulo": "Angular: De cero a experto (Legacy)",
+            "imagen": "https://i.postimg.cc/D0JH90H1/Certificado-angular.webp"
+        },
+        {
+            "titulo": "Curso de ASP.NET Core",
+            "imagen": "https://i.postimg.cc/HkhZgd02/Diploma-aspnet-core.webp"
+        },
+        {
             "titulo": "Curso de MongoDB Aprende bases de datos NoSQL + API NodeJS",
             "imagen": "https://i.postimg.cc/d19hgrCw/Curso-Mongo.webp"
         },
