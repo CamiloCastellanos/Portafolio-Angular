@@ -26,7 +26,6 @@ export const APP_ROUTING = RouterModule.forRoot
   (
     APP_ROUTES,
     {
-      preloadingStrategy: PreloadAllModules,
-      relativeLinkResolution: 'legacy'
-    }
+    preloadingStrategy: PreloadAllModules
+}
   );
