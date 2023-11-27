@@ -1,14 +1,9 @@
 {
-    "hosting": {
-        "public": "dist/Portafolio-Angular",
-        "ignore": [
-            "firebase.json",
-            "**/.*",
-            "**/node_modules/**"
-        ],
-        "rewrites": [{
-            "source": "**",
-            "destination": "/index.html"
-        }]
+  "hosting": [
+    {
+      "target": "Portafolio-Angular",
+      "source": ".",
+      "frameworksBackend": {}
     }
+  ]
 }

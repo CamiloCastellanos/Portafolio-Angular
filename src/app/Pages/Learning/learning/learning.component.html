@@ -1,0 +1,42 @@
+<section class="section">
+
+    <!-- Titulos -->
+    <div class="has-text-centered">
+        <h1 class="textoDetras title is-2 is-uppercase">{{ "TITULO_LEARNING" | translate }}</h1>
+        <h1 class="textoEncima subtitle is-uppercase">{{ "SUBTITULO_LEARNING" | translate }}</h1>
+    </div>
+
+    <!-- Imagenes Zoom -->
+    <div class="container is-hidden-touch">
+        <div class="section">
+            <div class="row columns is-multiline">
+                <div class="column is-4" *ngFor="let item of listaTitulos">
+                    <figure class="image zoom is-16by9">
+                        <img src="{{item.imagen}}" alt="Camilo Castellanos - {{item.titulo}}" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Imagenes Lista -->
+    <!-- is-hidden-desktop -->
+    <div class="container mt-6 ">
+        <!-- <mzd-timeline>
+            <mzd-timeline-content [border]="true">
+                <figure class="image is-1by1">
+                    <img src="https://i.postimg.cc/Gh4pxZXc/Cursos-Online.webp" alt="Camilo Castellanos - Learning" />
+                </figure>
+            </mzd-timeline-content>
+            <mzd-timeline-content [border]="true" *ngFor="let item of listaTitulos">
+                <div class="">
+                    <figure class="image is-5by3">
+                        <img src="{{item.imagen}}" alt="Camilo Castellanos - {{item.titulo}}" />
+                    </figure>
+                </div>
+            </mzd-timeline-content>
+        </mzd-timeline> -->
+        <app-time-line [certificateList]="listaTitulos"></app-time-line>
+    </div>
+
+</section>

@@ -1,0 +1,22 @@
+<section class="is-medium mt-6">
+    <div class="container">
+        <div class="title-wrapper has-text-centered">
+            <h2 class="title is-2">{{ "TITULO_TOOLS" | translate }}</h2>
+            <h3 class="subtitle is-muted">{{ "SUBTITULO_TOOLS" | translate }}</h3>
+        </div>
+
+        <div class="content-wrapper mt-6 is-hidden-touch">
+            <div class="row columns is-centered is-multiline has-text-centered">
+                <div class="column is-3" *ngFor="let herramienta of listaHerramientas">
+                    <figure class="icon is-large">
+                        <img src="{{herramienta.imagen}}" alt="Camilo Castellanos - Ha utilizado {{herramienta.nombre}}">
+                    </figure>
+                    <h4>{{herramienta.nombre}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6 is-hidden-desktop">
+            <app-infinite-carousel [carouselList]="carouselList"></app-infinite-carousel>
+        </div>
+    </div>
+</section>

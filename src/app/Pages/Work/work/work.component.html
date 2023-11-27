@@ -1,0 +1,70 @@
+<div class=" section">
+    <div class="container">
+
+        <div class="has-text-centered">
+            <h1 class="textoDetras title is-2 is-uppercase">{{ "TITULO_WORK" | translate }}</h1>
+            <h1 class="textoEncima subtitle is-uppercase">{{ "SUBTITULO_WORK" | translate }}</h1>
+        </div>
+
+        <div class="row mt-6 columns is-multiline is-hidden-desktop">
+            <figure class="image is-1by1">
+                <img src="https://i.postimg.cc/K8LvdtXw/Equipo.webp" alt="Camilo Castellanos - Equipo" />
+            </figure>
+            <div *ngFor="let trabajo of listaTrabajo" class="column is-4">
+                <div class="card large transparente">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="{{trabajo.imagen}}" alt="Camilo Castellanos trabajo en trabajo.titulo | uppercase}}">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 no-padding "> {{trabajo.titulo | uppercase}} </p>
+                                <p>
+                                    <span class="subtitle is-6">
+                                        <p *ngIf="idiomaPagina == 'es'">{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
+                                        <p *ngIf="idiomaPagina == 'es'">Cargo:</p>
+                                        <p *ngIf="idiomaPagina == 'es'">{{trabajo.descripcion | uppercase}}</p>
+
+                                        <p *ngIf="idiomaPagina == 'en'">{{trabajo.fechaInicio}} - {{trabajo.fechaFinEN}}</p>
+                                        <p *ngIf="idiomaPagina == 'en'">Position:</p>
+                                        <p *ngIf="idiomaPagina == 'en'">{{trabajo.descripcionEN | uppercase}}</p>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="{{trabajo.url}}" class="card-footer-item" target="_blank">
+                            <i class="fa fa-globe fa-3x iconcolor" aria-hidden="true"></i>
+                        </a>
+                    </footer>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-6 is-centered contenedorLineaTiempo is-hidden-touch">
+            <div class="container">
+                <figure class="image is-1by1">
+                    <img src="https://i.postimg.cc/K8LvdtXw/Equipo.webp" alt="Camilo Castellanos - Equipo" />
+                </figure>
+                <div class="columns is-multiline momentoLineaTiempo" *ngFor="let trabajo of listaTrabajo">
+                    <figure class="image snip0015 mt-6 mb-6 mr-6 ml-6">
+                        <img src="{{trabajo.imagen}}" class="imagen" alt="Camilo Castellanos trabajo en {{trabajo.titulo | uppercase}}" />
+                        <figcaption>
+                            <h2 class="has-text-centered">{{trabajo.titulo | uppercase}}</h2>
+                            <p *ngIf="idiomaPagina == 'es'">{{trabajo.fechaInicio}} - {{trabajo.fechaFin}}</p>
+                            <p *ngIf="idiomaPagina == 'en'">{{trabajo.fechaInicio}} - {{trabajo.fechaFinEN}}</p>
+                            <p class="has-text-centered" *ngIf="idiomaPagina == 'es'">Cargo: {{trabajo.descripcion | uppercase}}</p>
+                            <p class="has-text-centered" *ngIf="idiomaPagina == 'en'">Position: {{trabajo.descripcionEN | uppercase}}</p>
+                            <a href="{{trabajo.url}}" target="_blank"></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

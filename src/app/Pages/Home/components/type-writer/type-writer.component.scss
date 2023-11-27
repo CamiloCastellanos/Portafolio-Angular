@@ -1,0 +1,10 @@
+.blink {
+    border-right-style: solid;
+    animation: 1s blink infinity;
+}
+
+@keyframes blink {
+    to {
+        opacity: 0;
+    }
+}

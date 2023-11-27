@@ -1,0 +1,48 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    background: #348F50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #56B4D3, #348F50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #56B4D3, #348F50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.textoEncima {
+    font-weight: 610!important;
+}
+
+.textoDetras {
+    /* font-size: calc(1.95rem + 4.4vw)!important; */
+    color: #dee9ed!important;
+    opacity: .7;
+    font-weight: 610!important;
+}
+
+.transparente {
+    opacity: .6;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.no-text-selection {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox
+    */
+}

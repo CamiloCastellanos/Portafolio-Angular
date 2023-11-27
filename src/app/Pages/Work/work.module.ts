@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WorkRoutingModule } from './work.routes';
-import { WorkComponent } from './components/work/work.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { WorkComponent } from './work/work.component';
 
 @NgModule({
-  declarations: [
-    WorkComponent
-  ],
+  declarations: [WorkComponent],
   imports: [
     CommonModule,
+    TranslateModule,
     WorkRoutingModule,
-    SharedModule
   ]
 })
+
 export class WorkModule { }

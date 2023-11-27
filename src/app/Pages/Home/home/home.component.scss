@@ -1,0 +1,17 @@
+.div-principal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.div-photo {
+    grid-area: 1 / 2 / 4 / 4;
+}
+
+.div-greetings {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.div-phrase {
+    grid-area: 2 / 4 / 3 / 5;
+}

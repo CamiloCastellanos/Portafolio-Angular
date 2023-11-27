@@ -1,0 +1,64 @@
+/*
+Credits https://www.youtube.com/watch?v=AlUIlZsQ7vI
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+ul {
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    transition: 0.3s;
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+li {
+    position: relative;
+    margin: 0.8rem 0.8rem;
+    transition: 0.5s;
+    border-radius: 0 200px 200px 0;
+}
+
+li:nth-child(1) i:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+li:nth-child(2) i:hover {
+    background: #47b6f5;
+    color: #ffffff;
+}
+
+li:nth-child(3) i:hover {
+    background: #47b6f5;
+    color: #ffffff;
+}
+
+i {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.1rem;
+    padding: 10px 11px;
+    border-radius: 50%;
+    color: #000000;
+    background: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.github {
+    position: relative;
+    color: #000000;
+}
+
+.linkedin {
+    position: relative;
+    color: #47b6f5;
+}

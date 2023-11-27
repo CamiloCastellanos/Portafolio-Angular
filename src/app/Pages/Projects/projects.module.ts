@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GitComponent } from './components/git/git.component';
-import { ProjectsRoutingModule } from './projects.routes';
-import { SharedModule } from 'src/app/shared/shared.module';
-
-
+import { ProjectsRoutingModule } from './projects.routers';
+import { TranslateModule } from '@ngx-translate/core';
+import { ProjectsComponent } from './projects/projects.component';
+import { ToolsLanguagesModule } from '../../shared/components/tools-languages/tools-languages.module';
 
 @NgModule({
-  declarations: [
-    GitComponent
-  ],
+  declarations: [ProjectsComponent],
   imports: [
     CommonModule,
-    SharedModule,
-    ProjectsRoutingModule
+    ProjectsRoutingModule,
+    TranslateModule,
+    ToolsLanguagesModule
   ]
 })
 export class ProjectsModule { }

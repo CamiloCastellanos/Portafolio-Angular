@@ -1,19 +1,17 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LearningComponent } from './components/learning/learning.component';
 import { LearningRoutingModule } from './learning.routes';
-import { SharedModule } from 'src/app/shared/shared.module';
-import { MzdTimelineModule } from 'ngx-mzd-timeline';
+import { TranslateModule } from '@ngx-translate/core';
+import { LearningComponent } from './learning/learning.component';
+import { TimeLineComponent } from './components/time-line/time-line.component';
 
 @NgModule({
-  declarations: [
-    LearningComponent
-  ],
+  declarations: [LearningComponent, TimeLineComponent],
   imports: [
     CommonModule,
     LearningRoutingModule,
-    SharedModule,
-    MzdTimelineModule
-  ]
+    TranslateModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class LearningModule { }

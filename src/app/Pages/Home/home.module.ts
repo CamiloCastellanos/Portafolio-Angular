@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './components/home/home.component';
+import { TranslateModule } from '@ngx-translate/core';
 import { HomeRoutingModule } from './home.routes';
-import { NgxTypedJsModule } from 'ngx-typed-js';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { HomeComponent } from './home/home.component';
+import { TypeWriterComponent } from './components/type-writer/type-writer.component';
 
 @NgModule({
-  declarations: [
-    HomeComponent
-  ],
+  declarations: [HomeComponent, TypeWriterComponent],
   imports: [
     CommonModule,
-    NgxTypedJsModule,
-    SharedModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    TranslateModule
   ]
 })
 export class HomeModule { }
