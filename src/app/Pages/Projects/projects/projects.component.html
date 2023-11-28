@@ -1,64 +1,97 @@
 <section class="section">
-    <div>
-        <div class="container">
-            <div class="has-text-centered mb-6">
-                <h1 class="textoDetras title is-2 is-uppercase">{{ "TITULO_PROJECT" | translate }}</h1>
-                <h1 class="textoEncima subtitle is-uppercase">{{ "SUBTITULO_PROJECT" | translate }}</h1>
+  <div>
+    <div class="container">
+      <div class="has-text-centered mb-6">
+        <h1 class="textoDetras title is-2 is-uppercase">
+          {{ "TITULO_PROJECT" | translate }}
+        </h1>
+        <h1 class="textoEncima subtitle is-uppercase">
+          {{ "SUBTITULO_PROJECT" | translate }}
+        </h1>
+      </div>
+      <div class="containerLibro mt-6 my-3 is-hidden-touch" href="#">
+        <div *ngFor="let project of projectList" class="libro">
+          <a [href]="project.url" target="_blank">
+            <div class="imagenLibro image is-4by5">
+              <img
+                [src]="project.image2"
+                alt="Camilo Castellanos - {{ project.title }}"
+                width=" 300px"
+                height="400px"
+              />
             </div>
-            <div class="containerLibro mt-6 my-3 is-hidden-touch" href="#">
-                <div *ngFor="let project of projectList" class="libro">
-                    <a [href]="project.url" target="_blank">
-                        <div class="imagenLibro image is-4by5">
-                            <img [src]="project.image2" alt="Camilo Castellanos - {{project.title}}" width=" 300px" height="400px">
-                        </div>
-                        <div class="contenido">
-                            <h2 class="title is-3 has-text-centered" *ngIf="language == 'es'">{{project.title}}</h2>
-                            <p class="has-text-justified " *ngIf="language == 'es'"> {{project.description}}</p>
-                            <h2 class="title is-3 has-text-centered" *ngIf="language == 'en'">{{project.titleEn}}</h2>
-                            <p class="has-text-justified " *ngIf="language == 'en'"> {{project.descriptionEn}}</p>
-                        </div>
-                    </a>
-                </div>
+            <div class="contenido">
+              <h2 class="title is-3 has-text-centered" *ngIf="language == 'es'">
+                {{ project.title }}
+              </h2>
+              <p class="has-text-justified" *ngIf="language == 'es'">
+                {{ project.description }}
+              </p>
+              <h2 class="title is-3 has-text-centered" *ngIf="language == 'en'">
+                {{ project.titleEn }}
+              </h2>
+              <p class="has-text-justified" *ngIf="language == 'en'">
+                {{ project.descriptionEn }}
+              </p>
             </div>
-            <div class="row columns is-multiline is-hidden-desktop">
-                <div *ngFor="let project of projectList" class="column is-6">
-                    <div class="card large transparente">
-                        <div class="card-image">
-                            <figure class="image is-16by9">
-                                <img [src]="project.image" alt="Camilo Castellanos - {{project.title}}">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-48x48">
-                                        <img [src]="project.tool" alt="Lenguaje de Programacion">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4 no-padding" *ngIf="language == 'es'"> {{project.title | uppercase}} </p>
-                                    <p class="title is-4 no-padding" *ngIf="language == 'en'"> {{project.titleEn | uppercase}} </p>
-                                    <p>
-                                        <span class="is-6">
-                                      <p class="has-text-justified" *ngIf="language == 'es'"> {{project.description}}</p>
-                                      <p class="has-text-justified" *ngIf="language == 'en'"> {{project.descriptionEn}}</p>
-                                  </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <footer class="card-footer">
-                            <a [href]="project.url" class="card-footer-item" target="_blank">
-                                <i class="fa fa-code-fork fa-3x iconcolor" aria-hidden="true"></i>
-                            </a>
-                        </footer>
-                    </div>
-                </div>
-
-            </div>
+          </a>
         </div>
-        <div id="Herramientas">
-            <app-tools-languages [tipoListaDefault]="2" [tipoLista]="1"></app-tools-languages>
+      </div>
+      <div class="row columns is-multiline is-hidden-desktop">
+        <div *ngFor="let project of projectList" class="column is-6">
+          <div class="card large transparente">
+            <div class="card-image">
+              <figure class="image is-16by9">
+                <img
+                  [src]="project.image"
+                  alt="Camilo Castellanos - {{ project.title }}"
+                />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img [src]="project.tool" alt="Lenguaje de Programacion" />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4 no-padding" *ngIf="language == 'es'">
+                    {{ project.title | uppercase }}
+                  </p>
+                  <p class="title is-4 no-padding" *ngIf="language == 'en'">
+                    {{ project.titleEn | uppercase }}
+                  </p>
+                  <p>
+                    <span class="is-6">
+                      <p class="has-text-justified" *ngIf="language == 'es'">
+                        {{ project.description }}
+                      </p>
+                      <p class="has-text-justified" *ngIf="language == 'en'">
+                        {{ project.descriptionEn }}
+                      </p>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a [href]="project.url" class="card-footer-item" target="_blank">
+                <i
+                  class="fa fa-code-fork fa-3x iconcolor"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </footer>
+          </div>
         </div>
+      </div>
     </div>
+    <div id="Herramientas">
+      <app-tools-languages
+        [tipoListaDefault]="2"
+        [tipoLista]="1"
+      ></app-tools-languages>
+    </div>
+  </div>
 </section>

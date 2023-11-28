@@ -7,5 +7,5 @@ import { Certificate } from '../../../../models/Certificate';
   styleUrl: './time-line.component.scss'
 })
 export class TimeLineComponent {
- @Input() certificateList: Certificate[] = []
+  @Input() certificateList: Certificate[] = []
 }

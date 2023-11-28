@@ -1,12 +1,12 @@
 <ul>
-    <li style="--accent-color:#0BDE92" *ngFor="let item of certificateList">
-        <div class="titleDate">
-            <h6>{{item.titulo}}</h6>
-        </div>
-        <div class="descr">
-            <figure class="image is-5by3">
-                <img [src]="item.imagen" alt="Camilo Castellanos - {{item.titulo}}" />
-            </figure>
-        </div>
-    </li>
+  <li style="--accent-color: #0bde92" *ngFor="let item of certificateList">
+    <div class="titleDate">
+      <h6>{{ item.titulo }}</h6>
+    </div>
+    <div class="descr">
+      <figure class="image is-5by3">
+        <img [src]="item.imagen" alt="Camilo Castellanos - {{ item.titulo }}" />
+      </figure>
+    </div>
+  </li>
 </ul>
