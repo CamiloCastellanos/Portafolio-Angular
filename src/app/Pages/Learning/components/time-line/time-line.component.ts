@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Learning } from '../../../../models/Learning.model';
+import { Certificate } from '../../../../models/Certificate';
 
 @Component({
   selector: 'app-time-line',
@@ -7,5 +7,5 @@ import { Learning } from '../../../../models/Learning.model';
   styleUrl: './time-line.component.scss'
 })
 export class TimeLineComponent {
- @Input() certificateList: Learning[] = []
+ @Input() certificateList: Certificate[] = []
 }

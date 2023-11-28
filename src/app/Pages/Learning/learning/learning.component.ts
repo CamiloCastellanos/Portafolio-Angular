@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Learning } from '../../../models/Learning.model';
+import { Certificate } from '../../../models/Certificate';
 import { LearningService } from '../services/learning.service';
 
 @Component({
@@ -8,9 +8,9 @@ import { LearningService } from '../services/learning.service';
   styleUrl: './learning.component.scss'
 })
 export class LearningComponent {
-  listaTitulos: Learning[] = []
-  
+  listaTitulos: Certificate[] = []
+
   constructor(private serviceLearning: LearningService) {
-    this.listaTitulos = serviceLearning.listaTitulos;
+    this.listaTitulos = serviceLearning.certificateList;
   }
 }

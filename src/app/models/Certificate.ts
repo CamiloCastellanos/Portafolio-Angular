@@ -1,4 +1,4 @@
-export class Learning {
+export class Certificate {
   titulo: string = '';
   imagen: string = '';
 }

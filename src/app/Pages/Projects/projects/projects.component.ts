@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Project } from '../../../models/Project.model';
-import { NgxSpinnerService } from 'ngx-spinner';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { Project } from '../../../models/Project';
 import { ProjectsService } from '../services/projects.service';
 
 @Component({
@@ -11,45 +10,27 @@ import { ProjectsService } from '../services/projects.service';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  listaProyecto: Project[] = [];
-  idiomaPagina: string = "es";
+  projectList: Project[] = [];
+  language: string = "es";
 
-  constructor(private servicioProyecto: ProjectsService,
+  constructor(private projectService: ProjectsService,
     private spinnerService: NgxSpinnerService,
     private translate: TranslateService) {
-    this.listaProyectos();
+    this.getProjects();
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.idiomaPagina = event.lang
+      this.language = event.lang
     });
   }
 
   ngOnInit(): void {
     this.spinnerService.show();
-    this.idiomaPagina = this.translate.currentLang;
+    this.language = this.translate.currentLang;
   }
 
-  listaProyectos() {
-debugger
-    this.servicioProyecto.cargarProyectos().subscribe((data: any) => {
-      this.listaProyecto = [];
-
-      data.forEach((element: any) => {
-
-        let proyecto = new Project();
-        proyecto.titulo = element.titulo;
-        proyecto.tituloEN = element.tituloEN;
-        proyecto.lenguaje = element.lenguaje;
-        proyecto.descripcion = element.descripcion;
-        proyecto.descripcionEN = element.descripcionEN;
-        proyecto.imagen = element.imagen;
-        proyecto.imagen2 = element.imagen2;
-        proyecto.url = element.url;
-
-        this.listaProyecto.push(proyecto);
-      });
-
+  getProjects() {
+    this.projectService.cargarProyectos().subscribe((data: any) => {
+      this.projectList = data as Project[];
       this.spinnerService.hide();
     });
-
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Learning } from '../../../../models/Learning.model';
+import { Certificate } from '../../../../models/Certificate';
 import { LearningService } from '../../../../core/services/learning.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { LearningService } from '../../../../core/services/learning.service';
 })
 export class LearningComponent implements OnInit {
 
-  listaTitulos: Learning[] = []
+  listaTitulos: Certificate[] = []
 
 
   constructor() {
