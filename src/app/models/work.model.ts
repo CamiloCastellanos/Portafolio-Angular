@@ -1,11 +1,11 @@
 export class Work {
-  titulo: string = '';
-  descripcion: string = '';
-  descripcionEN: string = '';
-  imagen: string = '';
+  title: string = '';
+  description: string = '';
+  descriptionEn: string = '';
+  image: string = '';
   url: string = '#';
-  fechaInicio: string = '';
-  fechaFin: string = 'Actual';
-  fechaFinEN: string = 'Present';
-
+  startDate: string = '';
+  endDate: string = 'Actual';
+  endDateEn: string = 'Present';
+  order: number = 0
 }

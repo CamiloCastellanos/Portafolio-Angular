@@ -7,8 +7,8 @@ import { Firestore, collectionData, collection } from '@angular/fire/firestore';
   providedIn: 'root'
 })
 export class WorkService {
-  constructor(private firestore: Firestore) {
-  }
+  constructor(private firestore: Firestore) {}
+
   /**
    * Lista de Trabajos
    * @returns

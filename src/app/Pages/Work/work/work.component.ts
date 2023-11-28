@@ -4,51 +4,42 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { WorkService } from '../services/work.service'
 
-
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
   styleUrl: './work.component.scss'
 })
 export class WorkComponent {
-  listaTrabajo: Work[] = [];
-  idiomaPagina: string = "es";
+  workList: Work[] = [];
+  language: string = "es";
 
   constructor(
-    private servicioTrabajo: WorkService,
+    private workService: WorkService,
     private spinnerService: NgxSpinnerService,
     private translate: TranslateService) {
-    this.listaTrabajos();
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.idiomaPagina = event.lang
+      this.language = event.lang
     });
+    this.getWork();
   }
 
   ngOnInit(): void {
     this.spinnerService.show();
-    this.idiomaPagina = this.translate.currentLang;
+    this.language = this.translate.currentLang;
   }
 
-  listaTrabajos() {
-    this.listaTrabajo = [];
-
-    this.servicioTrabajo.cargarTrabajos().subscribe(data => {
-
-      data.forEach((element: any) => {
-        let trabajo = new Work();
-        trabajo.titulo = element.titulo;
-        trabajo.descripcion = element.descripcion;
-        trabajo.descripcionEN = element.descripcionEN;
-        trabajo.imagen = element.imagen;
-        trabajo.url = element.url;
-        trabajo.fechaInicio = element.fechaInicio;
-        trabajo.fechaFin = element.fechaFin;
-        trabajo.fechaFinEN = element.fechaFinEN;
-        this.listaTrabajo.push(trabajo);
+  private getWork() {
+    this.workService.cargarTrabajos().subscribe((data: any) => {
+      this.workList = data as Work[];
+      this.workList.sort((first, second) => {
+        const [day, month, year] = first.startDate.split('-').map(Number);
+        const [daySecond, monthSecond, yearSecond] = second.startDate.split('-').map(Number);
+        let dateFirst = new Date(year, month - 1, day).getTime();
+        let dateSecond = new Date(yearSecond, monthSecond - 1, daySecond).getTime();
+        return dateSecond - dateFirst;
       });
 
       this.spinnerService.hide();
     });
-
   }
 }
