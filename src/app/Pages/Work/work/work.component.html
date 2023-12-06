@@ -17,7 +17,7 @@
         />
       </figure>
       <div *ngFor="let work of workList" class="column is-4">
-        <div class="card large transparente">
+        <div class="card transparente">
           <div class="card-image">
             <figure class="image">
               <img
@@ -29,9 +29,6 @@
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title is-4 no-padding">
-                  {{ work.title | uppercase }}
-                </p>
                 <p>
                   <span class="subtitle is-6">
                     <p *ngIf="language == 'es'">
@@ -63,44 +60,9 @@
       </div>
     </div>
 
-    <div class="mt-6 is-centered contenedorLineaTiempo is-hidden-touch">
+    <div class="mt-6 is-hidden-touch">
       <div class="container">
-        <figure class="image is-1by1">
-          <img
-            src="https://i.postimg.cc/K8LvdtXw/Equipo.webp"
-            alt="Camilo Castellanos - Equipo"
-          />
-        </figure>
-        <div
-          class="columns is-multiline momentoLineaTiempo"
-          *ngFor="let trabajo of workList"
-        >
-          <figure class="image snip0015 mt-6 mb-6 mr-6 ml-6">
-            <img
-              src="{{ trabajo.image }}"
-              class="imagen"
-              alt="Camilo Castellanos trabajo en {{
-                trabajo.title | uppercase
-              }}"
-            />
-            <figcaption>
-              <h2 class="has-text-centered">{{ trabajo.title | uppercase }}</h2>
-              <p *ngIf="language == 'es'">
-                {{ trabajo.startDate }} - {{ trabajo.endDate }}
-              </p>
-              <p *ngIf="language == 'en'">
-                {{ trabajo.startDate }} - {{ trabajo.endDateEn }}
-              </p>
-              <p class="has-text-centered" *ngIf="language == 'es'">
-                Cargo: {{ trabajo.description | uppercase }}
-              </p>
-              <p class="has-text-centered" *ngIf="language == 'en'">
-                Position: {{ trabajo.descriptionEn | uppercase }}
-              </p>
-              <a href="{{ trabajo.url }}" target="_blank"></a>
-            </figcaption>
-          </figure>
-        </div>
+        <app-carousel [workList]="workList" ></app-carousel>
       </div>
     </div>
   </div>

@@ -1,97 +1,127 @@
 <section class="section">
-  <div>
-    <div class="container">
-      <div class="has-text-centered mb-6">
-        <h1 class="textoDetras title is-2 is-uppercase">
-          {{ "TITULO_PROJECT" | translate }}
-        </h1>
-        <h1 class="textoEncima subtitle is-uppercase">
-          {{ "SUBTITULO_PROJECT" | translate }}
-        </h1>
+  <div class="container">
+    <div class="has-text-centered mb-6">
+      <h1 class="textoDetras title is-2 is-uppercase">
+        {{ "TITULO_PROJECT" | translate }}
+      </h1>
+      <h1 class="textoEncima subtitle is-uppercase">
+        {{ "SUBTITULO_PROJECT" | translate }}
+      </h1>
+    </div>
+    <div class="containerLibro mt-6 my-3 is-hidden-touch" href="#">
+      <div *ngFor="let project of projectList" class="libro">
+        <a [href]="project.url" target="_blank">
+          <div class="imagenLibro image is-4by5">
+            <img
+              [src]="project.image2"
+              alt="Camilo Castellanos - {{ project.title }}"
+              width=" 300px"
+              height="400px"
+            />
+          </div>
+          <div class="contenido">
+            <h2 class="title is-3 has-text-centered" *ngIf="language == 'es'">
+              {{ project.title }}
+            </h2>
+            <p class="has-text-justified" *ngIf="language == 'es'">
+              {{ project.description }}
+            </p>
+            <h2 class="title is-3 has-text-centered" *ngIf="language == 'en'">
+              {{ project.titleEn }}
+            </h2>
+            <p class="has-text-justified" *ngIf="language == 'en'">
+              {{ project.descriptionEn }}
+            </p>
+          </div>
+        </a>
       </div>
-      <div class="containerLibro mt-6 my-3 is-hidden-touch" href="#">
-        <div *ngFor="let project of projectList" class="libro">
-          <a [href]="project.url" target="_blank">
-            <div class="imagenLibro image is-4by5">
-              <img
-                [src]="project.image2"
-                alt="Camilo Castellanos - {{ project.title }}"
-                width=" 300px"
-                height="400px"
-              />
+    </div>
+    <div class="row columns is-multiline is-hidden-desktop">
+      <div *ngFor="let project of projectList" class="column is-6">
+        <div class="card transparente">
+          <div class="card-image mb-0">
+            <img
+              [src]="project.image"
+              alt=""
+              style="height: 200px; width: 100%"
+            />
+          </div>
+          <div class="card-content">
+            <div class="media mb-0">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img [src]="project.tool" alt="Image" />
+                </figure>
+              </div>
+              <div
+                class="media-content is-flex is-justify-content-center is-align-content-center"
+              >
+                <p class="title is-6 no-padding" *ngIf="language == 'es'">
+                  {{ project.title | uppercase }}
+                </p>
+                <p class="title is-6 no-padding" *ngIf="language == 'en'">
+                  {{ project.titleEn | uppercase }}
+                </p>
+              </div>
             </div>
-            <div class="contenido">
-              <h2 class="title is-3 has-text-centered" *ngIf="language == 'es'">
-                {{ project.title }}
-              </h2>
+            <div class="content my-0 mb-0">
               <p class="has-text-justified" *ngIf="language == 'es'">
                 {{ project.description }}
               </p>
-              <h2 class="title is-3 has-text-centered" *ngIf="language == 'en'">
-                {{ project.titleEn }}
-              </h2>
               <p class="has-text-justified" *ngIf="language == 'en'">
                 {{ project.descriptionEn }}
               </p>
+              <app-redirect-button
+                class="is-flex is-justify-content-center is-align-content-center mt-2"
+              ></app-redirect-button>
             </div>
-          </a>
-        </div>
-      </div>
-      <div class="row columns is-multiline is-hidden-desktop">
-        <div *ngFor="let project of projectList" class="column is-6">
-          <div class="card large transparente">
-            <div class="card-image">
-              <figure class="image is-16by9">
-                <img
-                  [src]="project.image"
-                  alt="Camilo Castellanos - {{ project.title }}"
-                />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img [src]="project.tool" alt="Lenguaje de Programacion" />
-                  </figure>
-                </div>
-                <div class="media-content">
-                  <p class="title is-4 no-padding" *ngIf="language == 'es'">
-                    {{ project.title | uppercase }}
-                  </p>
-                  <p class="title is-4 no-padding" *ngIf="language == 'en'">
-                    {{ project.titleEn | uppercase }}
-                  </p>
-                  <p>
-                    <span class="is-6">
-                      <p class="has-text-justified" *ngIf="language == 'es'">
-                        {{ project.description }}
-                      </p>
-                      <p class="has-text-justified" *ngIf="language == 'en'">
-                        {{ project.descriptionEn }}
-                      </p>
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <footer class="card-footer">
-              <a [href]="project.url" class="card-footer-item" target="_blank">
-                <i
-                  class="fa fa-code-fork fa-3x iconcolor"
-                  aria-hidden="true"
-                ></i>
-              </a>
-            </footer>
           </div>
         </div>
       </div>
     </div>
-    <div id="Herramientas">
-      <app-tools-languages
-        [tipoListaDefault]="2"
-        [tipoLista]="1"
-      ></app-tools-languages>
+  </div>
+  <div id="Herramientas">
+    <app-tools-languages
+      [tipoListaDefault]="2"
+      [tipoLista]="1"
+    ></app-tools-languages>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card transparente">
+      <div class="card-image mb-0">
+        <figure class="image">
+          <img src="https://i.postimg.cc/c4hcft5q/npl.webp" alt="" />
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media mb-0">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img
+                src="https://i.postimg.cc/vmd1Zb5P/python.webp"
+                alt="Image"
+              />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-6">PROCESAMIENTO DE LENGUAJES NATURALES</p>
+          </div>
+        </div>
+        <div class="content my-0 mb-0">
+          Conjunto de proyectos para el aprendizaje de Procesamiento del
+          Lenguaje Natural (PLN) - Natural Language Processing (NLP) en los
+          cuales se analizan textos obtenidos de diferentes fuentes con Python y
+          diversas librerías.
+          <a href="#">#css</a> <a href="#">#responsive</a>
+          <br />
+          <app-redirect-button
+            class="is-flex is-justify-content-center is-align-content-center mt-2"
+          ></app-redirect-button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
