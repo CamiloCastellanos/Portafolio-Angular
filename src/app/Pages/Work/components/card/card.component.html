@@ -1,25 +1,25 @@
 <div class="center-card mt-5" *ngFor="let item of workList">
-  <figure class="movie">
-    <div class="movie__hero">
-      <img [src]="item.image" alt="Rambo" class="movie__img" />
+  <figure class="card-work">
+    <div class="card-hero">
+      <img [src]="item.image" alt="Rambo" class="card-image" />
     </div>
-    <div class="movie__content">
-      <div class="movie__title">
-        <h1 class="heading__primary">
+    <div class="card-content">
+      <div class="card-title">
+        <h1 class="card-primary">
           {{ item.title }}
         </h1>
-        <div class="movie__tag" *ngIf="language == 'es'">
+        <div class="card-date" *ngIf="language == 'es'">
           {{ item.startDate }} - {{ item.endDate }}
         </div>
 
-        <div class="movie__tag" *ngIf="language == 'en'">
+        <div class="card-date" *ngIf="language == 'en'">
           {{ item.startDate }} - {{ item.endDateEn }}
         </div>
       </div>
-      <p class="movie__description" *ngIf="language == 'es'">
+      <p class="card-description" *ngIf="language == 'es'">
         Cargo 🧑🏼‍💻: {{ item.description }}
       </p>
-      <p class="movie__description" *ngIf="language == 'en'">
+      <p class="card-description" *ngIf="language == 'en'">
         Position 🧑🏼‍💻: {{ item.descriptionEn }}
       </p>
       <a
