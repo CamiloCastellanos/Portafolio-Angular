@@ -5,7 +5,7 @@
 }
 
 $scene-height: 180%;
-$sections: order0, order1, order2, order3, order4, order5, order6;
+$sections: order0, order1, order2, order3, order4, order5, order6, order7;
 $colors: (
   white: #fff,
   gray: #eee,
@@ -16,18 +16,18 @@ $colors: (
   order4: #d9042b,
   order5: #26658c,
   order6: #d90d1e,
+  order7: #d90d1e,
 );
 
 $pictograms: (
-  order6: url("https://i.postimg.cc/qvWwWBWh/sin-imagen.png"),
-  order5:
-    url("https://i.postimg.cc/28rRTGwM/Icono-Gestion-Franca-Azuloscuro3-2.png"),
-  order4: url("https://i.postimg.cc/VsjPjpjX/Icono-Corferias.png"),
-  order3: url("https://i.postimg.cc/RhQr4JMg/icono-Aportes-En-Linea.png"),
-  order2: url("https://i.postimg.cc/RhzrkLz3/icono-Mareigua.png"),
-  order1:
-    url("https://i.postimg.cc/50zdKkDd/icono-Colombian-Shared-Services.png"),
-  order0: url("https://i.postimg.cc/LswFTMC3/iconomtc.png"),
+  order7: url("https://i.postimg.cc/qvWwWBWh/sin-imagen.png"),
+  order6: url("https://i.postimg.cc/brDDJfsH/paradigma-Icono.webp"),
+  order5: url("https://i.postimg.cc/QC04X5KW/gestion-Franca-Icono.webp"),
+  order4: url("https://i.postimg.cc/8c1XQwcS/corferias-Icono.webp"),
+  order3: url("https://i.postimg.cc/QtMj8gHp/aportes-Linea-Icono.webp"),
+  order2: url("https://i.postimg.cc/9fbWHgFm/mareigua-Icono.webp"),
+  order1: url("https://i.postimg.cc/3JFmVY5z/cssIcono.webp"),
+  order0: url("https://i.postimg.cc/Qx3cfVPp/mtcIcono.webp"),
 );
 
 @function get-color($color-name) {

@@ -72,7 +72,9 @@
                 {{ project.descriptionEn }}
               </p>
               <app-redirect-button
+                [href]="project.url"
                 class="is-flex is-justify-content-center is-align-content-center mt-2"
+                [buttonText]="textButton"
               ></app-redirect-button>
             </div>
           </div>
@@ -85,43 +87,5 @@
       [tipoListaDefault]="2"
       [tipoLista]="1"
     ></app-tools-languages>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="card transparente">
-      <div class="card-image mb-0">
-        <figure class="image">
-          <img src="https://i.postimg.cc/c4hcft5q/npl.webp" alt="" />
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media mb-0">
-          <div class="media-left">
-            <figure class="image is-64x64">
-              <img
-                src="https://i.postimg.cc/vmd1Zb5P/python.webp"
-                alt="Image"
-              />
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-6">PROCESAMIENTO DE LENGUAJES NATURALES</p>
-          </div>
-        </div>
-        <div class="content my-0 mb-0">
-          Conjunto de proyectos para el aprendizaje de Procesamiento del
-          Lenguaje Natural (PLN) - Natural Language Processing (NLP) en los
-          cuales se analizan textos obtenidos de diferentes fuentes con Python y
-          diversas librerías.
-          <a href="#">#css</a> <a href="#">#responsive</a>
-          <br />
-          <app-redirect-button
-            class="is-flex is-justify-content-center is-align-content-center mt-2"
-          ></app-redirect-button>
-        </div>
-      </div>
-    </div>
   </div>
 </section>

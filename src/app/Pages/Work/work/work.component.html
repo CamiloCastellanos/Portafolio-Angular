@@ -10,59 +10,15 @@
     </div>
 
     <div class="row mt-6 columns is-multiline is-hidden-desktop">
-      <figure class="image is-1by1">
-        <img
-          src="https://i.postimg.cc/K8LvdtXw/Equipo.webp"
-          alt="Camilo Castellanos - Equipo"
-        />
-      </figure>
-      <div *ngFor="let work of workList" class="column is-4">
-        <div class="card transparente">
-          <div class="card-image">
-            <figure class="image">
-              <img
-                [src]="work.image"
-                alt="Camilo Castellanos trabajo en {{ work.title | uppercase }}"
-              />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p>
-                  <span class="subtitle is-6">
-                    <p *ngIf="language == 'es'">
-                      {{ work.startDate }} - {{ work.endDate }}
-                    </p>
-                    <p *ngIf="language == 'es'">Cargo:</p>
-                    <p *ngIf="language == 'es'">
-                      {{ work.description | uppercase }}
-                    </p>
-
-                    <p *ngIf="language == 'en'">
-                      {{ work.startDate }} - {{ work.endDateEn }}
-                    </p>
-                    <p *ngIf="language == 'en'">Position:</p>
-                    <p *ngIf="language == 'en'">
-                      {{ work.descriptionEn | uppercase }}
-                    </p>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <footer class="card-footer">
-            <a href="{{ work.url }}" class="card-footer-item" target="_blank">
-              <i class="fa fa-globe fa-3x iconcolor" aria-hidden="true"></i>
-            </a>
-          </footer>
-        </div>
-      </div>
+      <app-card [language]="language" [workList]="workList"></app-card>
     </div>
 
     <div class="mt-6 is-hidden-touch">
       <div class="container">
-        <app-carousel [workList]="workList" ></app-carousel>
+        <app-carousel
+          [workList]="workList"
+          [language]="language"
+        ></app-carousel>
       </div>
     </div>
   </div>
