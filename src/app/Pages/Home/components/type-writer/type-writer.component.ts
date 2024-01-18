@@ -32,6 +32,7 @@ export class TypeWriterComponent {
       "color",
       this.textColor
     );
+
     this.renderer.setStyle(this.textElement.nativeElement, "padding", "0.1em");
 
     this.renderer.setStyle(
@@ -44,6 +45,13 @@ export class TypeWriterComponent {
       "border-right-color",
       this.textColor
     );
+
+    this.renderer.setStyle(
+      this.textElement.nativeElement,
+      "font-size",
+      this.fontSize
+    );
+
     this.renderer.setStyle(
       this.blinkElement.nativeElement,
       "font-size",
