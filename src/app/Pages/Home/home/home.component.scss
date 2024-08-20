@@ -20,7 +20,7 @@
   width: 70% !important;
 }
 
-.center-image{
+.center-image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,9 +30,13 @@
   .photo {
     width: 50% !important;
   }
-  .image{
+  .image {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+}
+
+.image {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
 }
