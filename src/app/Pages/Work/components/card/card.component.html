@@ -5,13 +5,13 @@
     </div>
     <div class="card-content">
       <div class="card-title">
-        <div class="columns is-vcentered is-centered ">
-          <div class="column is-full">
+        <div class="rows is-vcentered is-centered ">
+          <div class="row is-full">
             <h1 class="card-primary has-text-centered">
               {{ item.title }}
             </h1>
           </div>
-          <div class="column is-full">
+          <div class="row is-full">
             <div class="card-date has-text-centered" *ngIf="language == 'es'">
               📅 {{ item.startDate }} → {{ item.endDate }}
             </div>

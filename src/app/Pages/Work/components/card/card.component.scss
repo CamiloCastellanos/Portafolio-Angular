@@ -86,3 +86,11 @@
     height: 7.813rem;
   }
 }
+
+
+@media (min-width: 1000px) {
+  .card-image {
+    width: 70% !important;
+    height: auto !important;
+  }
+}
