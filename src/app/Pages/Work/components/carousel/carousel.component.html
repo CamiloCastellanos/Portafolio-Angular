@@ -1,0 +1,36 @@
+<div id="scene" *ngIf="workList.length > 0">
+  <div id="left-zone">
+    <ul class="list">
+      <li class="item" *ngFor="let item of workList; index as index">
+        <input
+          type="radio"
+          [id]="'item' + index"
+          name="basic_carousel"
+          [checked]="index == 0"
+        />
+        <label class="label_order{{ item.order }}" [for]="'item' + index">
+          {{ item.title }}
+        </label>
+        <div class="content">
+          <img [src]="item.image" alt="" class="image" width="35%" />
+          <p class="mt-2 has-text-centered" *ngIf="language == 'es'">
+            Cargo 🧑🏼‍💻: {{ item.description | uppercase }}
+          </p>
+          <p class="mt-2 has-text-centered" *ngIf="language == 'en'">
+            Position 🧑🏼‍💻: {{ item.descriptionEn | uppercase }}
+          </p>
+          <p class="mt-1">{{ item.startDate }} - {{ item.endDate }}</p>
+
+          <a
+            [href]="item.url"
+            target="_blank"
+            class="button is-outlined is-primary is-normal"
+            *ngIf="item.url != '' && item.url != '#'"
+          >
+            {{ textButton }}
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

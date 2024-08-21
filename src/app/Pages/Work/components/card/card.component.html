@@ -1,0 +1,43 @@
+<div class="center-card mt-5" *ngFor="let item of workList">
+  <figure class="card-work">
+    <div class="card-hero">
+      <img [src]="item.image" alt="Rambo" class="card-image" />
+    </div>
+    <div class="card-content">
+      <div class="card-title">
+        <div class="rows is-vcentered is-centered ">
+          <div class="row is-full">
+            <h1 class="card-primary has-text-centered">
+              {{ item.title }}
+            </h1>
+          </div>
+          <div class="row is-full">
+            <div class="card-date has-text-centered" *ngIf="language == 'es'">
+              📅 {{ item.startDate }} → {{ item.endDate }}
+            </div>
+
+            <div class="card-date has-text-centered" *ngIf="language == 'en'">
+              📅 {{ item.startDateEn }} → {{ item.endDateEn }}
+            </div>
+          </div>
+
+          <p class="card-description has-text-centered" *ngIf="language == 'es'">
+            Cargo 🧑🏼‍💻: {{ item.description | titlecase }}
+          </p>
+          <p class="card-description has-text-centered" *ngIf="language == 'en'">
+            Position 🧑🏼‍💻: {{ item.descriptionEn | titlecase }}
+          </p>
+        </div>
+      </div>
+
+      <a
+        [href]="item.url"
+        target="_blank"
+        class="button is-outlined is-primary is-normal mt-3 card-button"
+        *ngIf="item.url != '' && item.url != '#'"
+      >
+        {{ textButton }}
+      </a>
+    </div>
+  </figure>
+</div>

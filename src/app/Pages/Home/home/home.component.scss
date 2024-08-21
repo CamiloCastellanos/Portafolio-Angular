@@ -1,0 +1,42 @@
+.div-principal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.div-photo {
+  grid-area: 1 / 2 / 4 / 4;
+}
+
+.div-greetings {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.div-phrase {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.photo {
+  width: 70% !important;
+}
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .photo {
+    width: 50% !important;
+  }
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.image {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
+}

@@ -1,0 +1,29 @@
+<section class="section">
+  <div class="has-text-centered">
+    <h1 class="textoDetras title is-2 is-uppercase">
+      {{ "TITULO_LEARNING" | translate }}
+    </h1>
+    <h1 class="textoEncima subtitle is-uppercase">
+      {{ "SUBTITULO_LEARNING" | translate }}
+    </h1>
+  </div>
+
+  <div class="container is-hidden-touch">
+    <div class="section">
+      <div class="row columns is-multiline">
+        <div class="column is-4" *ngFor="let item of certificateList">
+          <figure class="image zoom is-16by9">
+            <img
+              src="{{ item.imagen }}"
+              alt="Camilo Castellanos - {{ item.titulo }}"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-6 is-hidden-desktop">
+    <app-time-line [certificateList]="certificateList"></app-time-line>
+  </div>
+</section>

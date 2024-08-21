@@ -1,0 +1,117 @@
+.navbar {
+    background-color: transparent;
+}
+
+.navbar-menu {
+    background-color: transparent;
+}
+
+nav a,
+nav a:after,
+nav a:before {
+    transition: all .5s;
+}
+
+#logo {
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar-start {
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar-item:hover,
+.navbar-item:focus {
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+a {
+    text-decoration: none;
+    background-image: -webkit-linear-gradient(currentColor, currentColor);
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.5rem;
+    transition: background-size .3s;
+    border-bottom: 4px solid transparent;
+}
+
+a:hover {
+    background-size: 100% 0.5rem;
+}
+
+.languages {
+    border-radius: 50px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media screen and (max-width: 1024px-1px) {
+    .force-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-start {
+        flex-grow: 1;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar-brand {
+        display: none;
+    }
+}
+
+#menu-icon,
+#menu-icon:before,
+#menu-icon:after {
+    background: #1d1f20;
+    border-radius: 0.05em;
+    height: 0.2em;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+#menu-icon {
+    display: inline-block;
+    margin: 0.4em 0;
+    max-width: 1em;
+    position: relative;
+}
+
+nav label #menu-icon {
+    float: right;
+}
+
+#menu-icon:before,
+#menu-icon:after {
+    content: '';
+    left: 0;
+    position: absolute;
+}
+
+.overlay {
+    background: #348F50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #56B4D3, #348F50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #56B4D3, #348F50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.navbar .navbar-menu {
+    box-shadow: none;
+}

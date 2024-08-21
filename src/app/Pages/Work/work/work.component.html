@@ -1,0 +1,25 @@
+<div class="section">
+  <div class="container">
+    <div class="has-text-centered">
+      <h1 class="textoDetras title is-2 is-uppercase">
+        {{ "TITULO_WORK" | translate }}
+      </h1>
+      <h1 class="textoEncima subtitle is-uppercase">
+        {{ "SUBTITULO_WORK" | translate }}
+      </h1>
+    </div>
+
+    <div class="row mt-6 columns is-multiline is-hidden-desktop">
+      <app-card [language]="language" [workList]="workList"></app-card>
+    </div>
+
+    <div class="mt-6 is-hidden-touch">
+      <div class="container">
+        <app-carousel
+          [workList]="workList"
+          [language]="language"
+        ></app-carousel>
+      </div>
+    </div>
+  </div>
+</div>

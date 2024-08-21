@@ -1,0 +1,38 @@
+$animationSpeed: 40s;
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-15.625rem * 7));
+    }
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    &::before,
+    &::after {
+        position: absolute;
+        width: 12.5rem;
+        z-index: 2;
+    }
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+    &::before {
+        left: 0;
+        top: 0;
+    }
+    .slide-track {
+        animation: scroll $animationSpeed linear infinite;
+        display: flex;
+        width: calc(5.625rem * 14);
+    }
+    .slide {
+        height: 6.25rem;
+        width: 15.625rem;
+    }
+}

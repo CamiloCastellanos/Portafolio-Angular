@@ -1,0 +1,202 @@
+@media (max-width: 1300px) {
+  label {
+    font-size: 12px;
+  }
+}
+
+$scene-height: 180%;
+$sections: order0, order1, order2, order3, order4, order5, order6, order7;
+$colors: (
+  white: #fff,
+  gray: #eee,
+  order0: #2d5944,
+  order1: #08403a,
+  order2: #653473,
+  order3: #92bf4e,
+  order4: #d9042b,
+  order5: #26658c,
+  order6: #d90d1e,
+  order7: #d90d1e,
+);
+
+$pictograms: (
+  order7: url("https://i.postimg.cc/qvWwWBWh/sin-imagen.png"),
+  order6: url("https://i.postimg.cc/brDDJfsH/paradigma-Icono.webp"),
+  order5: url("https://i.postimg.cc/QC04X5KW/gestion-Franca-Icono.webp"),
+  order4: url("https://i.postimg.cc/8c1XQwcS/corferias-Icono.webp"),
+  order3: url("https://i.postimg.cc/QtMj8gHp/aportes-Linea-Icono.webp"),
+  order2: url("https://i.postimg.cc/9fbWHgFm/mareigua-Icono.webp"),
+  order1: url("https://i.postimg.cc/3JFmVY5z/cssIcono.webp"),
+  order0: url("https://i.postimg.cc/Qx3cfVPp/mtcIcono.webp"),
+);
+
+@function get-color($color-name) {
+  @if map-has-key($colors, $color-name) {
+    @return map-get($colors, $color-name);
+  } @else {
+    @warn "This color key doesn't exist."+$color-name;
+  }
+}
+
+@function get-picto-url($picto-name) {
+  @if map-has-key($pictograms, $picto-name) {
+    @return map-get($pictograms, $picto-name);
+  } @else {
+    @warn "This pictogram key doesn't exist."+$picto-name;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    top: -$scene-height;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: -$scene-height;
+    opacity: 0;
+  }
+}
+
+#scene {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 80%; //configurados manualmente
+  height: 55%; //configurados manualmente
+  margin: auto;
+  background-color: get-color(white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+
+  #left-zone {
+    background: get-color(white);
+    height: 77%;
+    flex-grow: 0;
+    display: flex;
+    width: 45%; //configurados manualmente
+    align-items: center;
+    justify-content: left;
+
+    .list {
+      display: flex;
+      list-style: none;
+      align-content: stretch;
+      flex-direction: column;
+      flex-grow: 1;
+      margin: 0;
+      padding: 0;
+
+      li.item {
+        input[type="radio"] {
+          display: none;
+          & ~ label {
+            display: block;
+            opacity: 0.5;
+            height: 50px;
+            text-align: center;
+            width: 90%;
+            line-height: 50px;
+
+            &:first-letter {
+              text-transform: uppercase;
+            }
+
+            &:hover {
+              opacity: 0.75;
+              cursor: pointer;
+            }
+
+            @each $item in $sections {
+              &.label_#{$item} {
+                &:before {
+                  content: " ";
+                  display: block;
+                  position: absolute;
+                  width: 55px;
+                  height: 55px;
+                  margin-left: 15px;
+                  background-image: get-picto-url($item);
+                  background-position: center;
+                  background-size: 75% 75%;
+                  background-repeat: no-repeat;
+                }
+              }
+            }
+          }
+
+          & ~ .content {
+            position: absolute;
+            left: 45%;
+            top: -$scene-height;
+            width: 40%;
+            height: 90%;
+            animation-duration: 0.75s;
+            animation-name: slideout;
+            animation-timing-function: ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            p {
+              max-width: 70%;
+              text-align: center;
+            }
+          }
+
+          &:checked {
+            & ~ label {
+              opacity: 1;
+              animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+              @each $item in $sections {
+                &.label_#{$item} {
+                  color: get-color($item);
+                  border-right: solid 4px get-color($item);
+                }
+              }
+            }
+
+            & ~ .content {
+              animation-duration: 0.75s;
+              animation-name: slidein;
+              animation-fill-mode: forwards;
+              animation-timing-function: cubic-bezier(
+                0.455,
+                0.03,
+                0.515,
+                0.955
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #middle-border {
+    background-color: get-color(gray);
+    height: 75%;
+    flex-grow: 1;
+    max-width: 2px;
+    z-index: 0;
+  }
+
+  #right-zone {
+    background: get-color(white);
+    height: 100%;
+    flex-grow: 3;
+  }
+}

@@ -1,0 +1,19 @@
+.footer {
+    background-color: transparent;
+}
+
+.heart {
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    from {
+        transform: none;
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    to {
+        transform: none;
+    }
+}

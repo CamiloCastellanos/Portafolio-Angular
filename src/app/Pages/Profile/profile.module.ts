@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProfileComponent } from './components/profile/profile.component';
+import { TranslateModule } from '@ngx-translate/core';
 import { ProfileRoutingModule } from './profile.routes';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { ProfileComponent } from './profile/profile.component';
+import { ToolsLanguagesModule } from '../../shared/components/tools-languages/tools-languages.module';
 
 @NgModule({
-  declarations: [
-    ProfileComponent
-  ],
+  declarations: [ProfileComponent],
   imports: [
     CommonModule,
     ProfileRoutingModule,
-    SharedModule
+    TranslateModule,
+    ToolsLanguagesModule
   ]
 })
 export class ProfileModule { }

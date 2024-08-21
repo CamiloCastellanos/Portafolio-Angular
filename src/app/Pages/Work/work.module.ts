@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WorkRoutingModule } from './work.routes';
-import { WorkComponent } from './components/work/work.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { WorkComponent } from './work/work.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
-  declarations: [
-    WorkComponent
-  ],
+  declarations: [WorkComponent, CarouselComponent, CardComponent],
   imports: [
     CommonModule,
+    TranslateModule,
     WorkRoutingModule,
-    SharedModule
   ]
 })
+
 export class WorkModule { }

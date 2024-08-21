@@ -1,7 +1,4 @@
 {
-  "projects": {
-    "default": "portafolioangular-4f64f"
-  },
   "targets": {
     "portafolioangular-4f64f": {
       "hosting": {
@@ -10,5 +7,8 @@
         ]
       }
     }
+  },
+  "projects": {
+    "default": "portafolioangular-4f64f"
   }
 }

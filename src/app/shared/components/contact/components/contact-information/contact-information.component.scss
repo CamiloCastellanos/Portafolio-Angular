@@ -1,0 +1,19 @@
+i {
+    width: 50px;
+    height: 50px;
+    padding: 10px 7px;
+    border-radius: 50%;
+    color: #000000;
+    background: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+a i:hover {
+    background: #f69e22;
+    color: #ffffff;
+}
+
+.email {
+    position: relative;
+    color: #f69e22;
+}

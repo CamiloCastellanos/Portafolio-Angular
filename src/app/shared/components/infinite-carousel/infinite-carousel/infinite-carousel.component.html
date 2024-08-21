@@ -1,0 +1,10 @@
+<div class="slider">
+    <div class="slide-track">
+        <div class="slide has-text-centered" *ngFor="let item of carouselList">
+            <figure class="icon is-large">
+                <img [src]="item.image" [alt]="item.text" />
+            </figure>
+            <h4 class="">{{item.text}}</h4>
+        </div>
+    </div>
+</div>

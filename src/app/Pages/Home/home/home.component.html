@@ -1,0 +1,86 @@
+<section class="section py-0 my-0">
+  <div class="container">
+    <div class="div-principal has-text-centered is-hidden-touch">
+      <div class="div-photo center-image">
+        <figure class="image photo">
+          <img
+            src="https://i.postimg.cc/QCbPNmvJ/Camilo-Castellanos.webp"
+            class="is-rounded"
+            alt="Juan Camilo Castellanos Puentes - Camilo Castellanos"
+          />
+        </figure>
+      </div>
+      <div class="div-greetings">
+        <h1 class="has-text-centered is-size-4">
+          <strong class="title is-2">{{ "SALUDO_HOME" | translate }}</strong>
+        </h1>
+        <p class="has-text-centered is-size-4">
+          <strong class="has-text-light">{{
+            "NOMBRE_HOME" | translate
+          }}</strong>
+        </p>
+        <p class="has-text-centered is-size-4">
+          <strong class="">{{ "SUBTITULO_HOME" | translate }}</strong>
+        </p>
+      </div>
+      <div class="div-phrase pl-1">
+        <div class="box has-background-success-dark transparente">
+          <app-type-writer
+            [classText]="'is-size-3 is-uppercase has-text-white-ter'"
+            [fontSize]="'20px'"
+            [wordArray]="phraseEn"
+            *ngIf="lang == 'en'"
+          ></app-type-writer>
+          <app-type-writer
+            [classText]="'is-size-3 is-uppercase has-text-white-ter'"
+            [fontSize]="'20px'"
+            [wordArray]="phraseEs"
+            *ngIf="lang == 'es'"
+          ></app-type-writer>
+        </div>
+      </div>
+    </div>
+
+    <div class="has-text-centered is-hidden-desktop">
+      <div class="row center-image">
+        <figure class="image photo">
+          <img
+            src="https://i.postimg.cc/QCbPNmvJ/Camilo-Castellanos.webp"
+            class="is-rounded"
+            alt="Juan Camilo Castellanos Puentes - Camilo Castellanos"
+          />
+        </figure>
+      </div>
+
+      <div class="row has-text-centered">
+        <h1 class="has-text-centered is-size-4">
+          <strong class="title is-3">{{ "SALUDO_HOME" | translate }}</strong>
+        </h1>
+        <p class="has-text-centered is-size-5">
+          <strong class="has-text-light">{{
+            "NOMBRE_HOME" | translate
+          }}</strong>
+        </p>
+        <p class="has-text-centered is-size-6">
+          <strong class="">{{ "SUBTITULO_HOME" | translate }}</strong>
+        </p>
+      </div>
+      <div class="row mt-3 mb-0 pb-0">
+        <div class="box has-background-success-dark transparente">
+          <app-type-writer
+            [classText]="'is-size-5 is-uppercase has-text-white-ter'"
+            [fontSize]="'20px'"
+            [wordArray]="phraseEn"
+            *ngIf="lang == 'en'"
+          ></app-type-writer>
+          <app-type-writer
+            [classText]="'is-size-5 is-uppercase has-text-white-ter'"
+            [fontSize]="'20px'"
+            [wordArray]="phraseEs"
+            *ngIf="lang == 'es'"
+          ></app-type-writer>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

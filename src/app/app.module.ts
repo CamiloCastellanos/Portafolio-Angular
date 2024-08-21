@@ -1,32 +1,27 @@
-/*Rutas*/
-import { APP_ROUTING } from './app.routes'
-import { Router } from '@angular/router';
-
-//Modulos
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { environment } from 'src/environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxSpinnerModule } from "ngx-spinner";
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { NgParticlesModule } from "ng-particles";
-import { NgxTypedJsModule } from 'ngx-typed-js';
-import { HomeModule } from './Pages/Home/home.module';
-import { WorkModule } from './Pages/Work/work.module';
-import { ProjectsModule } from './Pages/Projects/projects.module';
-import { SharedModule } from './shared/shared.module';
-import { CoreModule } from './core/core.module';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { BrowserModule } from '@angular/platform-browser';
 
-/*Componentes*/
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './layout/layout.component';
-import { LearningModule } from './Pages/Learning/learning.module';
-import { ProfileModule } from './Pages/Profile/profile.module';
+import { AppRouting } from './app.routes';
+import { NgParticlesModule } from 'ng-particles';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { HomeModule } from './pages/home/home.module';
+import { WorkModule } from './pages/work/work.module';
+import { ProjectsModule } from './pages/projects/projects.module';
+import { LearningModule } from './pages/learning/learning.module';
+
+import { ProfileModule } from './pages/profile/profile.module';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { LayoutComponent } from './shared/components/layout/layout/layout.component';
+import { NavbarModule } from './shared/components/navbar/navbar.module';
+import { SocialNetworkModule } from './shared/components/social-network/social-network.module';
+import { FooterModule } from './shared/components/footer/footer.module';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 /**
  * Rutas de los archivos de los idiomas
@@ -37,6 +32,7 @@ export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,31 +40,28 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRouting,
+    NavbarModule,
+    SocialNetworkModule,
+    FooterModule,
     NgParticlesModule,
-    APP_ROUTING,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgxTypedJsModule,
     NgxSpinnerModule,
     HomeModule,
     WorkModule,
     ProjectsModule,
     LearningModule,
-    SharedModule,
-    CoreModule,
     ProfileModule,
-    HttpClientModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
-    })
-
+    }),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
