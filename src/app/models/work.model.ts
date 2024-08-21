@@ -5,6 +5,7 @@ export class Work {
   image: string = '';
   url: string = '#';
   startDate: string = '';
+  startDateEn: string = '';
   endDate: string = 'Actual';
   endDateEn: string = 'Present';
   order: number = 0

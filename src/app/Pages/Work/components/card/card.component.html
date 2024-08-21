@@ -5,27 +5,35 @@
     </div>
     <div class="card-content">
       <div class="card-title">
-        <h1 class="card-primary">
-          {{ item.title }}
-        </h1>
-        <div class="card-date" *ngIf="language == 'es'">
-          {{ item.startDate }} - {{ item.endDate }}
-        </div>
+        <div class="columns is-vcentered is-centered ">
+          <div class="column is-full">
+            <h1 class="card-primary has-text-centered">
+              {{ item.title }}
+            </h1>
+          </div>
+          <div class="column is-full">
+            <div class="card-date has-text-centered" *ngIf="language == 'es'">
+              📅 {{ item.startDate }} → {{ item.endDate }}
+            </div>
 
-        <div class="card-date" *ngIf="language == 'en'">
-          {{ item.startDate }} - {{ item.endDateEn }}
+            <div class="card-date has-text-centered" *ngIf="language == 'en'">
+              📅 {{ item.startDateEn }} → {{ item.endDateEn }}
+            </div>
+          </div>
+
+          <p class="card-description has-text-centered" *ngIf="language == 'es'">
+            Cargo 🧑🏼‍💻: {{ item.description | titlecase }}
+          </p>
+          <p class="card-description has-text-centered" *ngIf="language == 'en'">
+            Position 🧑🏼‍💻: {{ item.descriptionEn | titlecase }}
+          </p>
         </div>
       </div>
-      <p class="card-description" *ngIf="language == 'es'">
-        Cargo 🧑🏼‍💻: {{ item.description }}
-      </p>
-      <p class="card-description" *ngIf="language == 'en'">
-        Position 🧑🏼‍💻: {{ item.descriptionEn }}
-      </p>
+
       <a
         [href]="item.url"
         target="_blank"
-        class="button is-outlined is-primary is-normal mt-3"
+        class="button is-outlined is-primary is-normal mt-3 card-button"
         *ngIf="item.url != '' && item.url != '#'"
       >
         {{ textButton }}

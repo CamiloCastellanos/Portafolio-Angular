@@ -31,14 +31,7 @@ export class WorkComponent {
   private getWork() {
     this.workService.cargarTrabajos().subscribe((data: any) => {
       this.workList = data as Work[];
-      this.workList.sort((first, second) => {
-        const [day, month, year] = first.startDate.split('-').map(Number);
-        const [daySecond, monthSecond, yearSecond] = second.startDate.split('-').map(Number);
-        let dateFirst = new Date(year, month - 1, day).getTime();
-        let dateSecond = new Date(yearSecond, monthSecond - 1, daySecond).getTime();
-        return dateSecond - dateFirst;
-      });
-
+      this.workList.sort((first, second) => second.order - first.order);
       this.spinnerService.hide();
     });
   }
