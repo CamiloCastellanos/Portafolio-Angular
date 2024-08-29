@@ -1,7 +1,21 @@
-.image{
+.image {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90%;
+}
+
+.floating {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-17px);
+  }
 }
