@@ -23,13 +23,13 @@
             <h2 class="title is-3 has-text-centered" *ngIf="language == 'es'">
               {{ project.title }}
             </h2>
-            <p class="has-text-justified" *ngIf="language == 'es'">
+            <p class="" *ngIf="language == 'es'">
               {{ project.description }}
             </p>
             <h2 class="title is-3 has-text-centered" *ngIf="language == 'en'">
               {{ project.titleEn }}
             </h2>
-            <p class="has-text-justified" *ngIf="language == 'en'">
+            <p class="" *ngIf="language == 'en'">
               {{ project.descriptionEn }}
             </p>
           </div>
@@ -65,10 +65,10 @@
               </div>
             </div>
             <div class="content my-0 mb-0">
-              <p class="has-text-justified" *ngIf="language == 'es'">
+              <p class="" *ngIf="language == 'es'">
                 {{ project.description }}
               </p>
-              <p class="has-text-justified" *ngIf="language == 'en'">
+              <p class="" *ngIf="language == 'en'">
                 {{ project.descriptionEn }}
               </p>
               <app-redirect-button
