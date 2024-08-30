@@ -1,13 +1,28 @@
+// Variables
+:root {
+  --color-primary: #348f50;
+  --color-secondary: #56b4d3;
+}
+//
+
 * {
   font-family: "Open Sans", sans-serif;
 }
 
 html {
-  background: #348f50;
+  background: var(--color-primary);
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #56b4d3, #348f50);
+  background: -webkit-linear-gradient(
+    to right,
+    var(--color-secondary),
+    var(--color-primary)
+  );
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #56b4d3, #348f50);
+  background: linear-gradient(
+    to right,
+    var(--color-secondary),
+    var(--color-primary)
+  );
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
