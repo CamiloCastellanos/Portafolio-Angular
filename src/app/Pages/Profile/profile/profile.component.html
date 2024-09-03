@@ -8,33 +8,80 @@
         {{ "SUBTITULO1_PROFILE" | translate }}
       </h1>
     </div>
+    <div class="columns mt-6">
+      <div class="column">
+        <div class="rows">
+          <div class="row">
+            <article class="is-size-5" style="font-weight: 550">
+              {{ "ABOUT" | translate }}
+            </article>
+          </div>
+          <div class="row">
+            <div class="field has-addons">
+              <p class="control has-icons-left has-icons-right is-expanded">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </span>
+                <input
+                  class="input transparente"
+                  type="text"
+                  [value]="email"
+                  disabled
+                />
+              </p>
+              <p class="control">
+                <button
+                  class="button is-info is-primary is-rounded has-tooltip-primary"
+                  (click)="copyEmail()"
+                  data-tooltip="Copy"
+                  *ngIf="lang == 'en'"
+                >
+                  <i class="fa fa-files-o" aria-hidden="true"></i>
+                </button>
 
-    <div class="box mt-6 transparente">
-      <div class="content">
-        <table class="table has-text-centered">
-          <tbody>
-            <tr>
-              <td>{{ "TITULO_NOMBRE_PROFILE" | translate }}</td>
-              <td>{{ "INFORMACION_NOMBRE_PROFILE" | translate }}</td>
-            </tr>
-            <tr>
-              <td>{{ "TITULO_RESIDENCIA_PROFILE" | translate }}</td>
-              <td>{{ "INFORMACION_RESIDENCIA_PROFILE" | translate }}</td>
-            </tr>
-            <tr>
-              <td>{{ "TITULO_CARRERA_PROFILE" | translate }}</td>
-              <td>{{ "INFORMACION_CARRERA_PROFILE" | translate }}</td>
-            </tr>
-            <tr>
-              <td>{{ "TITULO_POSTGRADO_PROFILE" | translate }}</td>
-              <td>
-                {{ "INFORMACION_POSTGRADO1_PROFILE" | translate }}
-                <br />
-                {{ "INFORMACION_POSTGRADO2_PROFILE" | translate }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                <button
+                  class="button is-info is-primary is-rounded has-tooltip-primary"
+                  (click)="copyEmail()"
+                  data-tooltip="Copiar"
+                  *ngIf="lang == 'es'"
+                >
+                  <i class="fa fa-files-o" aria-hidden="true"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="box transparente">
+          <div class="content">
+            <table class="table has-text-centered">
+              <tbody>
+                <tr>
+                  <td>{{ "TITULO_NOMBRE_PROFILE" | translate }}</td>
+                  <td>{{ "INFORMACION_NOMBRE_PROFILE" | translate }}</td>
+                </tr>
+                <tr>
+                  <td>{{ "TITULO_RESIDENCIA_PROFILE" | translate }}</td>
+                  <td>{{ "INFORMACION_RESIDENCIA_PROFILE" | translate }}</td>
+                </tr>
+                <tr>
+                  <td>{{ "TITULO_CARRERA_PROFILE" | translate }}</td>
+                  <td>{{ "INFORMACION_CARRERA_PROFILE" | translate }}</td>
+                </tr>
+                <tr>
+                  <td>{{ "TITULO_POSTGRADO_PROFILE" | translate }}</td>
+                  <td>
+                    {{ "INFORMACION_POSTGRADO1_PROFILE" | translate }}
+                    <br />
+                    {{ "INFORMACION_POSTGRADO2_PROFILE" | translate }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
