@@ -36,3 +36,9 @@
     margin-bottom: 0%;
   }
 }
+
+.control.has-icons-left .icon,
+.control.has-icons-right .icon {
+  color: var(--color-primary);
+  opacity: 1;
+}
