@@ -11,6 +11,9 @@ export class HomeComponent {
   phraseEn: string[] = motivationalQuotes.en;
   phraseEs: string[] = motivationalQuotes.es;
   lang: string = "es";
+  typographyTitle = "typography-lora font-weight-600"
+  typographyText = "typography-open-sans font-weight-500"
+  typographyTypeWriter="typography-lora font-weight-600"
 
   constructor(private translate: TranslateService) {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {

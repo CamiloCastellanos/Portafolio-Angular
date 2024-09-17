@@ -12,27 +12,37 @@
       </div>
       <div class="div-greetings">
         <h1 class="is-size-3">
-          <strong class="title is-2">{{ "SALUDO_HOME" | translate }}</strong>
+          <strong class="title is-2" [ngClass]="typographyTitle">{{
+            "SALUDO_HOME" | translate
+          }}</strong>
         </h1>
         <p class="is-size-4">
-          <strong class="has-text-light">{{
+          <strong class="has-text-light" [ngClass]="typographyText">{{
             "NOMBRE_HOME" | translate
           }}</strong>
         </p>
         <p class="is-size-4">
-          <strong class="">{{ "SUBTITULO_HOME" | translate }}</strong>
+          <strong [ngClass]="typographyText">{{
+            "SUBTITULO_HOME" | translate
+          }}</strong>
         </p>
       </div>
       <div class="div-phrase pl-1">
         <div class="box has-background-success-dark transparente">
           <app-type-writer
-            [classText]="'is-size-3 is-uppercase has-text-white-ter'"
+            [classText]="
+              'is-size-3 is-uppercase has-text-white-ter ' +
+              typographyTypeWriter
+            "
             [fontSize]="'20px'"
             [wordArray]="phraseEn"
             *ngIf="lang == 'en'"
           ></app-type-writer>
           <app-type-writer
-            [classText]="'is-size-3 is-uppercase has-text-white-ter'"
+            [classText]="
+              'is-size-3 is-uppercase has-text-white-ter ' +
+              typographyTypeWriter
+            "
             [fontSize]="'20px'"
             [wordArray]="phraseEs"
             *ngIf="lang == 'es'"
@@ -54,27 +64,35 @@
 
       <div class="row has-text-centered">
         <h1 class="is-size-3">
-          <strong class="title is-3">{{ "SALUDO_HOME" | translate }}</strong>
+          <strong class="title is-3" [ngClass]="typographyTitle">{{
+            "SALUDO_HOME" | translate
+          }}</strong>
         </h1>
         <p class="is-size-4">
-          <strong class="has-text-light">{{
+          <strong class="has-text-light" [ngClass]="typographyText">{{
             "NOMBRE_HOME" | translate
           }}</strong>
         </p>
-        <p class="is-size-4">
+        <p class="is-size-4" [ngClass]="typographyText">
           <strong class="">{{ "SUBTITULO_HOME" | translate }}</strong>
         </p>
       </div>
       <div class="row mt-3 mb-0 pb-0">
         <div class="box has-background-success-dark transparente">
           <app-type-writer
-            [classText]="'is-size-5 is-uppercase has-text-white-ter'"
+            [classText]="
+              'is-size-5 is-uppercase has-text-white-ter ' +
+              typographyTypeWriter
+            "
             [fontSize]="'20px'"
             [wordArray]="phraseEn"
             *ngIf="lang == 'en'"
           ></app-type-writer>
           <app-type-writer
-            [classText]="'is-size-5 is-uppercase has-text-white-ter'"
+            [classText]="
+              'is-size-5 is-uppercase has-text-white-ter ' +
+              typographyTypeWriter
+            "
             [fontSize]="'20px'"
             [wordArray]="phraseEs"
             *ngIf="lang == 'es'"
