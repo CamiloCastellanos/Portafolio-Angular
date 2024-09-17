@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2, RendererStyleFlags2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-type-writer',
@@ -49,13 +49,15 @@ export class TypeWriterComponent {
     this.renderer.setStyle(
       this.textElement.nativeElement,
       "font-size",
-      this.fontSize
+      this.fontSize,
+      RendererStyleFlags2.Important
     );
 
     this.renderer.setStyle(
       this.blinkElement.nativeElement,
       "font-size",
-      this.fontSize
+      this.fontSize,
+      RendererStyleFlags2.Important
     );
   }
 
