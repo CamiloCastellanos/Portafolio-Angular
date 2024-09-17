@@ -10,6 +10,12 @@ export class ProfileComponent {
   email = 'camilo.castellanos.puentes@gmail.com';
   textTooltip = ""
   lang: string = "es";
+  typographyAbout="font-weight-500 typography-open-sans"
+  typographyTable="font-weight-500 typography-open-sans"
+  typographyFrontEndTitle="font-weight-600 typography-lora"
+  typographyFrontEnd="font-weight-500 typography-open-sans"
+  typographyBackEndTitle="font-weight-600 typography-lora"
+  typographyBackEnd="font-weight-500 typography-open-sans"
 
   constructor(private translate: TranslateService) {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {

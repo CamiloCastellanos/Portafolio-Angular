@@ -1,10 +1,10 @@
 <section class="section" id="profile">
   <div class="container">
     <div class="has-text-centered section-heading">
-      <h1 class="textoDetras title is-2 is-uppercase">
+      <h1 class="top-text title is-2 is-uppercase">
         {{ "TITULO1_PROFILE" | translate }}
       </h1>
-      <h1 class="textoEncima subtitle is-uppercase">
+      <h1 class="bottom-text subtitle is-uppercase">
         {{ "SUBTITULO1_PROFILE" | translate }}
       </h1>
     </div>
@@ -15,7 +15,7 @@
           <div class="column">
             <div class="rows">
               <div class="row">
-                <article class="is-size-5" style="font-weight: 550">
+                <article class="is-size-5" [ngClass]="typographyAbout">
                   {{ "ABOUT" | translate }}
                 </article>
               </div>
@@ -59,7 +59,10 @@
           <div class="column">
             <div class="box transparente">
               <div class="content">
-                <table class="table has-text-centered">
+                <table
+                  class="table has-text-centered"
+                  [ngClass]="typographyTable"
+                >
                   <tbody>
                     <tr>
                       <td>{{ "TITULO_NOMBRE_PROFILE" | translate }}</td>
@@ -105,10 +108,10 @@
 <section class="section" id="services">
   <div class="container">
     <div class="has-text-centered section-heading">
-      <h1 class="textoDetras title is-2 is-uppercase">
+      <h1 class="top-text title is-2 is-uppercase">
         {{ "TITULO2_PROFILE" | translate }}
       </h1>
-      <h1 class="textoEncima subtitle is-uppercase">
+      <h1 class="bottom-text subtitle is-uppercase">
         {{ "SUBTITULO_PROFILE" | translate }}
       </h1>
     </div>
@@ -128,10 +131,13 @@
           <div class="column transparente">
             <div class="box">
               <div class="content">
-                <h4 class="has-text-centered title is-5">
+                <h4
+                  class="has-text-centered title is-5 mb-2"
+                  [ngClass]="typographyFrontEndTitle"
+                >
                   {{ "FRONTEND_PROFILE" | translate }}
                 </h4>
-                <article>
+                <article [ngClass]="typographyFrontEnd">
                   {{ "DESCRIPCION_FRONTEND_PROFILE" | translate }}
                 </article>
               </div>
@@ -143,10 +149,13 @@
           <div class="column transparente">
             <div class="box">
               <div class="content">
-                <h4 class="has-text-centered title is-5">
+                <h4
+                  class="has-text-centered title is-5 mb-2"
+                  [ngClass]="typographyBackEndTitle"
+                >
                   {{ "BACKEND_PROFILE" | translate }}
                 </h4>
-                <article>
+                <article [ngClass]="typographyBackEnd">
                   {{ "DESCRIPCION_BACKEND_PROFILE" | translate }}
                 </article>
               </div>
@@ -179,10 +188,10 @@
 <section class="section mt-6 mb-6" id="resume">
   <div class="container">
     <div class="has-text-centered section-heading">
-      <h1 class="textoDetras title is-2 is-uppercase">
+      <h1 class="top-text title is-2 is-uppercase">
         {{ "TITULO3_PROFILE" | translate }}
       </h1>
-      <h1 class="textoEncima subtitle is-uppercase">
+      <h1 class="bottom-text subtitle is-uppercase">
         {{ "SUBTITULO3_PROFILE" | translate }}
       </h1>
 
