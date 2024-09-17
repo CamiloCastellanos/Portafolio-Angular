@@ -9,12 +9,13 @@ import { InfiniteCarouselType } from '../../../../models/InfiniteCarouselType';
   styleUrl: './tools-languages.component.scss'
 })
 export class ToolsLanguagesComponent {
-  listaHerramientas: ToolsLanguages[] = []
-  carouselList: InfiniteCarouselType[] = []
-
-
   @Input() tipoListaDefault: number = -1;
   @Input() tipoLista: number = -1;
+  listaHerramientas: ToolsLanguages[] = []
+  carouselList: InfiniteCarouselType[] = []
+  tipographyTitle: string = "font-weight-600 typography-lora"
+  tipographySubtitle: string = "font-weight-500 typography-open-sans"
+  tipographyText: string = "font-weight-600 typography-open-sans"
 
   constructor(public serviceTool: ToolsLanguagesService) { }
   /// Estado = 0 (Solo Trabajo)
