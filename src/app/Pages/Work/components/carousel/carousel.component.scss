@@ -1,6 +1,6 @@
 @media (max-width: 1300px) {
   label {
-    font-size: 12px;
+    font-size: 1.25rem;
   }
 }
 
@@ -107,8 +107,9 @@ $pictograms: (
             opacity: 0.5;
             height: 50px;
             text-align: center;
-            width: 90%;
+            width: 100%;
             line-height: 50px;
+            font-size: 1.063rem;
 
             &:first-letter {
               text-transform: uppercase;

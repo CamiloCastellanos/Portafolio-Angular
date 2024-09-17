@@ -8,10 +8,10 @@
           name="basic_carousel"
           [checked]="index == 0"
         />
-        <label class="label_order{{ item.order }}" [for]="'item' + index">
+        <label class="label_order{{ item.order }} typography-open-sans font-weight-500" [for]="'item' + index">
           {{ item.title }}
         </label>
-        <div class="content">
+        <div class="content typography-open-sans font-weight-600">
           <img [src]="item.image" alt="" class="image" width="35%" />
           <p class="mt-2 has-text-centered" *ngIf="language == 'es'">
             Cargo 🧑🏼‍💻: {{ item.description | uppercase }}
