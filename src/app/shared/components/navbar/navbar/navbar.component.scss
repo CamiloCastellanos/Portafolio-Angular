@@ -1,104 +1,104 @@
 .navbar {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .navbar-menu {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 nav a,
 nav a:after,
 nav a:before {
-    transition: all .5s;
+  transition: all 0.5s;
 }
 
 #logo {
-    flex-grow: 1;
-    justify-content: center;
-    text-align: center;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
 }
 
 .navbar-start {
-    flex-grow: 1;
-    justify-content: center;
-    text-align: center;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
 }
 
 .navbar-item:hover,
 .navbar-item:focus {
-    background-color: transparent;
-    border-radius: 50px;
+  background-color: transparent;
+  border-radius: 50px;
 }
 
 a {
-    text-decoration: none;
-    background-image: -webkit-linear-gradient(currentColor, currentColor);
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.5rem;
-    transition: background-size .3s;
-    border-bottom: 4px solid transparent;
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(currentColor, currentColor);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 0.5rem;
+  transition: background-size 0.3s;
+  border-bottom: 4px solid transparent;
 }
 
 a:hover {
-    background-size: 100% 0.5rem;
+  background-size: 100% 0.5rem;
 }
 
 .languages {
-    border-radius: 50px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 50px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 @media screen and (max-width: 1024px-1px) {
-    .force-center {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .navbar-start {
-        flex-grow: 1;
-        justify-content: center;
-        text-align: center;
-    }
+  .force-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navbar-start {
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .navbar-brand {
-        display: none;
-    }
+  .navbar-brand {
+    display: none;
+  }
 }
 
 #menu-icon,
 #menu-icon:before,
 #menu-icon:after {
-    background: #1d1f20;
-    border-radius: 0.05em;
-    height: 0.2em;
-    transition: all 0.2s ease-in-out;
-    width: 100%;
+  background: #1d1f20;
+  border-radius: 0.05em;
+  height: 0.2em;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
 }
 
 #menu-icon {
-    display: inline-block;
-    margin: 0.4em 0;
-    max-width: 1em;
-    position: relative;
+  display: inline-block;
+  margin: 0.4em 0;
+  max-width: 1em;
+  position: relative;
 }
 
 nav label #menu-icon {
-    float: right;
+  float: right;
 }
 
 #menu-icon:before,
 #menu-icon:after {
-    content: '';
-    left: 0;
-    position: absolute;
+  content: "";
+  left: 0;
+  position: absolute;
 }
 
 .overlay {
-  background:  var(--color-primary);
+  background: var(--color-primary);
   /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -121,5 +121,5 @@ nav label #menu-icon {
 }
 
 .navbar .navbar-menu {
-    box-shadow: none;
+  box-shadow: none;
 }

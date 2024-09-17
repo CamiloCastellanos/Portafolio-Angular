@@ -1,55 +1,131 @@
-<nav id="mobileMenu" class="navbar no-text-selection" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <span id="logo" class="navbar-item has-text-black">
-          <img src="assets/image/logo/multiPlatform2.gif" width="30" height="100%" alt="DevCastellanos">
-          <h1 class="has-text-black">Dev-Castellanos</h1>
+<nav
+  id="mobileMenu"
+  class="navbar no-text-selection typography-open-sans font-weight-700"
+  role="navigation"
+  aria-label="main navigation"
+>
+  <div class="navbar-brand">
+    <span id="logo" class="navbar-item has-text-black">
+      <img
+        src="assets/image/logo/multiPlatform2.gif"
+        width="30"
+        height="100%"
+        alt="DevCastellanos"
+      />
+      <h1 class="has-text-black typography-open-sans font-weight-700">
+        Dev-Castellanos
+      </h1>
+    </span>
+
+    <div
+      role="button"
+      class="navbar-burger burger menu-icon"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navBarMenu"
+      id="burger"
+      (click)="displayMenu()"
+    >
+      <span class="has-text-black"></span>
+      <span class="has-text-black"></span>
+      <span class="has-text-black"></span>
+    </div>
+  </div>
+  <div id="overlay" class=""></div>
+  <div id="navBarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <a
+        class="navbar-item has-text-black"
+        routerLink="home"
+        (click)="pickUpMenu()"
+      >
+        <span class="icon">
+          <i class="fa fa-home" aria-hidden="true"> </i
+        ></span>
+        <span>{{ "HOME_NAVBAR" | translate }}</span>
+      </a>
+      <a
+        class="navbar-item has-text-black"
+        routerLink="perfil"
+        (click)="pickUpMenu()"
+      >
+        <span class="icon">
+          <i class="fa fa-user" aria-hidden="true"></i>
         </span>
+        <span>{{ "PERFIL_NAVBAR" | translate }}</span>
+      </a>
+      <a
+        class="navbar-item has-text-black"
+        routerLink="trabajos"
+        routerLinkActive="activo"
+        (click)="pickUpMenu()"
+      >
+        <span class="icon">
+          <i class="fa fa-briefcase" aria-hidden="true"></i>
+        </span>
+        <span>{{ "TRABAJOS_NAVBAR" | translate }}</span>
+      </a>
 
-        <div role="button" class="navbar-burger burger menu-icon" aria-label="menu" aria-expanded="false" data-target="navBarMenu" id="burger" (click)="displayMenu()">
-            <span class="has-text-black"></span>
-            <span class="has-text-black"></span>
-            <span class="has-text-black"></span>
-        </div>
+      <span
+        class="navbar-item force-center is-hidden-touch"
+        routerLink="home"
+        (click)="pickUpMenu()"
+      >
+        <img
+          src="assets/image/logo/multiPlatform2.gif"
+          width="30"
+          height="100%"
+          alt="DevCastellanos"
+        />
+        <h1 class="has-text-black typography-open-sans font-weight-700">
+          Dev-Castellanos
+        </h1>
+      </span>
+
+      <a
+        class="navbar-item has-text-black"
+        routerLink="proyectosPersonales"
+        routerLinkActive="activo"
+        (click)="pickUpMenu()"
+      >
+        <span class="icon">
+          <i class="fa fa-code-fork" aria-hidden="true"></i>
+        </span>
+        <span>{{ "PROYECTOS_PERSONALES_NAVBAR" | translate }} </span>
+      </a>
+      <a
+        class="navbar-item has-text-black"
+        routerLink="seguirAprendiendo"
+        routerLinkActive="activo"
+        (click)="pickUpMenu()"
+      >
+        <span class="icon">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        </span>
+        <span>{{ "APRENDIENDO_NAVBAR" | translate }}</span>
+      </a>
+      <a
+        class="button is-ghost is-inverted is-medium"
+        (click)="changeLanguage('es'); pickUpMenu()"
+      >
+        <figure class="icon is-large languages">
+          <img
+            src="assets/image/languages/es.svg "
+            alt="Idioma Español - Spanish language "
+          />
+        </figure>
+      </a>
+      <a
+        class="button is-ghost is-inverted is-medium"
+        (click)="changeLanguage('en'); pickUpMenu()"
+      >
+        <figure class="icon is-large languages">
+          <img
+            src="assets/image/languages/en.svg "
+            alt="Idioma Ingles - English language "
+          />
+        </figure>
+      </a>
     </div>
-    <div id="overlay" class=""></div>
-    <div id="navBarMenu" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item has-text-black" routerLink="home" (click)="pickUpMenu()">
-                <span class="icon"> <i class="fa fa-home" aria-hidden="true"> </i></span>
-                <span>{{"HOME_NAVBAR"|translate}}</span>
-            </a>
-            <a class="navbar-item has-text-black" routerLink="perfil" (click)="pickUpMenu()">
-                <span class="icon"> <i class="fa fa-user" aria-hidden="true"></i> </span>
-                <span>{{"PERFIL_NAVBAR"|translate}}</span>
-            </a>
-            <a class="navbar-item has-text-black" routerLink="trabajos" routerLinkActive="activo" (click)="pickUpMenu()">
-                <span class="icon"> <i class="fa fa-briefcase" aria-hidden="true"></i> </span>
-                <span>{{"TRABAJOS_NAVBAR"|translate}}</span>
-            </a>
-
-            <span class="navbar-item force-center is-hidden-touch" routerLink="home" (click)="pickUpMenu()">
-              <img src="assets/image/logo/multiPlatform2.gif" width="30" height="100%" alt="DevCastellanos">
-              <h1 class="has-text-black">Dev-Castellanos</h1>
-            </span>
-
-            <a class="navbar-item has-text-black" routerLink="proyectosPersonales" routerLinkActive="activo" (click)="pickUpMenu()">
-                <span class="icon"> <i class="fa fa-code-fork" aria-hidden="true"></i> </span>
-                <span>{{"PROYECTOS_PERSONALES_NAVBAR"|translate}} </span>
-            </a>
-            <a class="navbar-item has-text-black" routerLink="seguirAprendiendo" routerLinkActive="activo" (click)="pickUpMenu()">
-                <span class="icon"> <i class="fa fa-graduation-cap" aria-hidden="true"></i> </span>
-                <span>{{"APRENDIENDO_NAVBAR"|translate}}</span>
-            </a>
-            <a class="button is-ghost is-inverted is-medium" (click)="changeLanguage('es');pickUpMenu();">
-                <figure class="icon is-large languages">
-                    <img src="assets/image/languages/es.svg " alt="Idioma Español - Spanish language ">
-                </figure>
-            </a>
-            <a class="button is-ghost is-inverted is-medium" (click)="changeLanguage('en');pickUpMenu();">
-                <figure class="icon is-large languages">
-                    <img src="assets/image/languages/en.svg " alt="Idioma Ingles - English language ">
-                </figure>
-            </a>
-        </div>
-    </div>
+  </div>
 </nav>
