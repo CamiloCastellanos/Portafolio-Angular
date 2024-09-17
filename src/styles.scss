@@ -1,12 +1,8 @@
-// Variables
+@import "styles/typography.scss";
+
 :root {
   --color-primary: #348f50;
   --color-secondary: #56b4d3;
-}
-//
-
-* {
-  font-family: "Open Sans", sans-serif;
 }
 
 html {
@@ -24,17 +20,6 @@ html {
     var(--color-primary)
   );
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.textoEncima {
-  font-weight: 610 !important;
-}
-
-.textoDetras {
-  /* font-size: calc(1.95rem + 4.4vw)!important; */
-  color: #dee9ed !important;
-  opacity: 0.7;
-  font-weight: 610 !important;
 }
 
 .transparente {
