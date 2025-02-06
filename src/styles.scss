@@ -46,3 +46,8 @@ html {
     supported by Chrome, Edge, Opera and Firefox
     */
 }
+
+.disabled-input {
+  cursor: not-allowed;
+  user-select: none;
+}
