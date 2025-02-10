@@ -26,7 +26,7 @@
                       <i class="fa fa-envelope-o" aria-hidden="true"></i>
                     </span>
                     <input
-                      class="input transparente disabled-input "
+                      class="input transparente disabled-input"
                       type="text"
                       [value]="email"
                       disabled
@@ -196,22 +196,9 @@
       </h1>
 
       <a
-        href="https://drive.google.com/file/d/1iiOjGLteQNDpTcoNLteAJIJM5gcYWjq7/view?usp=drive_link"
+        [href]="lang == 'es' ? curriculumVitaeEs : curriculumVitaeEn"
         target="_blank"
-        class="is-hidden-touch button is-outlined is-primary is-large is-rounded"
-      >
-        <span class="icon">
-          <i class="fa fa-download"></i>
-        </span>
-        <span class="is-uppercase has-text-centered">{{
-          "DESCARGA_PROFILE" | translate
-        }}</span>
-      </a>
-
-      <a
-        href="https://drive.google.com/file/d/1iiOjGLteQNDpTcoNLteAJIJM5gcYWjq7/view?usp=drive_link"
-        target="_blank"
-        class="is-hidden-desktop button is-outlined is-primary is-normal"
+        class="button is-outlined is-primary is-medium is-rounded"
       >
         <span class="icon">
           <i class="fa fa-download"></i>

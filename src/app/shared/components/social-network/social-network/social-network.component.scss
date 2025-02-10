@@ -78,3 +78,10 @@ figure {
   position: relative;
   color: #47b6f5;
 }
+
+@media (max-width: 1023px) {
+  ul {
+    bottom: 10%;
+    flex-direction: row;
+  }
+}
