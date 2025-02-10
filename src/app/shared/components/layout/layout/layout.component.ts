@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { IParticlesProps } from 'ng-particles';
-import { Engine } from 'tsparticles-engine';
-import { loadSlim } from "tsparticles-slim";
+import { IParticlesProps, NgParticlesService } from '@tsparticles/angular';
+import { Container } from '@tsparticles/engine';
+import { loadSlim } from '@tsparticles/slim';
+
+//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 
 @Component({
   selector: 'app-layout',
@@ -9,6 +11,8 @@ import { loadSlim } from "tsparticles-slim";
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
+  id = 'tsparticles';
+
   particlesOptions: IParticlesProps = {
     background: {
       color: {
@@ -23,7 +27,7 @@ export class LayoutComponent {
     interactivity: {
       detectsOn: "canvas",
       events: {
-        resize: true
+
       },
       modes: {
         bubble: {
@@ -58,7 +62,7 @@ export class LayoutComponent {
       move: {
         direction: "none",
         enable: true,
-        outMode: "bounce",
+
         random: false,
         speed: 1.5,
         straight: false
@@ -66,7 +70,7 @@ export class LayoutComponent {
       number: {
         density: {
           enable: true,
-          value_area: 800
+
         },
         value: 80
       },
@@ -77,13 +81,34 @@ export class LayoutComponent {
         type: "circle"
       },
       size: {
-        random: true,
+
         value: 5
       }
     },
     detectRetina: true
   };
-  async particlesInit(engine: Engine): Promise<void> {
-    await loadSlim(engine);
+
+  constructor(private readonly ngParticlesService: NgParticlesService) { }
+
+  ngOnInit(): void {
+    this.ngParticlesService.init(async (engine) => {
+      console.log(engine);
+
+      // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
+      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+      // starting from v2 you can add only the features you need reducing the bundle size
+      //await loadFull(engine);
+      await loadSlim(engine);
+    });
   }
+
+  particlesLoaded(container: Container): void {
+    console.log(container);
+  }
+
+  // async particlesInit(engine: Engine): Promise<void> {
+  //   await loadSlim(engine);
+  // }
+
+
 }
