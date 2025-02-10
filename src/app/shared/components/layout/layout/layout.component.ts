@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { IParticlesProps, NgParticlesService } from '@tsparticles/angular';
-import { Container } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
-
-//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 
 @Component({
   selector: 'app-layout',
@@ -26,9 +23,7 @@ export class LayoutComponent {
     fpsLimit: 60,
     interactivity: {
       detectsOn: "canvas",
-      events: {
-
-      },
+      events: {},
       modes: {
         bubble: {
           distance: 400,
@@ -62,7 +57,6 @@ export class LayoutComponent {
       move: {
         direction: "none",
         enable: true,
-
         random: false,
         speed: 1.5,
         straight: false
@@ -70,7 +64,6 @@ export class LayoutComponent {
       number: {
         density: {
           enable: true,
-
         },
         value: 80
       },
@@ -81,7 +74,6 @@ export class LayoutComponent {
         type: "circle"
       },
       size: {
-
         value: 5
       }
     },
@@ -92,23 +84,7 @@ export class LayoutComponent {
 
   ngOnInit(): void {
     this.ngParticlesService.init(async (engine) => {
-      console.log(engine);
-
-      // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadFull(engine);
       await loadSlim(engine);
     });
   }
-
-  particlesLoaded(container: Container): void {
-    console.log(container);
-  }
-
-  // async particlesInit(engine: Engine): Promise<void> {
-  //   await loadSlim(engine);
-  // }
-
-
 }
