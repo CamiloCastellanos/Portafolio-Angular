@@ -1,35 +1,44 @@
 {
-    "aprendiendo": [{
-            "titulo": "Angular: De cero a experto (Legacy)",
-            "imagen": "https://i.postimg.cc/D0JH90H1/Certificado-angular.webp"
-        },
-        {
-            "titulo": "Curso de ASP.NET Core",
-            "imagen": "https://i.postimg.cc/HkhZgd02/Diploma-aspnet-core.webp"
-        },
-        {
-            "titulo": "Curso de MongoDB Aprende bases de datos NoSQL + API NodeJS",
-            "imagen": "https://i.postimg.cc/d19hgrCw/Curso-Mongo.webp"
-        },
-        {
-            "titulo": "Matemáticas Aplicadas a la Ciencia de Datos",
-            "imagen": "https://i.postimg.cc/4y6j6vYk/Matem-ticas-Aplicadas-a-la-Ciencia-de-Datos-pages-to-jpg-0001.webp"
-        },
-        {
-            "titulo": "Fundamentos de Typescript",
-            "imagen": "https://i.postimg.cc/D0ySh0Qs/diploma-fundamentos-typescript.webp"
-        },
-        {
-            "titulo": "Curso Profesional de Git y GitHub",
-            "imagen": "https://i.postimg.cc/Mp5MsgCX/diploma-git-github.webp"
-        },
-        {
-            "titulo": "Markdown Desde Cero",
-            "imagen": "https://i.postimg.cc/dVzZCqvP/certificado-curso-markdown.webp"
-        },
-        {
-            "titulo": "Aprende Typescript",
-            "imagen": "https://i.postimg.cc/s2hSHMKg/Aprende-Type-Script.webp"
-        }
-    ]
+  "aprendiendo": [
+    {
+      "titulo": "Angular: De cero a experto (Legacy)",
+      "imagen": "https://i.postimg.cc/D0JH90H1/Certificado-angular.webp"
+    },
+    {
+      "titulo": "Angular: Pruebas unitarias con Jasmine y Karma",
+      "imagen": "https://i.postimg.cc/8zXmHKSN/Angular-Pruebas-Unitarias-Jasmine-Karma.webp"
+    },
+    {
+      "titulo": "Angular: Pruebas unitarias con Jest",
+      "imagen": "https://i.postimg.cc/NjjxRhZd/Angular-Pruebas-Unitarias-Jest.webp"
+    },
+    {
+      "titulo": "Curso de ASP.NET Core",
+      "imagen": "https://i.postimg.cc/HkhZgd02/Diploma-aspnet-core.webp"
+    },
+    {
+      "titulo": "Curso de MongoDB Aprende bases de datos NoSQL + API NodeJS",
+      "imagen": "https://i.postimg.cc/d19hgrCw/Curso-Mongo.webp"
+    },
+    {
+      "titulo": "Matemáticas Aplicadas a la Ciencia de Datos",
+      "imagen": "https://i.postimg.cc/PqW6XbDD/Matem-ticas-Aplicadas-a-la-Ciencia-de-Datos-pages-to-jpg-0001.webp"
+    },
+    {
+      "titulo": "Fundamentos de Typescript",
+      "imagen": "https://i.postimg.cc/D0ySh0Qs/diploma-fundamentos-typescript.webp"
+    },
+    {
+      "titulo": "Curso Profesional de Git y GitHub",
+      "imagen": "https://i.postimg.cc/Mp5MsgCX/diploma-git-github.webp"
+    },
+    {
+      "titulo": "Markdown Desde Cero",
+      "imagen": "https://i.postimg.cc/dVzZCqvP/certificado-curso-markdown.webp"
+    },
+    {
+      "titulo": "Aprende Typescript",
+      "imagen": "https://i.postimg.cc/s2hSHMKg/Aprende-Type-Script.webp"
+    }
+  ]
 }

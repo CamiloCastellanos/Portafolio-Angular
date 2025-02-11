@@ -10,6 +10,11 @@
             "estado": 2
         },
         {
+          "nombre": ".NET Core",
+          "imagen": "https://i.postimg.cc/13Z5nPTq/net-core.webp",
+          "estado": 2
+      },
+        {
             "nombre": "Github",
             "imagen": "https://i.postimg.cc/FszYnfHX/GitHub.webp",
             "estado": 2
