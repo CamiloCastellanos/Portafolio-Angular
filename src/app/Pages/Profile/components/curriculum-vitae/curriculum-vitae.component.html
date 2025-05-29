@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="has-text-centered section-heading">
+    <h1 class="top-text title is-2 is-uppercase">
+      {{ "TITULO3_PROFILE" | translate }}
+    </h1>
+    <h1 class="bottom-text subtitle is-uppercase">
+      {{ "SUBTITULO3_PROFILE" | translate }}
+    </h1>
+
+    <a
+      [href]="lang == 'es' ? curriculumVitaeEs : curriculumVitaeEn"
+      target="_blank"
+      class="button is-outlined is-primary is-medium is-rounded"
+    >
+      <span class="icon">
+        <i class="fa fa-download"></i>
+      </span>
+      <span class="is-uppercase has-text-centered">{{
+        "DESCARGA_PROFILE" | translate
+      }}</span>
+    </a>
+  </div>
+</div>
