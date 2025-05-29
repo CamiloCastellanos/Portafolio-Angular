@@ -5,9 +5,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { WorkComponent } from './work/work.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CardComponent } from './components/card/card.component';
+import { TimeLineComponent } from './Components/time-line/time-line.component';
 
 @NgModule({
-  declarations: [WorkComponent, CarouselComponent, CardComponent],
+  declarations: [WorkComponent, CarouselComponent, CardComponent, TimeLineComponent],
   imports: [
     CommonModule,
     TranslateModule,
