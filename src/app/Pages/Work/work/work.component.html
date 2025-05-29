@@ -9,8 +9,11 @@
       </h1>
     </div>
 
-    <div class="row mt-6 columns is-multiline is-hidden-desktop">
-      <app-card [language]="language" [workList]="workList"></app-card>
+    <div class="row mt-6 is-hidden-desktop">
+      <app-time-line
+        [workList]="workList"
+        [language]="language"
+      ></app-time-line>
     </div>
 
     <div class="mt-6 is-hidden-touch">
