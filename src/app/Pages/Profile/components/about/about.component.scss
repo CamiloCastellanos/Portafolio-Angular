@@ -1,0 +1,27 @@
+.image {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.pets-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.pets-image image {
+  width: 50%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .pets-image image {
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: 0%;
+  }
+}
