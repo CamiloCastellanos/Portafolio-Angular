@@ -51,3 +51,9 @@ html {
   cursor: not-allowed;
   user-select: none;
 }
+
+.center-element{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
