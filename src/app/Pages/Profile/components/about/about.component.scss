@@ -1,16 +1,9 @@
-.image {
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-}
-
 .pets-image {
   display: flex;
   justify-content: center;
   align-items: center;
   object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
 }
 
 .pets-image image {
