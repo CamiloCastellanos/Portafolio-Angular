@@ -9,4 +9,5 @@ export class Work {
   endDate: string = 'Actual';
   endDateEn: string = 'Present';
   order: number = 0
+  icon: string = ""
 }
