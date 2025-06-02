@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 
-.typography-open-sans {
-  font-family: "Open Sans", sans-serif !important;
-}
-
 .typography-lora {
   font-family: "Lora", sans-serif !important;
+  color: var(--text-primary) !important;
+}
+
+.typography-open-sans {
+  font-family: "Open Sans", sans-serif !important;
+  color: var(--text-secondary) !important;
 }
 
 .font-weight-700 {
@@ -24,11 +26,12 @@
 .bottom-text {
   font-weight: 610 !important;
   font-family: "Open Sans", sans-serif !important;
+  color: var(--text-secondary) !important;
 }
 
 .top-text {
   font-family: "Lora", sans-serif !important;
-  color: #dee9ed !important;
+  color: var(--text-primary) !important;
   opacity: 0.7;
   font-weight: 600 !important;
 }
