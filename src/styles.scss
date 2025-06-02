@@ -4,6 +4,17 @@
 :root {
   --color-primary: #348f50;
   --color-secondary: #56b4d3;
+  --text-primary: #2b2d42;
+  --text-secondary: #495057;
+  --text-terciary: #f8f9fa;
+}
+
+.dark-theme {
+  --color-primary: #0c2e1d;
+  --color-secondary: #1a3a4b;
+  --text-primary: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --text-terciary: #495057;
 }
 
 html {
@@ -53,8 +64,8 @@ html {
   user-select: none;
 }
 
-.center-element{
-    display: flex;
+.center-element {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
