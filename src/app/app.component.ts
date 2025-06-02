@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { language } from './common/GlobalVariables';
+import { ThemeService } from './shared/core/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { language } from './common/GlobalVariables';
 export class AppComponent {
   constructor(
     private router: Router,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private themeService: ThemeService
   ) {
     let lenguajeNavegador = window.navigator.language;
     this.translate.addLangs([language.es.toString(), language.en.toString()]);
