@@ -41,8 +41,8 @@ ul li .title-date {
   height: auto;
   margin-inline: calc(var(--inlineP) * -1);
   text-align: center;
-  background-color: var(--accent-color);
-  color: white;
+  background-color: var(--color-flag-learn);
+  color: var(--text-primary);
   font-size: 1.25rem;
   font-weight: 700;
   display: grid;
@@ -57,7 +57,7 @@ ul li .title-date::before {
   content: "";
   width: var(--inlineP);
   aspect-ratio: 1;
-  background: var(--accent-color);
+  background: var(--color-flag-learn);
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
   position: absolute;
   top: 100%;
@@ -73,7 +73,7 @@ ul li .title-date::after {
   width: 2rem;
   aspect-ratio: 1;
   background: var(--bgColor);
-  border: 0.3rem solid var(--accent-color);
+  border: 0.3rem solid var(--color-flag-learn);
   border-radius: 50%;
   top: 50%;
   transform: translate(50%, -50%);
