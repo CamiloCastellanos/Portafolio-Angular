@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { ThemeService } from '../../../core/services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService, private themeService: ThemeService) { }
 
   displayMenu(): void {
     let burger = document.querySelector('.burger');

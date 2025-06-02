@@ -12,9 +12,7 @@
         height="100%"
         alt="DevCastellanos"
       />
-      <h1 class="has-text-black typography-open-sans font-weight-700">
-        Dev-Castellanos
-      </h1>
+      <h1 class="typography-open-sans font-weight-700">Dev-Castellanos</h1>
     </span>
 
     <div
@@ -26,9 +24,9 @@
       id="burger"
       (click)="displayMenu()"
     >
-      <span class="has-text-black"></span>
-      <span class="has-text-black"></span>
-      <span class="has-text-black"></span>
+      <span class="has-text-black color-span"></span>
+      <span class="has-text-black color-span"></span>
+      <span class="has-text-black color-span"></span>
     </div>
   </div>
   <div id="overlay" class=""></div>
@@ -42,7 +40,9 @@
         <span class="icon">
           <i class="fa fa-home" aria-hidden="true"> </i
         ></span>
-        <span>{{ "HOME_NAVBAR" | translate }}</span>
+        <span class="typography-open-sans">{{
+          "HOME_NAVBAR" | translate
+        }}</span>
       </a>
       <a
         class="navbar-item has-text-black"
@@ -52,7 +52,9 @@
         <span class="icon">
           <i class="fa fa-user" aria-hidden="true"></i>
         </span>
-        <span>{{ "PERFIL_NAVBAR" | translate }}</span>
+        <span class="typography-open-sans">{{
+          "PERFIL_NAVBAR" | translate
+        }}</span>
       </a>
       <a
         class="navbar-item has-text-black"
@@ -63,7 +65,9 @@
         <span class="icon">
           <i class="fa fa-briefcase" aria-hidden="true"></i>
         </span>
-        <span>{{ "TRABAJOS_NAVBAR" | translate }}</span>
+        <span class="typography-open-sans">{{
+          "TRABAJOS_NAVBAR" | translate
+        }}</span>
       </a>
 
       <span
@@ -77,9 +81,7 @@
           height="100%"
           alt="DevCastellanos"
         />
-        <h1 class="has-text-black typography-open-sans font-weight-700">
-          Dev-Castellanos
-        </h1>
+        <h1 class="typography-open-sans font-weight-700">Dev-Castellanos</h1>
       </span>
 
       <a
@@ -91,7 +93,9 @@
         <span class="icon">
           <i class="fa fa-code-fork" aria-hidden="true"></i>
         </span>
-        <span>{{ "PROYECTOS_PERSONALES_NAVBAR" | translate }} </span>
+        <span class="typography-open-sans"
+          >{{ "PROYECTOS_PERSONALES_NAVBAR" | translate }}
+        </span>
       </a>
       <a
         class="navbar-item has-text-black"
@@ -102,7 +106,9 @@
         <span class="icon">
           <i class="fa fa-graduation-cap" aria-hidden="true"></i>
         </span>
-        <span>{{ "APRENDIENDO_NAVBAR" | translate }}</span>
+        <span class="typography-open-sans">{{
+          "APRENDIENDO_NAVBAR" | translate
+        }}</span>
       </a>
       <a
         class="button is-ghost is-inverted is-medium"
