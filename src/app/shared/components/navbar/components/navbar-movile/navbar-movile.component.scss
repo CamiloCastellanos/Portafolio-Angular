@@ -1,3 +1,9 @@
+.navbar-movile {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+}
+
 .menu {
   box-sizing: border-box;
   --duration: 0.7s;
