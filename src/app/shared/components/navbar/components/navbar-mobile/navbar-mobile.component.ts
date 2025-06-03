@@ -1,11 +1,11 @@
 import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar-movile',
-  templateUrl: './navbar-movile.component.html',
-  styleUrl: './navbar-movile.component.scss'
+  selector: 'app-navbar-mobile',
+  templateUrl: './navbar-mobile.component.html',
+  styleUrl: './navbar-mobile.component.scss'
 })
-export class NavbarMovileComponent {
+export class NavbarMobileComponent {
   @ViewChild('menu') menuRef!: ElementRef;
   @ViewChild('border') borderRef!: ElementRef;
   @Output() changeLanguageEvent: EventEmitter<string> = new EventEmitter();

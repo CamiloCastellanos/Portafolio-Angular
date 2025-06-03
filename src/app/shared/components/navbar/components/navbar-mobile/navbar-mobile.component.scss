@@ -1,4 +1,4 @@
-.navbar-movile {
+.navbar-mobile {
   position: fixed;
   bottom: 0;
   z-index: 1000;
@@ -16,8 +16,8 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-navbar-movile);
-  box-shadow: 0 0 50px 10px var(--color-box-shadow-movile);
+  background-color: var(--color-navbar-mobile);
+  box-shadow: 0 0 50px 10px var(--color-box-shadow-mobile);
 }
 
 .menu-item {
@@ -81,7 +81,7 @@
   position: absolute;
   clip-path: url(#menu);
   will-change: transform;
-  background-color: var(--color-navbar-movile);
+  background-color: var(--color-navbar-mobile);
   transition: transform var(--timeOut, var(--duration));
 }
 

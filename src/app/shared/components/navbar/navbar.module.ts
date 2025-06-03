@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
-import { NavbarMovileComponent } from './components/navbar-movile/navbar-movile.component';
+import { NavbarMobileComponent } from './components/navbar-mobile/navbar-mobile.component';
 import { NavbarWebComponent } from './components/navbar-web/navbar-web.component';
 import { SwitchThemeComponent } from './components/switch-theme/switch-theme.component';
 
 
 
 @NgModule({
-  declarations: [NavbarComponent, NavbarMovileComponent, NavbarWebComponent, SwitchThemeComponent],
+  declarations: [NavbarComponent, NavbarMobileComponent, NavbarWebComponent, SwitchThemeComponent],
   exports: [NavbarComponent],
   imports: [
     CommonModule,
