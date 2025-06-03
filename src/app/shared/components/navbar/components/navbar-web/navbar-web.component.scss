@@ -32,8 +32,14 @@ nav a:before {
 
 a {
   text-decoration: none;
-  background-image: -webkit-linear-gradient(currentColor, currentColor);
-  background-image: linear-gradient(currentColor, currentColor);
+  background-image: -webkit-linear-gradient(
+    var(--text-secondary),
+    var(--text-secondary)
+  );
+  background-image: linear-gradient(
+    var(--text-secondary),
+    var(--text-secondary)
+  );
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 0.5rem;
@@ -126,4 +132,8 @@ nav label #menu-icon {
 
 .color-span {
   color: var(--text-primary) !important;
+}
+
+.icon {
+  fill: var(--text-secondary);
 }
