@@ -9,7 +9,7 @@ import { ThemeService } from '../../../core/services/theme.service';
 })
 export class NavbarComponent {
 
-  constructor(private translate: TranslateService, private themeService: ThemeService) { }
+  constructor(private translate: TranslateService) { }
 
   changeLanguage(idiomaSeleccionado: string) {
     this.translate.use(idiomaSeleccionado.valueOf());
