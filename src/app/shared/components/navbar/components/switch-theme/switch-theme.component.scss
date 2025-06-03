@@ -1,0 +1,25 @@
+#theme-switch {
+  height: var(--height-button);
+  width: var(--width-button);
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  border-color: var(--text-primary);
+}
+
+@keyframes strok {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+.icon-theme {
+  path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: strok 1.5s reverse forwards;
+  }
+}
