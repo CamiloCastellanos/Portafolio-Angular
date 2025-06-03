@@ -8,9 +8,11 @@
   --text-secondary: #495057;
   --text-terciary: #f8f9fa;
   --color-card-word: #f8f9fa;
-  --color-flag-learn:#cbe9f2;
+  --color-flag-learn: #cbe9f2;
+  --color-navbar-movile: #2a7a4175;
+  --color-box-shadow-movile: rgba(52, 143, 80, 0.27);
 }
-
+//2a7a40
 .dark-theme {
   --color-primary: #0c2e1d;
   --color-secondary: #1a3a4b;
@@ -19,6 +21,8 @@
   --text-terciary: #495057;
   --color-card-word: #1a3a4b66;
   --color-flag-learn: #245874;
+  --color-navbar-movile: #1a3a4b;
+  --color-box-shadow-movile: rgba(255, 255, 255, 0.27);
 }
 
 html {
