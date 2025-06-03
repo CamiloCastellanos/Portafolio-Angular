@@ -32,21 +32,15 @@
         <p class="is-size-4" [ngClass]="typographyText">👨‍💻</p>
       </div>
       <div class="div-phrase pl-1">
-        <div class="box has-background-success-dark transparente">
+        <div class="box transparente">
           <app-type-writer
-            [classText]="
-              'is-size-3 is-uppercase has-text-white-ter ' +
-              typographyTypeWriter
-            "
+            [classText]="'is-size-3 is-uppercase  ' + typographyTypeWriter"
             [fontSize]="'20px'"
             [wordArray]="phraseEn"
             *ngIf="lang == 'en'"
           ></app-type-writer>
           <app-type-writer
-            [classText]="
-              'is-size-3 is-uppercase has-text-white-ter ' +
-              typographyTypeWriter
-            "
+            [classText]="'is-size-3 is-uppercase  ' + typographyTypeWriter"
             [fontSize]="'20px'"
             [wordArray]="phraseEs"
             *ngIf="lang == 'es'"
@@ -85,21 +79,15 @@
         <p class="is-size-4" [ngClass]="typographyText">👨‍💻</p>
       </div>
       <div class="row mt-3 mb-0 pb-0">
-        <div class="box has-background-success-dark transparente">
+        <div class="box transparente">
           <app-type-writer
-            [classText]="
-              'is-size-5 is-uppercase has-text-white-ter ' +
-              typographyTypeWriter
-            "
+            [classText]="'is-size-5 is-uppercase  ' + typographyTypeWriter"
             [fontSize]="'20px'"
             [wordArray]="phraseEn"
             *ngIf="lang == 'en'"
           ></app-type-writer>
           <app-type-writer
-            [classText]="
-              'is-size-5 is-uppercase has-text-white-ter ' +
-              typographyTypeWriter
-            "
+            [classText]="'is-size-5 is-uppercase  ' + typographyTypeWriter"
             [fontSize]="'20px'"
             [wordArray]="phraseEs"
             *ngIf="lang == 'es'"
