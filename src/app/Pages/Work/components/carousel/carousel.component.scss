@@ -1,3 +1,9 @@
+.button.is-primary.is-outlined {
+  background-color: transparent;
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
 @media (max-width: 1300px) {
   label {
     font-size: 1.25rem;
