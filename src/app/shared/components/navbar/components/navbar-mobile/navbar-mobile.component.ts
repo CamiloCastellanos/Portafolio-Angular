@@ -1,4 +1,6 @@
-import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar-mobile',
@@ -9,17 +11,19 @@ export class NavbarMobileComponent {
   @ViewChild('menu') menuRef!: ElementRef;
   @ViewChild('border') borderRef!: ElementRef;
   @Output() changeLanguageEvent: EventEmitter<string> = new EventEmitter();
-
   activeItem: HTMLElement | null = null;
+  currentUrl: string = '';
+
+  constructor(private router: Router, private changeDetector: ChangeDetectorRef) { }
 
   ngAfterViewInit(): void {
-    this.activeItem = this.menuRef.nativeElement.querySelector('.active');
-    this.updateBorderPosition();
+    this.updateSelectedMenu();
+  }
 
-    const menuItems = this.menuRef.nativeElement.querySelectorAll('.menu-item');
-    menuItems.forEach((item: HTMLElement, index: number) => {
-      item.addEventListener('click', () => this.setActiveItem(item, index));
-    });
+  ngAfterViewChecked(): void {
+    this.currentUrl = this.router.url.replace('/', '');
+    this.updateSelectedMenu();
+    this.changeDetector.detectChanges();
   }
 
   setActiveItem(item: HTMLElement, index: number): void {
@@ -48,6 +52,16 @@ export class NavbarMobileComponent {
 
   changeLanguage(language: string) {
     this.changeLanguageEvent.emit(language);
+  }
+
+  updateSelectedMenu() {
+    this.activeItem = this.menuRef.nativeElement.querySelector('.active');
+    this.updateBorderPosition();
+
+    const menuItems = this.menuRef.nativeElement.querySelectorAll('.menu-item');
+    menuItems.forEach((item: HTMLElement, index: number) => {
+      item.addEventListener('click', () => this.setActiveItem(item, index));
+    });
   }
 
   @HostListener('window:resize')
