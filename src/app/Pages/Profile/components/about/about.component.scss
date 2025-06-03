@@ -18,3 +18,17 @@
     margin-bottom: 0%;
   }
 }
+
+[data-tooltip]:not(.is-disabled).has-tooltip-primary:before,
+[data-tooltip]:not(.is-loading).has-tooltip-primary:before,
+[data-tooltip]:not([disabled]).has-tooltip-primary:before {
+  background-color: var(--color-box-home);
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.outlined {
+  background-color: transparent !important;
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
