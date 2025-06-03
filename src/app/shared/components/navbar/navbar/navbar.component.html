@@ -1,2 +1,8 @@
-<app-navbar-web (changeLanguageEvent)="changeLanguage($event)"></app-navbar-web>
-<app-navbar-movile class="is-hidden-desktop"></app-navbar-movile>
+<app-navbar-web
+  class="is-hidden-touch"
+  (changeLanguageEvent)="changeLanguage($event)"
+></app-navbar-web>
+<app-navbar-movile
+  class="is-hidden-desktop"
+  (changeLanguageEvent)="changeLanguage($event)"
+></app-navbar-movile>

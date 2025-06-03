@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar-movile',
@@ -8,6 +8,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 export class NavbarMovileComponent {
   @ViewChild('menu') menuRef!: ElementRef;
   @ViewChild('border') borderRef!: ElementRef;
+  @Output() changeLanguageEvent: EventEmitter<string> = new EventEmitter();
 
   activeItem: HTMLElement | null = null;
 
@@ -43,6 +44,10 @@ export class NavbarMovileComponent {
       (this.borderRef.nativeElement.offsetWidth - offsetActiveItem.width) / 2) + "px";
 
     this.borderRef.nativeElement.style.transform = `translate3d(${left}, 0, 0)`;
+  }
+
+  changeLanguage(language: string) {
+    this.changeLanguageEvent.emit(language);
   }
 
   @HostListener('window:resize')
