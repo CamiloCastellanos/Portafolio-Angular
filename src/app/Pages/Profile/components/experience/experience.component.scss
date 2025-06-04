@@ -5,6 +5,7 @@
   align-items: center;
   width: 90%;
 }
+
 .floating {
   animation: float 3.5s ease-in-out infinite;
 }
@@ -20,70 +21,45 @@
 }
 
 .card-hover {
-  position: relative;
-  cursor: pointer;
-}
-
-.card-hover .face {
-  transition: 0.5s;
-}
-
-.card-hover .face.face-title {
-  position: relative;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  transform: translateY(50%);
-  opacity: 0.4;
-}
-
-.card-hover:hover .face.face-title {
-  background: linear-gradient(to right, #56b4d3, #348f50);
-  transform: translateY(0);
-  opacity: 0.6;
-}
-
-.card-hover .face.face-title .content {
-  transition: 0.5s;
-}
-
-.card-hover:hover .face.face-title .content {
-  opacity: 1;
-}
-
-.card-hover .face.face-title .content img {
-  margin-top: 7px;
-  max-width: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-hover .face.face-description {
-  position: relative;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  transform: translateY(-100px);
+  border-radius: 10px;
+  filter: drop-shadow(0 5px 10px 0 #ffffff);
+  background-color: var(--color-box-home);
+  padding: 10px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in;
 }
 
-.card-hover:hover .face.face-description {
-  transform: translateY(0);
-  opacity: 0.6;
+.card-hover::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -15px;
+  right: -15px;
+  background: var(--color-effect-card-hover);
+  height: 1200%;
+  width: 25px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
 }
 
-.card-hover .face.face-description .content article {
-  margin: 0;
-  padding: 0;
+.card-hover:hover::before {
+  transition-delay: 0.2s;
+  transform: scale(40);
 }
 
-.face-description {
-  opacity: 0;
+.card-hover h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.card-hover-image {
+  width: 50px;
+  height: 50px;
+}
