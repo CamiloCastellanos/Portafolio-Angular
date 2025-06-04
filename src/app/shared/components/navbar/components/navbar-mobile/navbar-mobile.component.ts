@@ -14,16 +14,19 @@ export class NavbarMobileComponent {
   activeItem: HTMLElement | null = null;
   currentUrl: string = '';
 
-  constructor(private router: Router, private changeDetector: ChangeDetectorRef) { }
+  constructor(private router: Router, private changeDetector: ChangeDetectorRef) {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        setTimeout(() => {
+          this.updateSelectedMenu();
+          this.changeDetector.detectChanges();
+        }, 50);
+      });
+  }
 
   ngAfterViewInit(): void {
     this.updateSelectedMenu();
-  }
-
-  ngAfterViewChecked(): void {
-    this.currentUrl = this.router.url.replace('/', '');
-    this.updateSelectedMenu();
-    this.changeDetector.detectChanges();
   }
 
   setActiveItem(item: HTMLElement, index: number): void {
