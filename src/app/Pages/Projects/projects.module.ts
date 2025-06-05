@@ -4,13 +4,12 @@ import { ProjectsRoutingModule } from './projects.routers';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectsComponent } from './projects/projects.component';
 import { ToolsLanguagesModule } from '../../shared/components/tools-languages/tools-languages.module';
-import { RedirectButtonComponent } from './components/redirect-button/redirect-button.component';
 import { BookComponent } from './components/book/book.component';
 import { ProjectMobileComponent } from './components/project-mobile/project-mobile.component';
 
 
 @NgModule({
-  declarations: [ProjectsComponent, RedirectButtonComponent, BookComponent, ProjectMobileComponent],
+  declarations: [ProjectsComponent, BookComponent, ProjectMobileComponent],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
@@ -18,4 +17,5 @@ import { ProjectMobileComponent } from './components/project-mobile/project-mobi
     ToolsLanguagesModule
   ]
 })
+
 export class ProjectsModule { }

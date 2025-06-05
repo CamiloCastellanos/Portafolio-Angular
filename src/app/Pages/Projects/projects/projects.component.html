@@ -15,64 +15,13 @@
       class="is-hidden-touch"
     ></app-book>
 
-    <div class="row columns is-multiline is-hidden-desktop">
-      <div *ngFor="let project of projectList" class="column is-6">
-        <div class="card transparente">
-          <div class="card-image mb-0">
-            <img
-              [src]="project.image"
-              alt=""
-              style="height: 200px; width: 100%"
-            />
-          </div>
-          <div class="card-content">
-            <div class="media mb-0">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img [src]="project.tool" alt="Image" />
-                </figure>
-              </div>
-              <div
-                class="media-content is-flex is-justify-content-center is-align-content-center"
-              >
-                <p
-                  class="title is-6 no-padding typography-lora font-weight-600"
-                  *ngIf="language == 'es'"
-                >
-                  {{ project.title | uppercase }}
-                </p>
-                <p
-                  class="title is-6 no-padding typography-lora font-weight-600"
-                  *ngIf="language == 'en'"
-                >
-                  {{ project.titleEn | uppercase }}
-                </p>
-              </div>
-            </div>
-            <div class="content my-0 mb-0">
-              <p
-                class="typography-open-sans font-weight-500"
-                *ngIf="language == 'es'"
-              >
-                {{ project.description }}
-              </p>
-              <p
-                class="typography-open-sans font-weight-500"
-                *ngIf="language == 'en'"
-              >
-                {{ project.descriptionEn }}
-              </p>
-              <app-redirect-button
-                [href]="project.url"
-                class="is-flex is-justify-content-center is-align-content-center mt-2"
-                [buttonText]="textButton"
-              ></app-redirect-button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-project-mobile
+      [language]="language"
+      [projectList]="projectList"
+      class="is-hidden-desktop"
+    ></app-project-mobile>
   </div>
+
   <div id="Herramientas">
     <app-tools-languages
       [tipoListaDefault]="2"
