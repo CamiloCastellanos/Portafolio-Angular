@@ -1,0 +1,99 @@
+<div class="section columns is-multiline">
+  <div class="column is-4" *ngFor="let project of projectList">
+    <div class="project-card">
+      <div class="project-image">
+        <img
+          [src]="project.image"
+          alt="Camilo Castellanos - {{ project.title }}"
+        />
+
+        <div
+          *ngIf="project.urlProject != '' && project.urlProject != undefined"
+        >
+          <a
+            [href]="project.urlProject"
+            class="demo-link"
+            target="_blank"
+            *ngIf="language == 'es'"
+            >Ver Demo ↗</a
+          >
+
+          <a
+            [href]="project.urlProject"
+            class="demo-link"
+            target="_blank"
+            *ngIf="language == 'en'"
+            >Watch demo ↗</a
+          >
+        </div>
+      </div>
+
+      <div class="project-content">
+        <div class="title-with-icon">
+          <h3
+            class="typography-lora font-weight-600 mt-2"
+            *ngIf="language == 'es'"
+          >
+            {{ project.title | uppercase }}
+          </h3>
+          <h3
+            class="typography-lora font-weight-600 mt-2"
+            *ngIf="language == 'en'"
+          >
+            {{ project.titleEn | uppercase }}
+          </h3>
+          <div class="tech-stack">
+            <img
+              [src]="project.tool"
+              [alt]="project.nameTool"
+              [title]="project.nameTool"
+            />
+          </div>
+        </div>
+        <p
+          class="project-description typography-open-sans font-weight-500"
+          *ngIf="language == 'es'"
+        >
+          {{ project.description }}
+        </p>
+        <p
+          class="project-description typography-open-sans font-weight-500"
+          *ngIf="language == 'en'"
+        >
+          {{ project.descriptionEn }}
+        </p>
+
+        <div
+          class="project-links"
+          *ngIf="project.url != '' && project.url != undefined"
+        >
+          <a
+            [href]="project.url"
+            class="demo-btn typography-open-sans font-weight-600"
+            target="_blank"
+            *ngIf="language == 'es'"
+          >
+            <img
+              src="https://i.postimg.cc/FszYnfHX/GitHub.webp"
+              alt="Código en GitHub"
+            />
+            Ver Código</a
+          >
+
+          <a
+            [href]="project.url"
+            class="demo-btn typography-open-sans font-weight-600"
+            target="_blank"
+            *ngIf="language == 'en'"
+          >
+            <img
+              src="https://i.postimg.cc/FszYnfHX/GitHub.webp"
+              alt="Código en GitHub"
+            />
+            View code</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

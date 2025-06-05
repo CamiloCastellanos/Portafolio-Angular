@@ -6,10 +6,11 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ToolsLanguagesModule } from '../../shared/components/tools-languages/tools-languages.module';
 import { RedirectButtonComponent } from './components/redirect-button/redirect-button.component';
 import { BookComponent } from './components/book/book.component';
+import { ProjectMobileComponent } from './components/project-mobile/project-mobile.component';
 
 
 @NgModule({
-  declarations: [ProjectsComponent, RedirectButtonComponent, BookComponent],
+  declarations: [ProjectsComponent, RedirectButtonComponent, BookComponent, ProjectMobileComponent],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
