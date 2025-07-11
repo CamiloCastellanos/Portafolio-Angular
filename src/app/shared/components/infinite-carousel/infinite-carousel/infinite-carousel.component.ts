@@ -9,6 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class InfiniteCarouselComponent {
   @Input() carouselList: InfiniteCarouselType[] = [];
+  @Input() tipographyText: string = "";
 
   customOptions: OwlOptions = {
     loop: true,
@@ -16,8 +17,8 @@ export class InfiniteCarouselComponent {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    autoplay:true,
-    autoplayTimeout:1500,
+    autoplay: true,
+    autoplayTimeout: 1500,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {

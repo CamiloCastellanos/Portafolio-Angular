@@ -1,8 +1,34 @@
 @import "styles/typography.scss";
+@import "styles/ngx-translate.scss";
 
 :root {
   --color-primary: #348f50;
   --color-secondary: #56b4d3;
+  --text-primary: #2b2d42;
+  --text-secondary: #495057;
+  --text-terciary: #f8f9fa;
+  --color-card-word: #f8f9fa;
+  --color-flag-learn: #cbe9f2;
+  --color-navbar-mobile: #2a7a41;
+  --color-box-shadow-mobile: rgba(52, 143, 80, 0.27);
+  --color-box-home: #f8f9fa;
+  --color-effect-card-hover: #49505748;
+  --color-card-learn: #f8f9fa;
+}
+
+.dark-theme {
+  --color-primary: #0c2e1d;
+  --color-secondary: #1a3a4b;
+  --text-primary: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --text-terciary: #495057;
+  --color-card-word: #1a3a4b66;
+  --color-flag-learn: #245874;
+  --color-navbar-mobile: #1a3a4b;
+  --color-box-shadow-mobile: rgba(255, 255, 255, 0.27);
+  --color-box-home: #1a3a4b;
+  --color-effect-card-hover: #ffffff1f;
+  --color-card-learn: #1a3a4b;
 }
 
 html {
@@ -50,4 +76,10 @@ html {
 .disabled-input {
   cursor: not-allowed;
   user-select: none;
+}
+
+.center-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

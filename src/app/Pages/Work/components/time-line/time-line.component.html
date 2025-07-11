@@ -1,0 +1,28 @@
+<div class="container">
+  <ul>
+    <li
+      *ngFor="let work of workList"
+      [style.--icon-circle]="'url(' + work.icon + ')'"
+    >
+      <h1 class="title typography-lora">
+        {{ work.title }}
+      </h1>
+
+      <p class="typography-open-sans" *ngIf="language == 'es'">
+        Cargo 🧑🏼‍💻: {{ work.description | titlecase }}
+      </p>
+      <p class="typography-open-sans" *ngIf="language == 'en'">
+        Position 🧑🏼‍💻: {{ work.descriptionEn | titlecase }}
+      </p>
+
+      <div class="typography-open-sans" *ngIf="language == 'es'">
+        📅 {{ work.startDate }} → {{ work.endDate }}
+      </div>
+
+      <div class="typography-open-sans" *ngIf="language == 'en'">
+        📅 {{ work.startDateEn }} → {{ work.endDateEn }}
+      </div>
+    </li>
+    <li></li>
+  </ul>
+</div>

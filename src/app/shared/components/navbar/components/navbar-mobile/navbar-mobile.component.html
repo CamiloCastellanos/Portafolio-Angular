@@ -1,0 +1,249 @@
+<div class="mt-3">
+  <a
+    class="button is-ghost is-inverted is-medium ml-3"
+    (click)="changeLanguage('es')"
+  >
+    <figure class="icon languages">
+      <img
+        src="assets/image/languages/es.svg "
+        alt="Idioma Español - Spanish language "
+      />
+    </figure>
+  </a>
+  <a
+    class="button is-ghost is-inverted is-medium ml-3"
+    (click)="changeLanguage('en')"
+  >
+    <figure class="icon languages">
+      <img
+        src="assets/image/languages/en.svg "
+        alt="Idioma Ingles - English language "
+      />
+    </figure>
+  </a>
+  <app-switch-theme
+    [widthButton]="'52px'"
+    [heightButton]="'52px'"
+    class="ml-3"
+  ></app-switch-theme>
+</div>
+<div class="navbar-mobile">
+  <div class="menu" #menu>
+    <button
+      class="menu-item menu-text typography-open-sans font-weight-700"
+      routerLink="/home"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <svg class="icon" viewBox="0 0 24 24" fill="#fff">
+        <path
+          d="M22 22L2 22"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M4 22V9.5"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M20 9.5V13.5M20 22V17.5"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"
+          stroke="#fff"
+          stroke-width="1.5"
+        />
+      </svg>
+      {{ "HOME_NAVBAR" | translate }}
+    </button>
+
+    <button
+      class="menu-item menu-text typography-open-sans font-weight-700"
+      routerLink="/perfil"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <svg class="icon" viewBox="0 0 24 24" fill="#fff">
+        <circle cx="10" cy="6" r="4" stroke="#fff" stroke-width="1.5" />
+        <path
+          d="M18.0429 12.3656L18.4865 11.7609L18.4865 11.7609L18.0429 12.3656ZM19 8.69135L18.4813 9.23307C18.7713 9.51077 19.2287 9.51077 19.5187 9.23307L19 8.69135ZM19.9571 12.3656L19.5135 11.7609L19.5135 11.7609L19.9571 12.3656ZM19 12.8276L19 13.5776H19L19 12.8276ZM18.4865 11.7609C18.0686 11.4542 17.6081 11.0712 17.2595 10.6681C16.8912 10.2423 16.75 9.91131 16.75 9.69673H15.25C15.25 10.4666 15.6912 11.1479 16.1249 11.6493C16.5782 12.1735 17.1391 12.6327 17.5992 12.9703L18.4865 11.7609ZM16.75 9.69673C16.75 9.12068 17.0126 8.87002 17.2419 8.78964C17.4922 8.70189 17.9558 8.72986 18.4813 9.23307L19.5187 8.14963C18.6943 7.36028 17.6579 7.05432 16.7457 7.3741C15.8125 7.70123 15.25 8.59955 15.25 9.69673H16.75ZM20.4008 12.9703C20.8609 12.6327 21.4218 12.1735 21.8751 11.6493C22.3088 11.1479 22.75 10.4666 22.75 9.69672H21.25C21.25 9.91132 21.1088 10.2424 20.7405 10.6681C20.3919 11.0713 19.9314 11.4542 19.5135 11.7609L20.4008 12.9703ZM22.75 9.69672C22.75 8.59954 22.1875 7.70123 21.2543 7.37409C20.3421 7.05432 19.3057 7.36028 18.4813 8.14963L19.5187 9.23307C20.0442 8.72986 20.5078 8.70189 20.7581 8.78964C20.9874 8.87002 21.25 9.12068 21.25 9.69672H22.75ZM17.5992 12.9703C17.9678 13.2407 18.3816 13.5776 19 13.5776L19 12.0776C18.9756 12.0776 18.9605 12.0775 18.9061 12.0488C18.8202 12.0034 18.7128 11.9269 18.4865 11.7609L17.5992 12.9703ZM19.5135 11.7609C19.2872 11.9269 19.1798 12.0034 19.0939 12.0488C19.0395 12.0775 19.0244 12.0776 19 12.0776L19 13.5776C19.6184 13.5776 20.0322 13.2407 20.4008 12.9703L19.5135 11.7609Z"
+          fill="#fff"
+        />
+        <path
+          d="M17.9975 18C18 17.8358 18 17.669 18 17.5C18 15.0147 14.4183 13 10 13C5.58172 13 2 15.0147 2 17.5C2 19.9853 2 22 10 22C12.231 22 13.8398 21.8433 15 21.5634"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+      {{ "PERFIL_NAVBAR" | translate }}
+    </button>
+
+    <button
+      class="menu-item menu-text typography-open-sans font-weight-700"
+      routerLink="/trabajos"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <svg class="icon" viewBox="0 0 24 24" fill="#fff">
+        <path
+          d="M2.71598 16.1258C2.89681 17.6729 3.72352 19.0714 4.99182 19.9757C5.9263 20.6419 7.04537 21 8.19303 21H11.8069C12.9546 21 14.0736 20.6419 15.0081 19.9757C16.2764 19.0714 17.1031 17.6729 17.284 16.1258L17.6846 12.6978C17.7346 12.2706 17.7595 12.057 17.749 11.8809C17.694 10.9577 17.0132 10.1928 16.1027 10.0309C15.929 10 15.7139 10 15.2838 10H4.71612C4.286 10 4.07094 10 3.89725 10.0309C2.98677 10.1928 2.30599 10.9577 2.2509 11.8809C2.2404 12.057 2.26536 12.2706 2.3153 12.6978"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M17 17H19C20.6569 17 22 15.6569 22 14C22 12.3431 20.6569 11 19 11H17.5"
+          stroke="#fff"
+          stroke-width="1.5"
+        />
+        <path
+          d="M10.0002 2C9.44787 2.55228 9.44787 3.44772 10.0002 4C10.5524 4.55228 10.5524 5.44772 10.0002 6"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M4.99994 7.5L5.11605 7.38388C5.62322 6.87671 5.68028 6.0738 5.24994 5.5C4.81959 4.9262 4.87665 4.12329 5.38382 3.61612L5.49994 3.5"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M14.4999 7.5L14.6161 7.38388C15.1232 6.87671 15.1803 6.0738 14.7499 5.5C14.3196 4.9262 14.3767 4.12329 14.8838 3.61612L14.9999 3.5"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      {{ "TRABAJOS_NAVBAR" | translate }}
+    </button>
+
+    <button
+      class="menu-item menu-text typography-open-sans font-weight-700"
+      routerLink="/proyectosPersonales"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <svg class="icon" viewBox="0 0 24 24" fill="#fff">
+        <path
+          d="M4 12C4 13.3807 5.11929 14.5 6.5 14.5C7.88071 14.5 9 13.3807 9 12C9 10.6193 7.88071 9.5 6.5 9.5"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M14 6.5L9 10"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M14 17.5L9 14"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M16.5 21C17.8807 21 19 19.8807 19 18.5C19 17.1193 17.8807 16 16.5 16C15.1193 16 14 17.1193 14 18.5"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M18.665 6.74993C17.9746 7.94566 16.4457 8.35535 15.2499 7.66499C14.0542 6.97464 13.6445 5.44566 14.3349 4.24993C15.0252 3.0542 16.5542 2.64451 17.7499 3.33487"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+      {{ "PROYECTOS_PERSONALES_NAVBAR" | translate }}
+    </button>
+
+    <button
+      class="menu-item menu-text typography-open-sans font-weight-700"
+      routerLink="/seguirAprendiendo"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <svg class="icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="16" r="3" stroke="#fff" stroke-width="1.5" />
+        <path
+          d="M12 19.2599L9.73713 21.4293C9.41306 21.74 9.25102 21.8953 9.1138 21.9491C8.80111 22.0716 8.45425 21.9667 8.28977 21.7C8.21758 21.583 8.19509 21.3719 8.1501 20.9496C8.1247 20.7113 8.112 20.5921 8.07345 20.4922C7.98715 20.2687 7.80579 20.0948 7.57266 20.0121C7.46853 19.9751 7.3442 19.963 7.09553 19.9386C6.65512 19.8955 6.43491 19.8739 6.31283 19.8047C6.03463 19.647 5.92529 19.3145 6.05306 19.0147C6.10913 18.8832 6.27116 18.7278 6.59523 18.4171L8.07345 16.9999L9.1138 15.9596"
+          stroke="#fff"
+          stroke-width="1.5"
+        />
+        <path
+          d="M12 19.2599L14.2629 21.4294C14.5869 21.7401 14.749 21.8954 14.8862 21.9492C15.1989 22.0717 15.5457 21.9668 15.7102 21.7001C15.7824 21.5831 15.8049 21.372 15.8499 20.9497C15.8753 20.7113 15.888 20.5921 15.9265 20.4923C16.0129 20.2688 16.1942 20.0949 16.4273 20.0122C16.5315 19.9752 16.6558 19.9631 16.9045 19.9387C17.3449 19.8956 17.5651 19.874 17.6872 19.8048C17.9654 19.6471 18.0747 19.3146 17.9469 19.0148C17.8909 18.8832 17.7288 18.7279 17.4048 18.4172L15.9265 17L15 16.0735"
+          stroke="#fff"
+          stroke-width="1.5"
+        />
+        <path
+          d="M17.3197 17.9957C19.2921 17.9748 20.3915 17.8512 21.1213 17.1213C22 16.2426 22 14.8284 22 12V9M7 17.9983C4.82497 17.9862 3.64706 17.8897 2.87868 17.1213C2 16.2426 2 14.8284 2 12L2 8C2 5.17157 2 3.75736 2.87868 2.87868C3.75736 2 5.17157 2 8 2L16 2C18.8284 2 20.2426 2 21.1213 2.87868C21.6112 3.36857 21.828 4.02491 21.9239 5"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M9 6L15 6"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M7 9.5H9M17 9.5H12.5"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+      {{ "APRENDIENDO_NAVBAR" | translate }}
+    </button>
+
+    <div class="menu-border" #border></div>
+  </div>
+
+  <div class="svg-container">
+    <svg viewBox="0 0 202.9 45.5">
+      <clipPath
+        id="menu"
+        clipPathUnits="objectBoundingBox"
+        transform="scale(0.0049285362247413 0.021978021978022)"
+      >
+        <path
+          d="M6.7,45.5c5.7,0.1,14.1-0.4,23.3-4c5.7-2.3,9.9-5,18.1-10.5c10.7-7.1,11.8-9.2,20.6-14.3c5-2.9,9.2-5.2,15.2-7
+          c7.1-2.1,13.3-2.3,17.6-2.1c4.2-0.2,10.5,0.1,17.6,2.1c6.1,1.8,10.2,4.1,15.2,7c8.8,5,9.9,7.1,20.6,14.3c8.3,5.5,12.4,8.2,18.1,10.5
+          c9.2,3.6,17.6,4.2,23.3,4H6.7z"
+        />
+      </clipPath>
+    </svg>
+  </div>
+</div>

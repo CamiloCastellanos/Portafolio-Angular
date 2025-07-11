@@ -4,7 +4,7 @@
       <figure class="icon is-large">
         <img [src]="item.image" [alt]="item.text" />
       </figure>
-      <h4 class="">{{ item.text }}</h4>
+      <h4 [ngClass]="tipographyText">{{ item.text }}</h4>
     </div>
   </ng-template>
 </owl-carousel-o>

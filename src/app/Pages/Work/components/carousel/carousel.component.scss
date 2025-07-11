@@ -1,3 +1,9 @@
+.button.is-primary.is-outlined {
+  background-color: transparent;
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
 @media (max-width: 1300px) {
   label {
     font-size: 1.25rem;
@@ -9,8 +15,8 @@ $sections: order0, order1, order2, order3, order4, order5, order6, order7;
 $colors: (
   white: #fff,
   gray: #eee,
-  order0: #2d5944,
-  order1: #08403a,
+  order0: #386d53b0,
+  order1: #386d53b0,
   order2: #653473,
   order3: #92bf4e,
   order4: #d9042b,
@@ -77,12 +83,12 @@ $pictograms: (
   width: 80%; //configurados manualmente
   height: 55%; //configurados manualmente
   margin: auto;
-  background-color: get-color(white);
+  background-color: var(--color-card-word);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 
   #left-zone {
-    background: get-color(white);
+    background: var(--color-card-word);
     height: 77%;
     flex-grow: 0;
     display: flex;
@@ -164,7 +170,7 @@ $pictograms: (
 
               @each $item in $sections {
                 &.label_#{$item} {
-                  color: get-color($item);
+                  color: get-color($item) !important;
                   border-right: solid 4px get-color($item);
                 }
               }

@@ -39,8 +39,9 @@
 
 .image {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
-  mask-image: linear-gradient(
-    black 80%,
-    transparent
-  );
+  mask-image: linear-gradient(black 80%, transparent);
+}
+
+.box {
+  background-color: var(--color-box-home);
 }
