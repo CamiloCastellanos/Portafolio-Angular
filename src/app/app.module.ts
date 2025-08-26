@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 // Translate
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -35,37 +35,30 @@ export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    LayoutComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRouting,
-    NavbarModule,
-    SocialNetworkModule,
-    FooterModule,
-    NgxParticlesModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    NgxSpinnerModule,
-    HomeModule,
-    WorkModule,
-    ProjectsModule,
-    LearningModule,
-    ProfileModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [HttpClient]
-      }
-    }),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        LayoutComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRouting,
+        NavbarModule,
+        SocialNetworkModule,
+        FooterModule,
+        NgxParticlesModule,
+        BrowserAnimationsModule,
+        NgxSpinnerModule,
+        HomeModule,
+        WorkModule,
+        ProjectsModule,
+        LearningModule,
+        ProfileModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+        }),
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideFirestore(() => getFirestore())], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
