@@ -3,9 +3,10 @@ import { TranslateService } from '@ngx-translate/core';
 import { ThemeService } from '../../../core/services/theme.service';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.scss',
+    standalone: false
 })
 export class NavbarComponent {
 

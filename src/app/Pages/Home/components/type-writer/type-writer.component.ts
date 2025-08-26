@@ -1,9 +1,10 @@
 import { Component, ElementRef, Input, Renderer2, RendererStyleFlags2, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-type-writer',
-  templateUrl: './type-writer.component.html',
-  styleUrl: './type-writer.component.scss'
+    selector: 'app-type-writer',
+    templateUrl: './type-writer.component.html',
+    styleUrl: './type-writer.component.scss',
+    standalone: false
 })
 export class TypeWriterComponent {
   @ViewChild("textElement") textElement!: ElementRef;

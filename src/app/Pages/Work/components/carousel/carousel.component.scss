@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .button.is-primary.is-outlined {
   background-color: transparent;
   border-color: var(--text-secondary);
@@ -37,16 +39,16 @@ $pictograms: (
 );
 
 @function get-color($color-name) {
-  @if map-has-key($colors, $color-name) {
-    @return map-get($colors, $color-name);
+  @if map.has-key($colors, $color-name) {
+    @return map.get($colors, $color-name);
   } @else {
     @warn "This color key doesn't exist."+$color-name;
   }
 }
 
 @function get-picto-url($picto-name) {
-  @if map-has-key($pictograms, $picto-name) {
-    @return map-get($pictograms, $picto-name);
+  @if map.has-key($pictograms, $picto-name) {
+    @return map.get($pictograms, $picto-name);
   } @else {
     @warn "This pictogram key doesn't exist."+$picto-name;
   }

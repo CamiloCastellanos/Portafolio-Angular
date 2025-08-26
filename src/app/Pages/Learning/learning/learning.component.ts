@@ -3,9 +3,10 @@ import { Certificate } from '../../../models/Certificate';
 import { LearningService } from '../services/learning.service';
 
 @Component({
-  selector: 'app-learning',
-  templateUrl: './learning.component.html',
-  styleUrl: './learning.component.scss'
+    selector: 'app-learning',
+    templateUrl: './learning.component.html',
+    styleUrl: './learning.component.scss',
+    standalone: false
 })
 export class LearningComponent {
   certificateList: Certificate[] = []

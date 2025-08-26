@@ -3,10 +3,10 @@ import { ThemeService } from '../../../../core/services/theme.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
-  selector: 'app-switch-theme',
-  templateUrl: './switch-theme.component.html',
-  styleUrl: './switch-theme.component.scss',
-
+    selector: 'app-switch-theme',
+    templateUrl: './switch-theme.component.html',
+    styleUrl: './switch-theme.component.scss',
+    standalone: false
 })
 export class SwitchThemeComponent {
   @Input() widthButton: string = "";

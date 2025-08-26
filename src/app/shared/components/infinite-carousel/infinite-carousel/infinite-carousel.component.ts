@@ -3,9 +3,10 @@ import { InfiniteCarouselType } from '../../../../models/InfiniteCarouselType';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
-  selector: 'app-infinite-carousel',
-  templateUrl: './infinite-carousel.component.html',
-  styleUrl: './infinite-carousel.component.scss'
+    selector: 'app-infinite-carousel',
+    templateUrl: './infinite-carousel.component.html',
+    styleUrl: './infinite-carousel.component.scss',
+    standalone: false
 })
 export class InfiniteCarouselComponent {
   @Input() carouselList: InfiniteCarouselType[] = [];

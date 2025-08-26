@@ -4,9 +4,10 @@ import { ToolsLanguages } from '../../../../models/ToolsLanguages.model';
 import { InfiniteCarouselType } from '../../../../models/InfiniteCarouselType';
 
 @Component({
-  selector: 'app-tools-languages',
-  templateUrl: './tools-languages.component.html',
-  styleUrl: './tools-languages.component.scss'
+    selector: 'app-tools-languages',
+    templateUrl: './tools-languages.component.html',
+    styleUrl: './tools-languages.component.scss',
+    standalone: false
 })
 export class ToolsLanguagesComponent {
   @Input() tipoListaDefault: number = -1;

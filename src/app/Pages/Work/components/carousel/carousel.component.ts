@@ -2,9 +2,10 @@ import { Component, Input } from '@angular/core';
 import { Work } from '../../../../models/Work.model';
 
 @Component({
-  selector: 'app-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss'
+    selector: 'app-carousel',
+    templateUrl: './carousel.component.html',
+    styleUrl: './carousel.component.scss',
+    standalone: false
 })
 export class CarouselComponent {
   @Input() language: string = 'es';

@@ -3,9 +3,10 @@ import { IParticlesProps, NgParticlesService } from '@tsparticles/angular';
 import { loadSlim } from '@tsparticles/slim';
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss'
+    selector: 'app-layout',
+    templateUrl: './layout.component.html',
+    styleUrl: './layout.component.scss',
+    standalone: false
 })
 export class LayoutComponent {
   id = 'tsparticles';

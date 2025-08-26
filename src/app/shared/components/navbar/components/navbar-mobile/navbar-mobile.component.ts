@@ -3,9 +3,10 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-navbar-mobile',
-  templateUrl: './navbar-mobile.component.html',
-  styleUrl: './navbar-mobile.component.scss'
+    selector: 'app-navbar-mobile',
+    templateUrl: './navbar-mobile.component.html',
+    styleUrl: './navbar-mobile.component.scss',
+    standalone: false
 })
 export class NavbarMobileComponent {
   @ViewChild('menu') menuRef!: ElementRef;

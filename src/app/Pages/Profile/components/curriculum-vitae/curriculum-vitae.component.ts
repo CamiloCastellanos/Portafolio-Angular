@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-curriculum-vitae',
-  templateUrl: './curriculum-vitae.component.html',
-  styleUrl: './curriculum-vitae.component.scss'
+    selector: 'app-curriculum-vitae',
+    templateUrl: './curriculum-vitae.component.html',
+    styleUrl: './curriculum-vitae.component.scss',
+    standalone: false
 })
 export class CurriculumVitaeComponent {
   @Input() lang: string = "es";

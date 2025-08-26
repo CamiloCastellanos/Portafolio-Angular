@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrl: './experience.component.scss'
+    selector: 'app-experience',
+    templateUrl: './experience.component.html',
+    styleUrl: './experience.component.scss',
+    standalone: false
 })
 export class ExperienceComponent {
   @Input() lang: string = "es";

@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar-web',
-  templateUrl: './navbar-web.component.html',
-  styleUrl: './navbar-web.component.scss'
+    selector: 'app-navbar-web',
+    templateUrl: './navbar-web.component.html',
+    styleUrl: './navbar-web.component.scss',
+    standalone: false
 })
 export class NavbarWebComponent {
   @Output() changeLanguageEvent: EventEmitter<string> = new EventEmitter();

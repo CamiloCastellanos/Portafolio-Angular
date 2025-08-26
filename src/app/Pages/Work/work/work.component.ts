@@ -5,9 +5,10 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { WorkService } from '../services/work.service'
 
 @Component({
-  selector: 'app-work',
-  templateUrl: './work.component.html',
-  styleUrl: './work.component.scss'
+    selector: 'app-work',
+    templateUrl: './work.component.html',
+    styleUrl: './work.component.scss',
+    standalone: false
 })
 export class WorkComponent {
   workList: Work[] = [];

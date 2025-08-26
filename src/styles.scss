@@ -1,5 +1,5 @@
-@import "styles/typography.scss";
-@import "styles/ngx-translate.scss";
+@use "styles/typography";
+@use "styles/ngx-translate";
 
 :root {
   --color-primary: #348f50;

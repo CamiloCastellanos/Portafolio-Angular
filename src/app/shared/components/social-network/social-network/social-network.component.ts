@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-social-network',
-  templateUrl: './social-network.component.html',
-  styleUrl: './social-network.component.scss'
+    selector: 'app-social-network',
+    templateUrl: './social-network.component.html',
+    styleUrl: './social-network.component.scss',
+    standalone: false
 })
 export class SocialNetworkComponent {
   lang: string = "es";

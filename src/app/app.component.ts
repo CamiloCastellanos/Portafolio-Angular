@@ -5,9 +5,10 @@ import { language } from './common/GlobalVariables';
 import { ThemeService } from './shared/core/services/theme.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    standalone: false
 })
 export class AppComponent {
   constructor(

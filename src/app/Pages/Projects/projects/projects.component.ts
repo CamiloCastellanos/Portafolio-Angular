@@ -5,9 +5,10 @@ import { Project } from '../../../models/Project';
 import { ProjectsService } from '../services/projects.service';
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+    selector: 'app-projects',
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss',
+    standalone: false
 })
 export class ProjectsComponent {
   projectList: Project[] = [];
