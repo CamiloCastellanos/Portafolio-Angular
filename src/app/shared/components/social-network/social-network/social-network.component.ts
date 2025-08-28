@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({

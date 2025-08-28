@@ -1,10 +1,12 @@
 <owl-carousel-o [options]="customOptions">
-  <ng-template carouselSlide *ngFor="let item of carouselList">
-    <div class="has-text-centered">
-      <figure class="icon is-large">
-        <img [src]="item.image" [alt]="item.text" />
-      </figure>
-      <h4 [ngClass]="tipographyText">{{ item.text }}</h4>
-    </div>
-  </ng-template>
+  @for (item of carouselList; track item) {
+    <ng-template carouselSlide>
+      <div class="has-text-centered">
+        <figure class="icon is-large">
+          <img [src]="item.image" [alt]="item.text" />
+        </figure>
+        <h4 [ngClass]="tipographyText">{{ item.text }}</h4>
+      </div>
+    </ng-template>
+  }
 </owl-carousel-o>

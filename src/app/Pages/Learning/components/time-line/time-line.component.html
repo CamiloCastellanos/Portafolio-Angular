@@ -1,12 +1,14 @@
 <ul>
-  <li *ngFor="let item of certificateList">
-    <div class="title-date typography-lora font-weight-500">
-      <h6>{{ item.titulo }}</h6>
-    </div>
-    <div class="descr">
-      <figure class="image is-5by3">
-        <img [src]="item.imagen" alt="Camilo Castellanos - {{ item.titulo }}" />
-      </figure>
-    </div>
-  </li>
+  @for (item of certificateList; track item) {
+    <li>
+      <div class="title-date typography-lora font-weight-500">
+        <h6>{{ item.titulo }}</h6>
+      </div>
+      <div class="descr">
+        <figure class="image is-5by3">
+          <img [src]="item.imagen" alt="Camilo Castellanos - {{ item.titulo }}" />
+        </figure>
+      </div>
+    </li>
+  }
 </ul>

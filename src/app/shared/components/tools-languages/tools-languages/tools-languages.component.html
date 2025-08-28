@@ -11,22 +11,24 @@
 
     <div class="content-wrapper mt-6 is-hidden-touch">
       <div class="row columns is-centered is-multiline has-text-centered">
-        <div class="column is-3" *ngFor="let herramienta of listaHerramientas">
-          <figure class="icon is-large">
-            <img
-              src="{{ herramienta.imagen }}"
-              alt="Camilo Castellanos - Ha utilizado {{ herramienta.nombre }}"
-            />
-          </figure>
-          <h4 [ngClass]="tipographyText">{{ herramienta.nombre }}</h4>
+        @for (herramienta of listaHerramientas; track herramienta) {
+          <div class="column is-3">
+            <figure class="icon is-large">
+              <img
+                src="{{ herramienta.imagen }}"
+                alt="Camilo Castellanos - Ha utilizado {{ herramienta.nombre }}"
+                />
+              </figure>
+              <h4 [ngClass]="tipographyText">{{ herramienta.nombre }}</h4>
+            </div>
+          }
         </div>
       </div>
+      <div class="mt-6 is-hidden-desktop">
+        <app-infinite-carousel
+          [carouselList]="carouselList"
+          [tipographyText]="tipographyText"
+        ></app-infinite-carousel>
+      </div>
     </div>
-    <div class="mt-6 is-hidden-desktop">
-      <app-infinite-carousel
-        [carouselList]="carouselList"
-        [tipographyText]="tipographyText"
-      ></app-infinite-carousel>
-    </div>
-  </div>
-</section>
+  </section>

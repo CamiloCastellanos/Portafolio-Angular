@@ -1,37 +1,44 @@
 <div class="containerLibro mt-6 my-3" href="#">
-  <div *ngFor="let project of projectList" class="libro">
-    <a [href]="project.url" target="_blank">
-      <div class="imagenLibro image is-4by5">
-        <img
-          [src]="project.image2"
-          alt="Camilo Castellanos - {{ project.title }}"
-          width=" 300px"
-          height="400px"
-        />
+  @for (project of projectList; track project) {
+    <div class="libro">
+      <a [href]="project.url" target="_blank">
+        <div class="imagenLibro image is-4by5">
+          <img
+            [src]="project.image2"
+            alt="Camilo Castellanos - {{ project.title }}"
+            width=" 300px"
+            height="400px"
+            />
+          </div>
+          <div class="contenido">
+            @if (language == 'es') {
+              <h2
+                class="title is-3 has-text-centered typography-lora font-weight-600"
+                >
+                {{ project.title }}
+              </h2>
+            }
+            @if (language == 'es') {
+              <p
+                class="typography-open-sans font-weight-600"
+                >
+                {{ project.description }}
+              </p>
+            }
+            @if (language == 'en') {
+              <h2 class="title is-3 has-text-centered typography-lora font-weight-600">
+                {{ project.titleEn }}
+              </h2>
+            }
+            @if (language == 'en') {
+              <p
+                class="typography-open-sans font-weight-600"
+                >
+                {{ project.descriptionEn }}
+              </p>
+            }
+          </div>
+        </a>
       </div>
-      <div class="contenido">
-        <h2
-          class="title is-3 has-text-centered typography-lora font-weight-600"
-          *ngIf="language == 'es'"
-        >
-          {{ project.title }}
-        </h2>
-        <p
-          class="typography-open-sans font-weight-600"
-          *ngIf="language == 'es'"
-        >
-          {{ project.description }}
-        </p>
-        <h2 class="title is-3 has-text-centered typography-lora font-weight-600" *ngIf="language == 'en'">
-          {{ project.titleEn }}
-        </h2>
-        <p
-          class="typography-open-sans font-weight-600"
-          *ngIf="language == 'en'"
-        >
-          {{ project.descriptionEn }}
-        </p>
-      </div>
-    </a>
+    }
   </div>
-</div>
