@@ -3,12 +3,14 @@ import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { language } from './common/GlobalVariables';
 import { ThemeService } from './shared/core/services/theme.service';
+import { LayoutComponent } from './shared/components/layout/layout/layout.component';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
+  standalone: true,
+  imports: [LayoutComponent]
 })
 export class AppComponent {
   constructor(
