@@ -1,10 +1,18 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { ToolsLanguagesComponent } from '../../../../shared/components/tools-languages/tools-languages/tools-languages.component';
 
 @Component({
-    selector: 'app-experience',
-    templateUrl: './experience.component.html',
-    styleUrl: './experience.component.scss',
-    standalone: false
+  selector: 'app-experience',
+  templateUrl: './experience.component.html',
+  styleUrl: './experience.component.scss',
+  standalone: true,
+  imports: [
+    TranslateModule,
+    CommonModule,
+    ToolsLanguagesComponent
+  ]
 })
 export class ExperienceComponent {
   @Input() lang: string = "es";

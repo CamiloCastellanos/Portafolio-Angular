@@ -1,8 +1,8 @@
-@if (workList.length > 0) {
+@if (workList().length > 0) {
   <div id="scene">
     <div id="left-zone">
       <ul class="list">
-        @for (item of workList; track item; let index = $index) {
+        @for (item of sortedWorkList(); track item; let index = $index) {
           <li class="item">
             <input
               type="radio"

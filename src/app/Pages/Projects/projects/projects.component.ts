@@ -1,17 +1,28 @@
-import { Component } from '@angular/core';
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { Component, signal } from '@angular/core';
+import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Project } from '../../../models/Project';
 import { ProjectsService } from '../services/projects.service';
+import { ToolsLanguagesComponent } from '../../../shared/components/tools-languages/tools-languages/tools-languages.component';
+import { CommonModule } from '@angular/common';
+import { ProjectMobileComponent } from '../components/project-mobile/project-mobile.component';
+import { BookComponent } from '../components/book/book.component';
 
 @Component({
-    selector: 'app-projects',
-    templateUrl: './projects.component.html',
-    styleUrl: './projects.component.scss',
-    standalone: false
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.scss',
+  standalone: true,
+  imports: [
+    CommonModule,
+    TranslateModule,
+    ToolsLanguagesComponent,
+    BookComponent,
+    ProjectMobileComponent
+  ]
 })
-export class ProjectsComponent {
-  projectList: Project[] = [];
+export default class ProjectsComponent {
+  projectList = signal<Project[]>([]);
   language: string = "es";
   textButton: string = 'Ver más - Código - Demostración - Ver más - '
   private textButtonLanguage = ['Ver más - Código - Demostración - Ver más - ', 'See more - Code - Demo - See more - ']
@@ -34,7 +45,7 @@ export class ProjectsComponent {
 
   getProjects() {
     this.projectService.cargarProyectos().subscribe((data: any) => {
-      this.projectList = data as Project[];
+      this.projectList.set(data);
       this.spinnerService.hide();
     });
   }

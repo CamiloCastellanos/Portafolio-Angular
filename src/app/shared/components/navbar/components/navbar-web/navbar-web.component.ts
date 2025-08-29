@@ -1,10 +1,21 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { SwitchThemeComponent } from '../switch-theme/switch-theme.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-    selector: 'app-navbar-web',
-    templateUrl: './navbar-web.component.html',
-    styleUrl: './navbar-web.component.scss',
-    standalone: false
+  selector: 'app-navbar-web',
+  templateUrl: './navbar-web.component.html',
+  styleUrl: './navbar-web.component.scss',
+  standalone: true,
+  imports: [
+    CommonModule,
+    SwitchThemeComponent,
+    TranslateModule,
+    RouterLinkActive,
+    RouterLink
+  ]
 })
 export class NavbarWebComponent {
   @Output() changeLanguageEvent: EventEmitter<string> = new EventEmitter();

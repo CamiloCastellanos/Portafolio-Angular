@@ -1,13 +1,25 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { CurriculumVitaeComponent } from '../components/curriculum-vitae/curriculum-vitae.component';
+// import { AvatarComponent } from '../components/avatar/avatar.component';
+import { AboutComponent } from '../components/about/about.component';
+import { ExperienceComponent } from '../components/experience/experience.component';
 
 @Component({
-    selector: 'app-profile',
-    templateUrl: './profile.component.html',
-    styleUrl: './profile.component.scss',
-    standalone: false
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.scss',
+  standalone: true,
+  imports: [
+    CommonModule,
+    TranslateModule,
+    AboutComponent,
+    ExperienceComponent,
+    CurriculumVitaeComponent
+  ]
 })
-export class ProfileComponent {
+export default class ProfileComponent {
   lang: string = "es";
 
   constructor(private translate: TranslateService) {

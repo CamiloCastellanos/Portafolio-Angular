@@ -1,14 +1,22 @@
 import { Component } from '@angular/core';
 import { Certificate } from '../../../models/Certificate';
 import { LearningService } from '../services/learning.service';
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { TimeLineComponent } from '../components/time-line/time-line.component';
 
 @Component({
-    selector: 'app-learning',
-    templateUrl: './learning.component.html',
-    styleUrl: './learning.component.scss',
-    standalone: false
+  selector: 'app-learning',
+  templateUrl: './learning.component.html',
+  styleUrl: './learning.component.scss',
+  standalone: true,
+  imports: [
+    CommonModule,
+    TranslateModule,
+    TimeLineComponent
+  ]
 })
-export class LearningComponent {
+export default class LearningComponent {
   certificateList: Certificate[] = []
 
   constructor(private serviceLearning: LearningService) {

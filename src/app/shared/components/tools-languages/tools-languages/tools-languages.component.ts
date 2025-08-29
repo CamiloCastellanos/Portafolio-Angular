@@ -2,12 +2,20 @@ import { Component, Input } from '@angular/core';
 import { ToolsLanguagesService } from '../services/tools-languages.service';
 import { ToolsLanguages } from '../../../../models/ToolsLanguages.model';
 import { InfiniteCarouselType } from '../../../../models/InfiniteCarouselType';
+import { TranslateModule } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
+import { InfiniteCarouselComponent } from '../../infinite-carousel/infinite-carousel/infinite-carousel.component';
 
 @Component({
-    selector: 'app-tools-languages',
-    templateUrl: './tools-languages.component.html',
-    styleUrl: './tools-languages.component.scss',
-    standalone: false
+  selector: 'app-tools-languages',
+  templateUrl: './tools-languages.component.html',
+  styleUrl: './tools-languages.component.scss',
+  standalone: true,
+  imports: [
+    TranslateModule,
+    InfiniteCarouselComponent,
+    CommonModule
+  ],
 })
 export class ToolsLanguagesComponent {
   @Input() tipoListaDefault: number = -1;

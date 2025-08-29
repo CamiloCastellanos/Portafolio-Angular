@@ -1,5 +1,5 @@
 <div class="containerLibro mt-6 my-3" href="#">
-  @for (project of projectList; track project) {
+  @for (project of projectList(); track project) {
     <div class="libro">
       <a [href]="project.url" target="_blank">
         <div class="imagenLibro image is-4by5">

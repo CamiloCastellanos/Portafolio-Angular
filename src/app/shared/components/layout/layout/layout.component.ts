@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
-import { IParticlesProps, NgParticlesService } from '@tsparticles/angular';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { IParticlesProps, NgParticlesService, NgxParticlesModule } from '@tsparticles/angular';
 import { loadSlim } from '@tsparticles/slim';
+import { NavbarComponent } from '../../navbar/navbar/navbar.component';
+import { SocialNetworkComponent } from '../../social-network/social-network/social-network.component';
+import { FooterComponent } from '../../footer/footer.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-    selector: 'app-layout',
-    templateUrl: './layout.component.html',
-    styleUrl: './layout.component.scss',
-    standalone: false
+  selector: 'app-layout',
+  templateUrl: './layout.component.html',
+  styleUrl: './layout.component.scss',
+  standalone: true,
+  imports: [
+    NavbarComponent,
+    SocialNetworkComponent,
+    FooterComponent,
+    NgxSpinnerModule,
+    NgxParticlesModule,
+    RouterOutlet
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LayoutComponent {
   id = 'tsparticles';

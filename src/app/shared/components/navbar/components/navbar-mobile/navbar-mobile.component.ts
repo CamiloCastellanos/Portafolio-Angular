@@ -1,12 +1,22 @@
 import { ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { SwitchThemeComponent } from '../switch-theme/switch-theme.component';
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-navbar-mobile',
-    templateUrl: './navbar-mobile.component.html',
-    styleUrl: './navbar-mobile.component.scss',
-    standalone: false
+  selector: 'app-navbar-mobile',
+  templateUrl: './navbar-mobile.component.html',
+  styleUrl: './navbar-mobile.component.scss',
+  standalone: true,
+  imports: [
+    CommonModule,
+    SwitchThemeComponent,
+    TranslateModule,
+    RouterLinkActive,
+    RouterLink
+  ]
 })
 export class NavbarMobileComponent {
   @ViewChild('menu') menuRef!: ElementRef;

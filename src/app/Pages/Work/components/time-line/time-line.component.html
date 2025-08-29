@@ -1,6 +1,6 @@
 <div class="container">
   <ul>
-    @for (work of workList; track work) {
+    @for (work of sortedWorkList(); track work) {
       <li
         [style.--icon-circle]="'url(' + work.icon + ')'"
         >

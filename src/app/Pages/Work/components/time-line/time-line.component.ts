@@ -1,13 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, computed, Input, signal } from '@angular/core';
 import { Work } from '../../../../models/Work.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-time-line',
-    templateUrl: './time-line.component.html',
-    styleUrl: './time-line.component.scss',
-    standalone: false
+  selector: 'app-time-line',
+  templateUrl: './time-line.component.html',
+  styleUrl: './time-line.component.scss',
+  standalone: true,
+  imports: [CommonModule]
 })
 export class TimeLineComponent {
-  @Input() workList: Work[] = [];
+  @Input() workList = signal<Work[]>([])
   @Input() language: string = "es";
+
+    sortedWorkList = computed(() =>
+    [...this.workList()].sort((a, b) => b.order - a.order)
+  );
 }

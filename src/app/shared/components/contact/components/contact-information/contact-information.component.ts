@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
     selector: 'app-contact-information',
     templateUrl: './contact-information.component.html',
     styleUrl: './contact-information.component.scss',
-    standalone: false
+    standalone: true
 })
 export class ContactInformationComponent { }

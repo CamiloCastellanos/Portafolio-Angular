@@ -1,12 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { InfiniteCarouselType } from '../../../../models/InfiniteCarouselType';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-infinite-carousel',
-    templateUrl: './infinite-carousel.component.html',
-    styleUrl: './infinite-carousel.component.scss',
-    standalone: false
+  selector: 'app-infinite-carousel',
+  templateUrl: './infinite-carousel.component.html',
+  styleUrl: './infinite-carousel.component.scss',
+  standalone: true,
+  imports: [
+    CarouselModule,
+    CommonModule
+  ]
 })
 export class InfiniteCarouselComponent {
   @Input() carouselList: InfiniteCarouselType[] = [];

@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-curriculum-vitae',
-    templateUrl: './curriculum-vitae.component.html',
-    styleUrl: './curriculum-vitae.component.scss',
-    standalone: false
+  selector: 'app-curriculum-vitae',
+  templateUrl: './curriculum-vitae.component.html',
+  styleUrl: './curriculum-vitae.component.scss',
+  standalone: true,
+  imports: [TranslateModule]
 })
 export class CurriculumVitaeComponent {
   @Input() lang: string = "es";

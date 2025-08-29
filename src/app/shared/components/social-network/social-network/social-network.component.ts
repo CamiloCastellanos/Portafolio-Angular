@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
 
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { ContactInformationComponent } from '../../contact/components/contact-information/contact-information.component';
 
 @Component({
     selector: 'app-social-network',
     templateUrl: './social-network.component.html',
     styleUrl: './social-network.component.scss',
-    standalone: false
+    standalone: true,
+    imports: [
+      ContactInformationComponent
+    ]
 })
 export class SocialNetworkComponent {
   lang: string = "es";

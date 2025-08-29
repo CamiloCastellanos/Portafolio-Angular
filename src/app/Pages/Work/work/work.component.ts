@@ -1,17 +1,24 @@
-import { Component } from '@angular/core';
-import { Work } from '../../../models/Work.model';
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { Work } from '../../../models/Work.model';
 import { WorkService } from '../services/work.service'
+import { TimeLineComponent } from '../Components/time-line/time-line.component';
+import { CarouselComponent } from '../components/carousel/carousel.component';
 
 @Component({
-    selector: 'app-work',
-    templateUrl: './work.component.html',
-    styleUrl: './work.component.scss',
-    standalone: false
+  selector: 'app-work',
+  templateUrl: './work.component.html',
+  styleUrl: './work.component.scss',
+  standalone: true,
+  imports: [
+    CarouselComponent,
+    TimeLineComponent,
+    TranslateModule,
+  ],
 })
-export class WorkComponent {
-  workList: Work[] = [];
+export default class WorkComponent {
+  workList = signal<Work[]>([]);
   language: string = "es";
 
   constructor(
@@ -31,8 +38,8 @@ export class WorkComponent {
 
   private getWork() {
     this.workService.cargarTrabajos().subscribe((data: any) => {
-      this.workList = data as Work[];
-      this.workList.sort((first, second) => second.order - first.order);
+      this.workList.set(data);
+      // this.workList.sort((first, second) => second.order - first.order);
       this.spinnerService.hide();
     });
   }

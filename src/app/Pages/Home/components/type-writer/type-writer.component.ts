@@ -4,7 +4,7 @@ import { Component, ElementRef, Input, Renderer2, RendererStyleFlags2, ViewChild
     selector: 'app-type-writer',
     templateUrl: './type-writer.component.html',
     styleUrl: './type-writer.component.scss',
-    standalone: false
+    standalone: true,
 })
 export class TypeWriterComponent {
   @ViewChild("textElement") textElement!: ElementRef;

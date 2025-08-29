@@ -1,13 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 import { Project } from '../../../../models/Project';
+import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-project-mobile',
-    templateUrl: './project-mobile.component.html',
-    styleUrl: './project-mobile.component.scss',
-    standalone: false
+  selector: 'app-project-mobile',
+  templateUrl: './project-mobile.component.html',
+  styleUrl: './project-mobile.component.scss',
+  standalone: true,
+  imports: [CommonModule]
 })
 export class ProjectMobileComponent {
-  @Input() projectList: Project[] = [];
+  @Input() projectList = signal<Project[]>([]);
   @Input() language: string = "es";
 }
