@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { language } from './common/GlobalVariables';
+import { language } from './common/global-variables';
 import { ThemeService } from './shared/core/services/theme.service';
 import { LayoutComponent } from './shared/components/layout/layout/layout.component';
 

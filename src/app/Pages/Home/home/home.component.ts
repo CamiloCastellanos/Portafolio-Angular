@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
-import { motivationalQuotes } from '../../../common/GlobalVariables';
+import { motivationalQuotes } from '../../../common/global-variables';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { TypeWriterComponent } from '../components/type-writer/type-writer.component';
 
