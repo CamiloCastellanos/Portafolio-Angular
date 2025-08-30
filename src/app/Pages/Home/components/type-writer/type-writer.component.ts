@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, Renderer2, RendererStyleFlags2, ViewChild } from '@angular/core';
 
 @Component({
-    selector: 'app-type-writer',
+    selector: 'home-type-writer',
     templateUrl: './type-writer.component.html',
     styleUrl: './type-writer.component.scss',
     standalone: true,
