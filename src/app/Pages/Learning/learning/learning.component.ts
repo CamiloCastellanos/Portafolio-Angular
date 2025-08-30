@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Certificate } from '../../../models/Certificate';
+import { Certificate } from '../../../models/certificate';
 import { LearningService } from '../services/learning.service';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';

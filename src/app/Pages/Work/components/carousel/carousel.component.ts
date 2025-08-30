@@ -1,5 +1,5 @@
 import { Component, computed, Input, signal } from '@angular/core';
-import { Work } from '../../../../models/Work.model';
+import { Work } from '../../../../models/work';
 import { CommonModule } from '@angular/common';
 
 @Component({

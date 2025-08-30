@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ToolsLanguagesService } from '../services/tools-languages.service';
-import { ToolsLanguages } from '../../../../models/ToolsLanguages.model';
-import { InfiniteCarouselType } from '../../../../models/InfiniteCarouselType';
+import { ToolsLanguages } from '../../../../models/tools-languages';
+import { InfiniteCarouselType } from '../../../../models/infinite-carousel-type';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { InfiniteCarouselComponent } from '../../infinite-carousel/infinite-carousel/infinite-carousel.component';

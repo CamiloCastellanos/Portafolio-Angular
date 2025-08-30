@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { Work } from '../../../models/Work.model';
+import { Work } from '../../../models/work';
 import { WorkService } from '../services/work.service'
 import { TimeLineComponent } from '../Components/time-line/time-line.component';
 import { CarouselComponent } from '../components/carousel/carousel.component';

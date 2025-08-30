@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { Project } from '../../../models/Project';
+import { Project } from '../../../models/project';
 import { ProjectsService } from '../services/projects.service';
 import { ToolsLanguagesComponent } from '../../../shared/components/tools-languages/tools-languages/tools-languages.component';
 import { CommonModule } from '@angular/common';
