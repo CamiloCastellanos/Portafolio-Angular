@@ -4,7 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ToolsLanguagesComponent } from '../../../../shared/components/tools-languages/tools-languages/tools-languages.component';
 
 @Component({
-  selector: 'app-experience',
+  selector: 'profile-experience',
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss',
   standalone: true,

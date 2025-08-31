@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-avatar',
+  selector: 'profile-avatar',
   templateUrl: './avatar.component.html',
   styleUrl: './avatar.component.scss',
   standalone: true,

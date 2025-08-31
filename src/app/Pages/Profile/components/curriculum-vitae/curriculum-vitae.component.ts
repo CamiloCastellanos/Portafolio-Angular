@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-curriculum-vitae',
+  selector: 'profile-curriculum-vitae',
   templateUrl: './curriculum-vitae.component.html',
   styleUrl: './curriculum-vitae.component.scss',
   standalone: true,

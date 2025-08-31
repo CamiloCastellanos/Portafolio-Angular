@@ -19,16 +19,17 @@
         ></app-avatar>
       </div> -->
       <div class="row">
-        <app-about [lang]="lang"> </app-about>
+        <profile-about [lang]="lang" [tooltipCopy]="tooltipCopy">
+        </profile-about>
       </div>
     </div>
   </div>
 </section>
 
 <section class="section" id="services">
-  <app-experience [lang]="lang"> </app-experience>
+  <profile-experience [lang]="lang"> </profile-experience>
 </section>
 
 <section class="section" id="resume">
-  <app-curriculum-vitae [lang]="lang"></app-curriculum-vitae>
+  <profile-curriculum-vitae [lang]="lang"></profile-curriculum-vitae>
 </section>
