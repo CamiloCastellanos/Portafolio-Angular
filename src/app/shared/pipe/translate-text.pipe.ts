@@ -4,13 +4,14 @@ import { language } from '../../common/global-variables';
 
 @Pipe({
   name: 'translateText',
-  standalone: false
+  standalone: true,
+  pure: false
 })
 export class TranslateTextPipe implements PipeTransform {
 
   constructor(private translate: TranslateService) { }
 
-  transform(obj: any, fieldSp: string, fieldEn: string): unknown {
+  transform(obj: any, fieldSp: string, fieldEn: string): string {
     if (!obj || !fieldSp || !fieldEn) return '';
 
     const lang = this.translate.currentLang || this.translate.getDefaultLang();

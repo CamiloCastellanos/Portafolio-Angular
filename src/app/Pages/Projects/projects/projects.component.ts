@@ -25,6 +25,8 @@ export default class ProjectsComponent {
   projectList = signal<Project[]>([]);
   language: string = "es";
   textButton: string = 'Ver más - Código - Demostración - Ver más - '
+  textDemo: string = "Ver Demo";
+  textCode: string = "Ver Código";
   private textButtonLanguage = ['Ver más - Código - Demostración - Ver más - ', 'See more - Code - Demo - See more - ']
 
   constructor(private projectService: ProjectsService,
@@ -33,14 +35,18 @@ export default class ProjectsComponent {
     this.getProjects();
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.language = event.lang
-      this.textButton = event.lang == 'es' ? this.textButtonLanguage[0] : this.textButtonLanguage[1]
+      this.textButton = event.lang == 'es' ? this.textButtonLanguage[0] : this.textButtonLanguage[1];
+      this.textDemo = event.lang == 'es' ? "Ver Demo" : "Watch demo";
+      this.textCode = event.lang == 'es' ? " Ver Código" : "View code";
     });
   }
 
   ngOnInit(): void {
     this.spinnerService.show();
     this.language = this.translate.currentLang;
-    this.textButton = this.language == 'es' ? this.textButtonLanguage[0] : this.textButtonLanguage[1]
+    this.textButton = this.language == 'es' ? this.textButtonLanguage[0] : this.textButtonLanguage[1];
+    this.textDemo = this.language == 'es' ? "Ver Demo" : "Watch demo";
+    this.textCode = this.language == 'es' ? " Ver Código" : "View code";
   }
 
   getProjects() {
