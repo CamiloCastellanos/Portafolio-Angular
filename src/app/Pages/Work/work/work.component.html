@@ -10,18 +10,20 @@
     </div>
 
     <div class="row mt-6 is-hidden-desktop">
-      <app-time-line
+      <work-time-line
         [workList]="workList"
         [language]="language"
-      ></app-time-line>
+        [textDescription]="textDescription"
+      ></work-time-line>
     </div>
 
     <div class="mt-6 is-hidden-touch">
       <div class="container">
-        <app-carousel
+        <work-carousel
           [workList]="workList"
           [language]="language"
-        ></app-carousel>
+          [textDescription]="textDescription"
+        ></work-carousel>
       </div>
     </div>
   </div>

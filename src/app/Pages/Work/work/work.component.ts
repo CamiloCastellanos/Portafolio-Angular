@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Work } from '../../../models/work';
-import { WorkService } from '../services/work.service'
-import { TimeLineComponent } from '../Components/time-line/time-line.component';
+import { WorkService } from '../services/work.service';
 import { CarouselComponent } from '../components/carousel/carousel.component';
+import { TimeLineComponent } from '../components/time-line/time-line.component';
 
 @Component({
   selector: 'app-work',
@@ -20,6 +20,7 @@ import { CarouselComponent } from '../components/carousel/carousel.component';
 export default class WorkComponent {
   workList = signal<Work[]>([]);
   language: string = "es";
+  textDescription: string = "Cargo 🧑🏼‍💻";
 
   constructor(
     private workService: WorkService,
@@ -27,6 +28,7 @@ export default class WorkComponent {
     private translate: TranslateService) {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.language = event.lang
+      this.textDescription = event.lang == 'es' ? "Cargo 🧑🏼‍💻" : "Position 🧑🏼‍💻";
     });
     this.getWork();
   }
@@ -34,12 +36,12 @@ export default class WorkComponent {
   ngOnInit(): void {
     this.spinnerService.show();
     this.language = this.translate.currentLang;
+    this.textDescription = this.language == 'es' ? "Cargo 🧑🏼‍💻" : "Position 🧑🏼‍💻";
   }
 
   private getWork() {
     this.workService.cargarTrabajos().subscribe((data: any) => {
       this.workList.set(data);
-      // this.workList.sort((first, second) => second.order - first.order);
       this.spinnerService.hide();
     });
   }
