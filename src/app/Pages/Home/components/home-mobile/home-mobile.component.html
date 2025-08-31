@@ -1,0 +1,42 @@
+<div class="has-text-centered is-hidden-desktop">
+  <div class="row center-image">
+    <figure class="image photo">
+      <img
+        [ngSrc]="'https://i.postimg.cc/QCbPNmvJ/Camilo-Castellanos.webp'"
+        class="is-rounded"
+        style="position: relative"
+        alt="Juan Camilo Castellanos Puentes - Camilo Castellanos"
+        priority
+        fill
+      />
+    </figure>
+  </div>
+
+  <div class="row has-text-centered">
+    <h1 class="is-size-3">
+      <strong class="title is-3" [ngClass]="typographyTitle"
+        >👋🏻{{ "SALUDO_HOME" | translate }}</strong
+      >
+    </h1>
+    <p class="is-size-4">
+      <strong class="has-text-light" [ngClass]="typographyText">{{
+        "NOMBRE_HOME" | translate
+      }}</strong>
+    </p>
+    <p class="is-size-4">
+      <strong [ngClass]="typographyText">{{
+        "SUBTITULO_HOME" | translate
+      }}</strong>
+    </p>
+    <p class="is-size-4" [ngClass]="typographyText">👨‍💻</p>
+  </div>
+  <div class="row mt-3 mb-0 pb-0">
+    <div class="box transparente">
+      <home-type-writer
+        [classText]="'is-size-5 is-uppercase  ' + typographyTypeWriter"
+        [fontSize]="'20px'"
+        [wordArray]="phrase"
+      ></home-type-writer>
+    </div>
+  </div>
+</div>

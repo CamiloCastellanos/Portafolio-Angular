@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { motivationalQuotes } from '../../../common/global-variables';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { TypeWriterComponent } from '../components/type-writer/type-writer.component';
+import { HomeDesktopComponent } from '../components/home-desktop/home-desktop.component';
+import { HomeMobileComponent } from '../components/home-mobile/home-mobile.component';
 
 @Component({
   selector: 'app-home',
@@ -12,25 +13,28 @@ import { TypeWriterComponent } from '../components/type-writer/type-writer.compo
   imports: [
     CommonModule,
     TranslateModule,
-    TypeWriterComponent,
-    NgOptimizedImage
+    HomeDesktopComponent,
+    HomeMobileComponent
   ]
 })
 export default class HomeComponent {
-  phraseEn: string[] = motivationalQuotes.en;
-  phraseEs: string[] = motivationalQuotes.es;
-  lang: string = "es";
+  phrase: string[] = []
   typographyTitle = "typography-lora font-weight-600"
   typographyText = "typography-open-sans font-weight-500"
   typographyTypeWriter = "typography-lora font-weight-600"
+  private lang: string = "es";
+  private readonly phraseEs: string[] = motivationalQuotes.es;
+  private readonly phraseEn: string[] = motivationalQuotes.en;
 
   constructor(private translate: TranslateService) {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.lang = event.lang;
+      this.phrase = this.lang === 'es' ? this.phraseEs : this.phraseEn;
     });
   }
 
   ngOnInit(): void {
     this.lang = this.translate.currentLang;
+    this.phrase = this.lang === 'es' ? this.phraseEs : this.phraseEn;
   }
 }
