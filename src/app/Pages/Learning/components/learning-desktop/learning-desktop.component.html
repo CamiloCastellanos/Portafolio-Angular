@@ -1,0 +1,16 @@
+  <div class="container is-hidden-touch">
+    <div class="section">
+      <div class="row columns is-multiline">
+        @for (item of certificateList; track item) {
+          <div class="column is-4">
+            <figure class="image zoom is-16by9">
+              <img
+                src="{{ item.imagen }}"
+                alt="Camilo Castellanos - {{ item.titulo }}"
+                />
+              </figure>
+            </div>
+          }
+        </div>
+      </div>
+    </div>

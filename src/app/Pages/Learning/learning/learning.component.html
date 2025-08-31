@@ -7,25 +7,8 @@
       {{ "SUBTITULO_LEARNING" | translate }}
     </h1>
   </div>
-
-  <div class="container is-hidden-touch">
-    <div class="section">
-      <div class="row columns is-multiline">
-        @for (item of certificateList; track item) {
-          <div class="column is-4">
-            <figure class="image zoom is-16by9">
-              <img
-                src="{{ item.imagen }}"
-                alt="Camilo Castellanos - {{ item.titulo }}"
-                />
-              </figure>
-            </div>
-          }
-        </div>
-      </div>
-    </div>
-
-    <div class="container mt-6 is-hidden-desktop">
-      <app-time-line [certificateList]="certificateList"></app-time-line>
-    </div>
-  </section>
+  <learning-desktop [certificateList]="certificateList"></learning-desktop>
+  <app-learning-mobile
+    [certificateList]="certificateList"
+  ></app-learning-mobile>
+</section>

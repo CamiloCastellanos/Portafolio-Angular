@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { Certificate } from '../../../models/certificate';
-import { LearningService } from '../services/learning.service';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { TimeLineComponent } from '../components/time-line/time-line.component';
+import { Certificate } from '../../../models/certificate';
+import { LearningService } from '../services/learning.service';
+import { LearningDesktopComponent } from '../components/learning-desktop/learning-desktop.component';
+import { LearningMobileComponent } from '../components/learning-mobile/learning-mobile.component';
 
 @Component({
   selector: 'app-learning',
@@ -13,7 +14,8 @@ import { TimeLineComponent } from '../components/time-line/time-line.component';
   imports: [
     CommonModule,
     TranslateModule,
-    TimeLineComponent
+    LearningDesktopComponent,
+    LearningMobileComponent
   ]
 })
 export default class LearningComponent {
