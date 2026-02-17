@@ -12,36 +12,24 @@
             type="text"
             [value]="email"
             disabled
-            />
-          </p>
-          <p class="control">
-            @if (lang == 'en') {
-              <button
-                class="button outlined is-rounded has-tooltip-primary "
-                (click)="copyEmail()"
-                data-tooltip="Copy"
-                >
-                <i class="fa fa-files-o" aria-hidden="true"></i>
-              </button>
-            }
-
-            @if (lang == 'es') {
-              <button
-                class="button outlined is-rounded has-tooltip-primary"
-                (click)="copyEmail()"
-                data-tooltip="Copiar"
-                >
-                <i class="fa fa-files-o" aria-hidden="true"></i>
-              </button>
-            }
-          </p>
-        </div>
-      </div>
-      <div class="column pets-image">
-        <img
-          src="../../../../assets/image/photo/mascotas.webp"
-          alt="mascotas Camilo Castellanos"
           />
-        </div>
+        </p>
+        <p class="control">
+          <button
+            class="button outlined is-rounded has-tooltip-primary"
+            (click)="copyEmail()"
+            [attr.data-tooltip]="tooltipCopy"
+          >
+            <i class="fa fa-files-o" aria-hidden="true"></i>
+          </button>
+        </p>
       </div>
     </div>
+    <div class="column pets-image">
+      <img
+        src="../../../../assets/image/photo/mascotas.webp"
+        alt="mascotas Camilo Castellanos"
+      />
+    </div>
+  </div>
+</div>

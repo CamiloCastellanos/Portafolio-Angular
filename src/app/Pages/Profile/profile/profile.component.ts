@@ -5,6 +5,7 @@ import { CurriculumVitaeComponent } from '../components/curriculum-vitae/curricu
 // import { AvatarComponent } from '../components/avatar/avatar.component';
 import { AboutComponent } from '../components/about/about.component';
 import { ExperienceComponent } from '../components/experience/experience.component';
+import { language } from '../../../common/global-variables';
 
 @Component({
   selector: 'app-profile',
@@ -21,10 +22,18 @@ import { ExperienceComponent } from '../components/experience/experience.compone
 })
 export default class ProfileComponent {
   lang: string = "es";
+  tooltipCopy: string = "Copy";
 
   constructor(private translate: TranslateService) {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.lang = event.lang;
+      this.tooltipCopy = this.lang === language.es ? 'Copiar' : 'Copy';
     });
   }
+
+  ngOnInit() {
+    this.lang = this.translate.currentLang;
+    this.tooltipCopy = this.lang === language.es ? 'Copiar' : 'Copy';
+  }
+
 }

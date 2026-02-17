@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { language } from './common/GlobalVariables';
+import { language } from './common/global-variables';
 import { ThemeService } from './shared/core/services/theme.service';
 import { LayoutComponent } from './shared/components/layout/layout/layout.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styles: '',
   standalone: true,
   imports: [LayoutComponent]
 })
@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(
     private router: Router,
     private translate: TranslateService,
-    private themeService: ThemeService
+    private readonly themeService: ThemeService
   ) {
     let lenguajeNavegador = window.navigator.language;
     this.translate.addLangs([language.es.toString(), language.en.toString()]);

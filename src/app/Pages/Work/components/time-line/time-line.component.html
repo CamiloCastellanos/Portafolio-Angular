@@ -1,33 +1,25 @@
 <div class="container">
   <ul>
     @for (work of sortedWorkList(); track work) {
-      <li
-        [style.--icon-circle]="'url(' + work.icon + ')'"
-        >
-        <h1 class="title typography-lora">
-          {{ work.title }}
-        </h1>
-        @if (language == 'es') {
-          <p class="typography-open-sans">
-            Cargo 🧑🏼‍💻: {{ work.description | titlecase }}
-          </p>
-        }
-        @if (language == 'en') {
-          <p class="typography-open-sans">
-            Position 🧑🏼‍💻: {{ work.descriptionEn | titlecase }}
-          </p>
-        }
-        @if (language == 'es') {
-          <div class="typography-open-sans">
-            📅 {{ work.startDate }} → {{ work.endDate }}
-          </div>
-        }
-        @if (language == 'en') {
-          <div class="typography-open-sans">
-            📅 {{ work.startDateEn }} → {{ work.endDateEn }}
-          </div>
-        }
-      </li>
+    <li [style.--icon-circle]="'url(' + work.icon + ')'">
+      <h1 class="title typography-lora">
+        {{ work.title }}
+      </h1>
+
+      <p class="typography-open-sans">
+        {{ textDescription }}
+        {{
+          work.description
+            | translateText : "description" : "descriptionEn"
+            | titlecase
+        }}
+      </p>
+
+      <div class="typography-open-sans">
+        📅 {{ work | translateText : "startDate" : "startDateEn" }} →
+        {{ work | translateText : "endDate" : "endDateEn" }}
+      </div>
+    </li>
     }
     <li></li>
   </ul>

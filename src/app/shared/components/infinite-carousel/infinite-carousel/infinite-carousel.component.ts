@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { InfiniteCarouselType } from '../../../../models/InfiniteCarouselType';
+import { InfiniteCarouselType } from '../../../../models/infinite-carousel-type';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
 
