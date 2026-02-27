@@ -12,7 +12,6 @@ import { TypeWriterComponent } from '../type-writer/type-writer.component';
     CommonModule,
     TranslateModule,
     NgOptimizedImage,
-    TypeWriterComponent,
   ]
 })
 export class HomeMobileComponent {
