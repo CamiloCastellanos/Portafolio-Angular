@@ -1,25 +1,25 @@
 <div class="container">
   <ul>
     @for (work of sortedWorkList(); track work) {
-    <li [style.--icon-circle]="'url(' + work.icon + ')'">
-      <h1 class="title typography-lora">
-        {{ work.title }}
-      </h1>
+      <li [style.--icon-circle]="'url(' + work.icon + ')'">
+        <h1 class="title typography-lora">
+          {{ work.title }}
+        </h1>
 
-      <p class="typography-open-sans">
-        {{ textDescription }}
-        {{
-          work.description
-            | translateText : "description" : "descriptionEn"
-            | titlecase
-        }}
-      </p>
+        <p class="typography-open-sans">
+          {{ textDescription }}
+          {{
+            work
+              | translateText: "description" : "descriptionEn"
+              | titlecase
+          }}
+        </p>
 
-      <div class="typography-open-sans">
-        📅 {{ work | translateText : "startDate" : "startDateEn" }} →
-        {{ work | translateText : "endDate" : "endDateEn" }}
-      </div>
-    </li>
+        <div class="typography-open-sans">
+          📅 {{ work | translateText: "startDate" : "startDateEn" }} →
+          {{ work | translateText: "endDate" : "endDateEn" }}
+        </div>
+      </li>
     }
     <li></li>
   </ul>
