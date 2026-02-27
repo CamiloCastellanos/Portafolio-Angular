@@ -17,7 +17,11 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-navbar-mobile);
-  box-shadow: 0 0 50px 10px var(--color-box-shadow-mobile);
+  box-shadow: none;
+  border: none;
+  border-top: none;
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(53.5px);
 }
 
 .menu-item {
@@ -44,7 +48,9 @@
   border-radius: 50%;
   position: absolute;
   transform: scale(0);
-  transition: background-color var(--duration), transform var(--duration);
+  transition:
+    background-color var(--duration),
+    transform var(--duration);
 }
 
 .menu-item.active {
@@ -83,6 +89,8 @@
   will-change: transform;
   background-color: var(--color-navbar-mobile);
   transition: transform var(--timeOut, var(--duration));
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(53.5px);
 }
 
 .svg-container {
@@ -104,7 +112,9 @@
 
 .languages {
   border-radius: 50px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
   width: 50px;
   height: 50px;
 }
