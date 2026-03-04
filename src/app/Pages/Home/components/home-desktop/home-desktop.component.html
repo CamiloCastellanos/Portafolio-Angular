@@ -12,25 +12,26 @@
     </figure>
   </div>
   <div class="div-greetings">
-    <h1 class="is-size-3">
-      <strong class="title is-3" [ngClass]="typographyTitle">👋🏻</strong>
-    </h1>
-    <h1 class="is-size-3">
-      <strong class="title is-2" [ngClass]="typographyTitle">{{
+    <!-- <h1 class="is-size-2">
+
+    </h1> -->
+    <h1 class="is-size-4">
+      <strong class="title is-3">👋🏻</strong>
+      <strong class="title is-4" [ngClass]="typographyTitle">{{
         "SALUDO_HOME" | translate
       }}</strong>
     </h1>
-    <p class="is-size-4">
+    <p class="is-size-2">
       <strong class="has-text-light" [ngClass]="typographyText">{{
         "NOMBRE_HOME" | translate
       }}</strong>
     </p>
     <p class="is-size-4">
-      <strong [ngClass]="typographyText">{{
-        "SUBTITULO_HOME" | translate
-      }}</strong>
+      <strong [ngClass]="typographyText"
+        >{{ "SUBTITULO_HOME" | translate }}
+        <strong class="is-size-2">👨‍💻</strong></strong
+      >
     </p>
-    <p class="is-size-4" [ngClass]="typographyText">👨‍💻</p>
   </div>
   <div class="div-phrase pl-1">
     <div class="box transparente">

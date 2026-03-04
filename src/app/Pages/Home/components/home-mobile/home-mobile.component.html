@@ -13,18 +13,17 @@
   </div>
 
   <div class="row has-text-centered">
-
     <h1 class="is-size-3">
       <strong class="has-text-light" [ngClass]="typographyTitle">{{
         "NOMBRE_HOME" | translate
       }}</strong>
     </h1>
     <p class="is-size-4">
-      <strong [ngClass]="typographyText">{{
-        "SUBTITULO_HOME" | translate
-      }}</strong>
+      <strong [ngClass]="typographyText"
+        >{{ "SUBTITULO_HOME" | translate
+        }}<strong class="is-size-2">👨‍💻</strong></strong
+      >
     </p>
-    <p class="is-size-4" [ngClass]="typographyText">👨‍💻</p>
   </div>
   <div class="row mt-3 mb-0 pb-0">
     <div class="box transparente" [ngClass]="typographyTypeWriter">
