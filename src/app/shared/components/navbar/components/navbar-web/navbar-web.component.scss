@@ -25,7 +25,8 @@ nav a:before {
 }
 
 .navbar-item:hover,
-.navbar-item:focus {
+.navbar-item:focus,
+.navbar-active {
   background-color: transparent;
   border-radius: 50px;
 }
@@ -47,6 +48,7 @@ a {
   border-bottom: 4px solid transparent;
 }
 
+.navbar-active,
 a:hover {
   background-size: 100% 0.5rem;
 }

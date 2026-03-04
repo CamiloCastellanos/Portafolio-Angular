@@ -36,6 +36,7 @@
         class="navbar-item has-text-black"
         routerLink="home"
         (click)="pickUpMenu()"
+        routerLinkActive="navbar-active"
       >
         <span class="typography-open-sans">{{
           "HOME_NAVBAR" | translate
@@ -45,6 +46,7 @@
         class="navbar-item has-text-black"
         routerLink="perfil"
         (click)="pickUpMenu()"
+        routerLinkActive="navbar-active"
       >
         <span class="typography-open-sans">{{
           "PERFIL_NAVBAR" | translate
@@ -55,6 +57,7 @@
         routerLink="trabajos"
         routerLinkActive="activo"
         (click)="pickUpMenu()"
+        routerLinkActive="navbar-active"
       >
         <span class="typography-open-sans">{{
           "TRABAJOS_NAVBAR" | translate
@@ -76,6 +79,7 @@
         routerLink="proyectosPersonales"
         routerLinkActive="activo"
         (click)="pickUpMenu()"
+        routerLinkActive="navbar-active"
       >
         <span class="typography-open-sans"
           >{{ "PROYECTOS_PERSONALES_NAVBAR" | translate }}
