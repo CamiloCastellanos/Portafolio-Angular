@@ -6,7 +6,6 @@ import { ProjectsService } from '../services/projects.service';
 import { ToolsLanguagesComponent } from '../../../shared/components/tools-languages/tools-languages/tools-languages.component';
 import { CommonModule } from '@angular/common';
 import { ProjectMobileComponent } from '../components/project-mobile/project-mobile.component';
-import { BookComponent } from '../components/book/book.component';
 
 @Component({
   selector: 'app-projects',
@@ -17,7 +16,6 @@ import { BookComponent } from '../components/book/book.component';
     CommonModule,
     TranslateModule,
     ToolsLanguagesComponent,
-    BookComponent,
     ProjectMobileComponent
   ]
 })
