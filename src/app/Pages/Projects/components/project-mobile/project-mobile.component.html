@@ -1,58 +1,54 @@
 <div class="section columns is-multiline">
   @for (project of projectList(); track project) {
-  <div class="column is-4">
-    <div class="project-card">
-      <div class="project-image">
-        <img
-          [src]="project.image"
-          alt="Camilo Castellanos - {{ project.title }}"
-        />
-        @if (project.urlProject != '' && project.urlProject != undefined) {
-        <div>
-          <a [href]="project.urlProject" class="demo-link" target="_blank"
-            >{{ textDemo }} ↗</a
-          >
-        </div>
-        }
-      </div>
-      <div class="project-content">
-        <div class="title-with-icon">
-          @if (language == 'es') {
-          <h3 class="typography-lora font-weight-600 mt-2">
-            {{ project | translateText : "title" : "titleEn" | uppercase }}
-          </h3>
+    <div class="column is-4">
+      <div class="project-card">
+        <div class="project-image">
+          <img
+            [src]="project.image"
+            alt="Camilo Castellanos - {{ project.title }}"
+          />
+          @if (project.urlProject != "" && project.urlProject != undefined) {
+            <div>
+              <a [href]="project.urlProject" class="demo-link" target="_blank"
+                >{{ textDemo }} ↗</a
+              >
+            </div>
           }
-          <div class="tech-stack">
-            <img
-              [src]="project.tool"
-              [alt]="project.nameTool"
-              [title]="project.nameTool"
-            />
+        </div>
+        <div class="project-content">
+          <div class="title-with-icon">
+            <h3 class="typography-lora font-weight-600 mt-2">
+              {{ project | translateText: "title" : "titleEn" | uppercase }}
+            </h3>
+
+            <div class="tech-stack">
+              <img
+                [src]="project.tool"
+                [alt]="project.nameTool"
+                [title]="project.nameTool"
+              />
+            </div>
           </div>
+          <p class="project-description typography-open-sans font-weight-500">
+            {{ project | translateText: "description" : "descriptionEn" }}
+          </p>
+          @if (project.url != "" && project.url != undefined) {
+            <div class="project-links">
+              <a
+                [href]="project.url"
+                class="demo-btn typography-open-sans font-weight-600"
+                target="_blank"
+              >
+                <img
+                  src="https://i.postimg.cc/FszYnfHX/GitHub.webp"
+                  alt="Código en GitHub"
+                />
+                {{ textCode }} ↗</a
+              >
+            </div>
+          }
         </div>
-        <p class="project-description typography-open-sans font-weight-500">
-          {{
-            project
-              | translateText : "description" : "descriptionEn"
-          }}
-        </p>
-        @if (project.url != '' && project.url != undefined) {
-        <div class="project-links">
-          <a
-            [href]="project.url"
-            class="demo-btn typography-open-sans font-weight-600"
-            target="_blank"
-          >
-            <img
-              src="https://i.postimg.cc/FszYnfHX/GitHub.webp"
-              alt="Código en GitHub"
-            />
-            {{ textCode }} ↗</a
-          >
-        </div>
-        }
       </div>
     </div>
-  </div>
   }
 </div>
