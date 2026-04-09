@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
-import { motivationalQuotes } from '../../../common/global-variables';
+import { motivationalQuotes } from '../../../Common/global-variables';
 import { HomeDesktopComponent } from '../components/home-desktop/home-desktop.component';
 import { HomeMobileComponent } from '../components/home-mobile/home-mobile.component';
 
