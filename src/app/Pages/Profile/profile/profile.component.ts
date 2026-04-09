@@ -5,7 +5,7 @@ import { CurriculumVitaeComponent } from '../components/curriculum-vitae/curricu
 // import { AvatarComponent } from '../components/avatar/avatar.component';
 import { AboutComponent } from '../components/about/about.component';
 import { ExperienceComponent } from '../components/experience/experience.component';
-import { language } from '../../../Common/global-variables';
+import { language } from '../../../common/global-variables';
 
 @Component({
   selector: 'app-profile',
